@@ -12,7 +12,10 @@ class Company_login extends CI_Controller{
     public function signup(){
         $this->load->model('company/company_model');
         $this->company_model->signup(); //function call from model
-        $this->load->view('company/success');
+        $company_name['user_name'] = $_POST['name'];
+        $this->load->view('template/header_after_login',$company_name);
+        $this->load->view('company/main_company');
+        $this->load->view('template/footer');        
     }
     public function login(){
         $this->load->view('company/template/header');

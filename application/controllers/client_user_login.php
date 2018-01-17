@@ -21,7 +21,6 @@ class client_User_login extends CI_Controller{
     {
         /* Retrieve session data */
         $user_or_company = $this->session->userdata('client_or_company');
-        echo $user_or_company;
         if($user_or_company==1)
         {
         $session_set_value = $this->session->all_userdata();
@@ -71,7 +70,7 @@ class client_User_login extends CI_Controller{
                         $user_name = $this->user_model->user_name();
                         foreach($user_name as $row)
                         {
-                            $user['user_name'] = $row->user_name;
+                            $user['user_name'] = $row->first_name;
                             
                         }
                         $userr =   $user['user_name'];
@@ -187,7 +186,7 @@ class client_User_login extends CI_Controller{
         $this->session->sess_destroy();
         $data['message_display'] = 'Successfully Logout';
         $this->load->view('template/header');
-        $this->load->view('login');
+        $this->load->view('login_options');
         $this->load->view('template/footer');
        
     }

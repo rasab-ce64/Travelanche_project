@@ -117,7 +117,7 @@
     <body>
 
     <div class="img-wrapper">
-        <img class="img-responsive" style="width: 100%; height: 600px; " src="<?php echo base_url('assets/images/login/travelling.jpg'); ?>" </img>
+        <img class="img-responsive" style="width: 100%; height: 650px; " src="<?php echo base_url('assets/images/login/travelling.jpg'); ?>" </img>
         <div class="centered">Choose the options</div>
         <br>
         <div class="img-overlay">

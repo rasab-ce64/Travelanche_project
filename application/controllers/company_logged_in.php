@@ -23,10 +23,11 @@ class Company_logged_in extends CI_Controller
 
     public function my_Trips()
     {
+        $user['user_name'] = $this->session->userdata('user');                
         $comp_trips = array();
         $this->load->model('company/company_model');
         $comp_trips['result'] = $this->company_model->My_trips(); //function call from model
-        $this->load->view('template/header');
+        $this->load->view('template/header_after_login',$user);
         $this->load->view('company/Trips',$comp_trips);
     }
 
@@ -40,6 +41,17 @@ class Company_logged_in extends CI_Controller
         $this->load->model('company/company_model');
         $this->company_model->add_vehicle();
         $this->load->view('company/success');
+    }
+    public function companies()
+    {
+        $user['user_name'] = $this->session->userdata('user'); 
+        $this->load->model('company/company_model');
+        $data['companies'] = $this->company_model->companies();
+
+        $this->load->view('template/header_after_login',$user);
+        $this->load->view('company/companies', $data);
+        $this->load->view('template/footer');
+   
     }
 
     public function place_bid()

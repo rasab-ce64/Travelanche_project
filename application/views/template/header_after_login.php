@@ -53,7 +53,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Link 2</a></li>
-                                <li id="logout"><a href="logout">Logout</a><li>
+                                <li id="logout"><a href="<?php echo site_url('client_user_login/logout'); ?>">Logout</a><li>
                             </ul>
                         </li>                        
                     </ul>

@@ -13,8 +13,6 @@ class client_Home extends CI_Controller {
 			$this->load->view('template/slider');
 			$this->load->view('template/home');
 			$this->load->view('template/footer');
-		//	C:\xampp\htdocs\Travelanche\application\controllers\client\Home.php
-			
                         // // $this->template['header'] = $this->load->view('template/header' , $this->data , TRUE);
 			// $this->template['slider'] = $this->load->view('template/slider' , $this->data , TRUE);
 			// $this->template['home'] = $this->load->view('template/home' , $this->data , TRUE);
@@ -56,8 +54,12 @@ class client_Home extends CI_Controller {
 
 		public function signup(){
 			/*  retrieve  session and check whether it is a client or company  */
+			$var = $this->session->userdata('client_or_company');
+			
 			$this->load->view('template/header');
+			if($var == 2)
 			$this->load->view('company/signup_company');
+			else
 			$this->load->view('signup');
 			$this->load->view('template/footer');
 		}

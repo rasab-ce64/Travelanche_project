@@ -158,17 +158,13 @@ class Company_model extends CI_model
             $curr_timestamp = date("Y-m-d h:i:sa ");
             $user_data = $this->session->userdata('logged_in');
             $company_phone = $user_data['phone'];
-
-
-           // $company_phone = $this->session->userdata('phone');
-
+            
             $sql = "INSERT INTO bids_by_rentals(company_name,company_phone, vehicle, driver, rate_per_day, total_fare,client_phone, trip_id, timestamp)
                    VALUES('Lahore Tours & Trips' , '$company_phone', '$vehicle', '$driver' , '$rate_per_day' ,'$total_fare','923164434854' , '31' , '$curr_timestamp')";
 
             $this->db->query($sql);
         }
     }
-
     public function get_bids($id){
 
         $id = $this->uri->segment(3);
@@ -196,6 +192,13 @@ class Company_model extends CI_model
         return $data;
 
     }
+ public function companies()
+ {
+        $query = $this->db->get('companies');
+        $data = $query->result();
+        return $data;
+
+ }   
 
 }
 ?>

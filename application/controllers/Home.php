@@ -11,11 +11,11 @@ class Home extends CI_Controller {
 		$this->load->view('company/template/home');
 		$this->load->view('company/template/footer');
 	}*/
-	public function signup(){
+/*	public function signup(){
 		$this->load->view('company/template/header');
 		$this->load->view('company/signup_company');
 		$this->load->view('company/template/footer');
-	}
+	}*/
 /*
 	public function login(){
 		$this->load->view('company/template/header');
@@ -45,7 +45,8 @@ class Home extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 	public function bachat(){
-		$this->load->view('template/header');
+		$user['user_name'] = $this->session->userdata('user');                
+		$this->load->view('template/header_after_login',$user);
 		$this->load->model('company/company_model');
 		$get_dropdown['vehicle_name'] = $this->company_model->dropdown_vehicle();
 		$get_dropdown['driver_name'] = $this->company_model->dropdown_driver();
@@ -54,7 +55,8 @@ class Home extends CI_Controller {
 	}
 
 	public function lambSamb(){
-		$this->load->view('template/header');
+		$user['user_name'] = $this->session->userdata('user');                
+		$this->load->view('template/header_after_login',$user);
 		$this->load->model('company/company_model');
 		$get_dropdown['vehicle_name'] = $this->company_model->dropdown_vehicle();
 		$get_dropdown['driver_name'] = $this->company_model->dropdown_driver();

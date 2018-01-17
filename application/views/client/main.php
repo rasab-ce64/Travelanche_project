@@ -39,7 +39,7 @@ a.btn-default{
         <a href="#" type="button" class="btn btn-default btn-lg btn-block" name="share_a_ride"> Share a ride</a>
         <a href="#" type="button" class="btn btn-default btn-lg btn-block" name="find_a_ride"> Find a ride</a>
         <a href="<?php echo site_url('client_logged_in/my_Trips'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="my_trips"> My trips</a>
-        <a href="#" type="button" class="btn btn-default btn-lg btn-block" name="companies"> Companies</a>
+        <a href="<?php echo site_url('company_logged_in/companies'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="companies"> Companies</a>
     </div>
     <hr>   
 </div>
