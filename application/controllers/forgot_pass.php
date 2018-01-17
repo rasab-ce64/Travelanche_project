@@ -12,7 +12,7 @@ class Forgot_pass extends CI_controller{
     }
 
     public function forgot(){
-        $this->load->view('company/forgot_pass');
+        $this->load->view('forgot_pass');
     }
     public function code(){
         $this->load->view('company/code');
