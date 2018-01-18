@@ -12,9 +12,13 @@ class Forgot_pass extends CI_controller{
     }
 
     public function forgot(){
+<<<<<<< HEAD
         $this->load->view('template/header');
         $this->load->view('forgot_pass');
         // $this->load->view('template/footer');
+=======
+        $this->load->view('forgot_pass');
+>>>>>>> 61b8d05226669bcf726532b2eaaad56d6717343e
     }
     public function code(){
         $this->load->view('template/header');
