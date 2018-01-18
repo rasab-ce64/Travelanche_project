@@ -1,6 +1,7 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <title>Reset Password</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -31,22 +32,23 @@
     <link rel="apple-touch-icon-precomposed" href="<?php echo base_url('assets/images/ico/apple-touch-icon-57-precomposed.png'); ?> ">
 </head><!--/head-->
 
-<body>
-
+<style>
+    strong{
+        color: #ba0710;
+    }
+    .alert{
+        background: #ffffff;
+        color: #000000;
+        padding: 12px;
+        margin-top: 60px;
+    }
+</style>
+<body class="jumbotron">
 <div class="container">
-    <div class="center">
-        <br> <br> <br> <br> <br>
-        <h2>Phone Verification</h2>
-        <hr>
-        <p>Enter the phone verification code that has been sent to your phone</p>
-        <form action="<?php echo site_url('forgot_pass/check_code'); ?>" method="POST">
-            <span class="text-danger"> <?php echo form_error('phone'); ?></span>
-            Enter SMS Code: <input type="text" name="code" autofocus="" required=""> <br> <br>
-            <button class="btn btn-sm btn-primary" style="text-align: center;" type="submit" name="submit">Send Code</button>
-        </form>
+    <div class="alert alert-success">
+        <strong>Success!</strong> Your Password has successfully been changed.
     </div>
+    <h3> Click here to &nbsp;<a href="<?php echo site_url(''); ?>" > <u>Login</u> </a></h3>
 </div>
 </body>
-
-
 </html>
