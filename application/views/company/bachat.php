@@ -114,7 +114,7 @@
             </script>
 
             <!--total fare -->
-            <input type="number" style="display: none" id="totalFare" class="form-control" name="total_fare" placeholder="Total Fare (Rs.)" autofocus="" />
+            <input type="number" style="display: none" id="totalFare" class="form-control" name="total_fare" placeholder="Total Fare (Rs.)" autofocus="" required="" />
             <span class="text-danger"> <?php echo form_error('number'); ?></span>
 
             <button class="btn btn-sm btn-primary" name="bid_by_bachat" type="submit">Place Bid</button>
