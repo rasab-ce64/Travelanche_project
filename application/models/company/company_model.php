@@ -72,17 +72,20 @@ class Company_model extends CI_model
 
     public function check_otp($otp)
     {
+        $phone = $this->session->userdata('fone');
         $this->load->database();
         $this->db->where('otp', $otp);
+        $this->db->where('phone',$phone);        
         $query = $this->db->get('companies');
-        return $query->result_array();
+        $data =$this->query->result();
+        return $data;
     }
 
     public function update_pwd($pwd, $phone)
     {
         $this->load->database();
         $this->db->where('password', $pwd);
-        $sql = "UPDATE companies SET password = $pwd WHERE phone = $phone ";
+        $sql = "UPDATE companies SET password = '$pwd' WHERE phone = $phone ";
         $this->db->query($sql);
     }
 
