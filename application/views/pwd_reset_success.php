@@ -48,7 +48,7 @@
     <div class="alert alert-success">
         <strong>Success!</strong> Your Password has successfully been changed.
     </div>
-    <h3> Click here to &nbsp;<a href="<?php echo site_url(''); ?>" > <u>Login</u> </a></h3>
+    <h3> Click here to &nbsp;<a href="<?php echo site_url('client_Home/login_option'); ?>" > <u>Login</u> </a></h3>
 </div>
 </body>
 </html>

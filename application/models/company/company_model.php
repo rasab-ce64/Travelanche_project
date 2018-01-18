@@ -77,7 +77,7 @@ class Company_model extends CI_model
         $this->db->where('otp', $otp);
         $this->db->where('phone',$phone);        
         $query = $this->db->get('companies');
-        $data =$this->query->result();
+        $data =$query->result();
         return $data;
     }
 
