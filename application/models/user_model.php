@@ -53,13 +53,13 @@ class User_model extends CI_model{
     }
       public function check_phone($phone){
         if (isset($_POST['phone'])) 
-         $phone = $_POST['phone'];
-         $this->db->where('phone', $phone);
+       //  $phone = $_POST['phone'];
+         $this->db->where('user_phone', $phone);
          $query = $this->db->get('users');
          $data = $query->result();      
          foreach ($data as $row)
          {   
-             $code = $row->phone;
+             $code = $row->user_phone;
              if( $code == NULL)
              return false;
              else 
@@ -69,20 +69,26 @@ class User_model extends CI_model{
     public function update_otp($phone,$otp){
 
         $this->db->where('otp' , $otp);
-        $this->db->where('phone', $phone);
-        $sql = "UPDATE users SET otp = $otp WHERE phone = $phone ";
+        $this->db->where('user_phone', $phone);
+        $sql = "UPDATE users SET otp = $otp WHERE user_phone = $phone ";
         $this->db->query($sql);
     }
 
     public function check_otp($otp){
+
+        $phone = $this->session->userdata('fone');
+        echo $phone;
+       // $this->load->database();
+        $this->db->where('user_phone',$phone);        
         $this->db->where('otp' , $otp);
         $query = $this->db->get('users');
-        return $query->result_array();
+        $data = $query->result();
+        return $data;
     }
 
     public function update_pwd($pwd,$phone){
         $this->db->where('pass', $pwd);
-        $sql = "UPDATE users SET pass = $pwd WHERE phone = $phone ";
+        $sql = "UPDATE users SET pass = '$pwd' WHERE user_phone = $phone ";
         $this->db->query($sql);
     }
 }
