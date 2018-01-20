@@ -93,7 +93,6 @@
     </style>
 
 <body>
-<div class="container-fluid">
     <div class="row">
         <?php foreach($result as $row) { ?>
         <div class="col-sm-4">
@@ -138,9 +137,8 @@
                 </div>
             </div>
         </div>
-        <?php } ?>
+    <?php } ?>
     </div>
-</div>
 </body>
 
 <!--<div class="modal fade" id="modal" aria-hidden="true" role="dialog" tabindex="-1">-->

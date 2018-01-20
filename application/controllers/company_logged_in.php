@@ -50,40 +50,23 @@ class Company_logged_in extends CI_Controller
 
         $this->load->view('template/header_after_login',$user);
         $this->load->view('company/companies', $data);
-        $this->load->view('template/footer');
+
+//        $this->load->view('template/footer');
    
     }
 
     public function place_bid()
     {
-//        if (isset($_POST['bid_by_bachat'])) {
-//            $data = array(
-//                'trip_id' => $this->input->post('trip_id'),
-//                'vehicle' => $this->input->post('vehicle'),
-//                'driver' => $this->input->post('driver'),
-//                'rate_per_day' => $this->input->post('rate_per_day'),
-//                'total_fare' => $this->input->post('total_fare'),
-//                'timestamp' => date("Y-m-d h:i:sa "),
-//                'company_phone' => $this->session->userdata('phone'),
-//            );
-
-            $this->load->model('company/company_model');
-            $this->company_model->bid_by_rental();
-            $this->load->view('company/success');
+        $this->load->model('company/company_model');
+        $this->company_model->bid_by_rental();
+        $this->load->view('template/header');
+        $this->load->view('company/place_bid_success');
     }
 
     public function bids_on_trip()
     {
         $id = $this->uri->segment(3);
         echo $id;
-//        if ($id != " ") {
-//            $this->load->model('company_model');
-//            $bids['result'] = $this->company_model->get_bids($id);
-//            $this->load->view('bids_on_trip', $bids);
-//        }
-//        else{
-//            echo "No record found";
-//        }
     }
 
     public function success(){

@@ -82,7 +82,7 @@ class Company_model extends CI_model
     {
         $this->load->database();
         $this->db->where('password', $pwd);
-        $sql = "UPDATE companies SET password = $pwd WHERE phone = $phone ";
+        $sql = "UPDATE companies SET password = '$pwd' WHERE phone = $phone ";
         $this->db->query($sql);
     }
 

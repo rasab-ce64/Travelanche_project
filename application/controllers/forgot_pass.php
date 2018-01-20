@@ -12,13 +12,8 @@ class Forgot_pass extends CI_controller{
     }
 
     public function forgot(){
-<<<<<<< HEAD
         $this->load->view('template/header');
         $this->load->view('forgot_pass');
-        // $this->load->view('template/footer');
-=======
-        $this->load->view('forgot_pass');
->>>>>>> 61b8d05226669bcf726532b2eaaad56d6717343e
     }
     public function code(){
         $this->load->view('template/header');
@@ -47,23 +42,25 @@ class Forgot_pass extends CI_controller{
              $this->load->view('code'); //view to enter code
          }
          else {
-            redirect('forgot_pass/code' , 'refresh');
+            redirect('forgot_pass/forgot' , 'refresh');
     }
 }
 
 public function check_code(){
 
     if(isset($_POST['submit'])){
+        
         $code = $_POST['code'];
         $this->load->model('company/company_model');
         $sms_code = $this ->company_model->check_otp($code);
-        //var_dump($sms_code);
+        var_dump($sms_code);
          if($code == $sms_code[0]['otp']){
              $data['phone']= $sms_code[0]['phone'];
              $this->load->view('template/header');
             $this->load->view('reset_pwd',$data);
          }
          else{
+            $sms_code = $this ->company_model->check_otp($code);
          redirect('forgot_pass/code', 'refresh');
          }
     }
