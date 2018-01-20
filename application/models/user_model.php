@@ -51,6 +51,7 @@ class User_model extends CI_model{
         $data = $query->result();
         return $data;
     }
+
       public function check_phone($phone){
         if (isset($_POST['phone'])) 
        //  $phone = $_POST['phone'];
