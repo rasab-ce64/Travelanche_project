@@ -95,6 +95,7 @@
 <body>
 <div class="container-fluid">
     <div class="row">
+        <a type="button" href="<?php echo site_url("company_logged_in/my_Pending_Bids"); ?>" class="btn btn-lg" name="bid_now" >Pending Bids/a>
         <?php foreach($result as $row) { ?>
         <div class="col-sm-4">
             <div class="panel panel-default text-center">

@@ -150,10 +150,18 @@ class Company_model extends CI_model
     public function bid_by_rental()
     {
         $this->load->database();
-
+        $trip_id = $this->session->userdata('trip_id');
+        $company_name = $this->session->userdata('user');        
+        $this->db->where('id',$trip_id);
+        $query=$this->db->get('trip');
+        $data =$query->result();
+        foreach($data as $row)
+        {
+            $client_phone =$row->user_phone;
+        }
         if (isset($_POST['bid_by_bachat'])) {
 
-            $trip_id = $this->uri->segment(3);
+           // $trip_id = $this->uri->segment(3);
             $vehicle = $this->input->post('vehicle');
             $driver = $this->input->post('driver');
             $rate_per_day = $this->input->post('rate_per_day');
@@ -163,11 +171,33 @@ class Company_model extends CI_model
             $company_phone = $user_data['phone'];
             
             $sql = "INSERT INTO bids_by_rentals(company_name,company_phone, vehicle, driver, rate_per_day, total_fare,client_phone, trip_id, timestamp)
-                   VALUES('Lahore Tours & Trips' , '$company_phone', '$vehicle', '$driver' , '$rate_per_day' ,'$total_fare','923164434854' , '31' , '$curr_timestamp')";
+                   VALUES('$company_name' , '$company_phone', '$vehicle', '$driver' , '$rate_per_day' ,'$total_fare','$client_phone' , '$trip_id' , '$curr_timestamp')";
 
             $this->db->query($sql);
         }
     }
+    public function my_Pending_Bids()
+    {
+         $company_data = $this->session->userdata('logged_in');
+         $company_phone = $company_data['phone'];
+         echo $company_phone;     
+        // $sql = "SELECT bid.bid_id,bid.vehicle,bid.rate_per_day,bid.total_fare,trip.destination,trip.vehicle,trip.start_date,trip.end_date,trip.time_pickup,trip.time_drop,trip.location_pickup,trip.diver,trip.ac,trip.bids_on_trip,
+        // bid.vehicle_image,bid.timestamp,trip.timestamp,trip.user_phone,trip.id from bids_by_rentals as bid
+        // LEFT JOIN  trip
+        // ON bid.trip_id=trip.id AND trip.trip_status='Pending'
+        // WHERE bid.company_phone='$company_phone' ORDER BY bid.timestamp DESC";
+        // $data= $this->db->query($sql);
+        $this->db->select('*');
+        $this->db->from('bids_by_rentals');
+        $this->db->join('trip', 'trip.id = bids_by_rentals.trip_id');
+        $this->db->where(array('bids_by_rentals.company_phone' => $company_phone) );
+        $this->db->where('trip.trip_status' , 'Pending' );
+ 
+        $query = $this->db->get();
+        $data = $query->result();
+        return $data;
+    }
+
     public function get_bids($id){
 
         $id = $this->uri->segment(3);

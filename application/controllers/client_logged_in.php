@@ -78,6 +78,7 @@ class client_Logged_in extends CI_Controller
         redirect('client_logged_in/my_Trips');
        // $this->load->view('Login/del_Trip');
     }
+    
     public function update_Data($trip_id)
     {
        $this->load->model('trip');
