@@ -44,7 +44,8 @@ class Home extends CI_Controller {
 		$this->load->view('company/add_vehicle');
 		$this->load->view('template/footer');
 	}
-	public function bachat(){
+	public function bachat($trip_id){
+		$this->session->set_userdata('trip_id',$trip_id);
 		$user['user_name'] = $this->session->userdata('user');                
 		$this->load->view('template/header_after_login',$user);
 		$this->load->model('company/company_model');

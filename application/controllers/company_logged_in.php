@@ -63,11 +63,29 @@ class Company_logged_in extends CI_Controller
         $this->load->view('company/place_bid_success');
     }
 
-    public function bids_on_trip()
+    public function my_Pending_Bids()
     {
+
+        $company['user_name'] = $this->session->userdata('user');
+        $this->load->model('company/company_model');
+        $pendind_bids['bids'] =$this->company_model->my_Pending_Bids();
+        $this->load->view('template/header_after_login',$company);
+       $this->load->view('company/my_Pending_Bids',$pendind_bids);
+        $this->load->view('template/footer');
         $id = $this->uri->segment(3);
         echo $id;
     }
+    public function my_Accepted_Bids()
+    {
+        $company['user_name'] = $this->session->userdata('user');
+        $this->load->model('company/company_model');
+        $accepted_bids['bids'] =$this->company_model->my_Accepted_Bids();
+
+        $this->load->view('template/header_after_login',$company);
+        $this->load->view('company/my_Accepted_Bids',$accepted_bids);
+        $this->load->view('template/footer');        
+    }
+
 
     public function success(){
         $this->load->view('template/header');
