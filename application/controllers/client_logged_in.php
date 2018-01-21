@@ -58,10 +58,22 @@ class client_Logged_in extends CI_Controller
     }
     public function bids_On_Trip($id)
     {
+        $user['user_name'] = $this->session->userdata('user');
         $this->load->model('trip');
         $bids['id'] = $this->trip->bids_On_Trip($id);
-       $this->load->view('template/header');
-       $this->load->view('client/bids_By_Rentals',$bids);
+        $this->load->view('template/header_after_login',$user);
+        $this->load->view('client/bids_By_Rentals',$bids);
+        $this->load->view('template/footer');
+
+    }
+
+    public function user_Accepted_Bid($id)
+    {
+        
+        $user['user_name'] = $this->session->userdata('user');
+        $this->load->view('template/header_after_login',$user);
+        echo $id;
+        $this->load->view('client/user_Accepted_Bid');
         $this->load->view('template/footer');
 
     }

@@ -51,6 +51,11 @@ class Trip extends CI_model
         $data  = $query->result();
         return $data;
     }
+
+    public function user_Accepted_Bid()
+    {
+
+    }
     public function edit_Trip($trip_id)
     {
         $this->db->where('id', $trip_id);

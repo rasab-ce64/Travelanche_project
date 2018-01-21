@@ -101,7 +101,7 @@
                 </div>
 
                 <div class="panel-footer">
-                    <button style="align-items: center; text-align: center"; title="submit" class="btn btn-sm">Accept Bid</button>
+                    <button style="align-items: center; text-align: center"; title="submit" class="btn btn-sm" onclick="window.location='<?php echo site_url("client_logged_in/user_Accepted_bid/$row->bid_id");?>'">Accept Bid</button>
                 </div>
             </div>
         </div>

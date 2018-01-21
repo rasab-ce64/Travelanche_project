@@ -53,27 +53,6 @@ class Forgot_pass extends CI_controller{
             }
         }
 
-         $this->load->model('company/company_model');
-         $phone = $this->input->post('phone');
-         $var = $this->company_model->check_phone($phone);
-         if($var==true)
-         {
-             $otp = rand(100000, 999999);
-             /* sending generated code to database */ 
-             $this->company_model->update_otp($phone,$otp);
-             $sms_content = "Your Password reset code for Travelanche is ".$otp;
-             echo $sms_content;
-             /* Encoding the text in url format */
-             $sms_text = urlencode($sms_content); 
-             //$api_url='https://bulksms.vsms.net/eapi/submission/send_sms/2/2.0?username='.SMSUSER.'&password='.PASSWORD.'&message='.$sms_text.'&msisdn='.$phone.''; 
-             //$response = file_get_contents($api_url); //Envoking the API url and getting the response
-             //echo $response;
-             //echo "Code has been sent to your phone! Please enter to proceed";
-             $this->load->view('template/header');
-             $this->load->view('code'); //view to enter code
-         }
-         else {
-            redirect('forgot_pass/forgot' , 'refresh');
         if($user==1)
         {
             $this->load->model('user_model');
@@ -106,7 +85,7 @@ class Forgot_pass extends CI_controller{
     }
 
 
-public function check_code(){
+    public function check_code(){
 
     $user = $this->session->userdata('client_or_company'); 
     if(isset($_POST['submit']))
