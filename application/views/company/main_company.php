@@ -65,8 +65,7 @@ $session_data = $this->session->userdata('logged_in');
         <a href="<?php echo site_url('Home/add_vehicle'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="share_a_ride">Add vehicle</a>
         <a href="<?php echo site_url('company_logged_in/companies'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="share_a_ride">Companies</a>
         <a href="<?php echo site_url('company_Logged_in/my_Trips'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="my_trips">Trips</a>
-        <a href="<?php echo site_url('company_Logged_in/my_Trips'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="my_trips">My Bids</a>
-        <a href="<?php echo site_url('#'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="my_trips">My accepted Bids</a>
+        <a href="<?php echo site_url('company_Logged_in/bid_options'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="my_trips">My Bids</a>
     </div>
 </div>
 </body>

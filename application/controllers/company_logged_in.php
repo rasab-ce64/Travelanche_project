@@ -16,7 +16,7 @@ class Company_logged_in extends CI_Controller
         $this->load->model('company/company_model');
         $get_dropdown['vehicle_name'] = $this->company_model->dropdown_vehicle();
         $get_dropdown['driver_name'] = $this->company_model->dropdown_driver();
-        $this->load->view('company/template/header');
+        $this->load->view('template/header');
         $this->load->view('company/bachat', $get_dropdown);
         //$this->load->view('lambSamb' , $get_dropdown);
     }
@@ -61,16 +61,22 @@ class Company_logged_in extends CI_Controller
         $this->company_model->bid_by_rental();
         $this->load->view('template/header');
         $this->load->view('company/place_bid_success');
+        $this->load->view('template/footer');
     }
+    public function bid_options(){
 
+        $this->load->view('template/header');
+        $this->load->view('company/bid_options');
+        $this->load->view('template/footer');
+    }
     public function my_Pending_Bids()
     {
 
         $company['user_name'] = $this->session->userdata('user');
         $this->load->model('company/company_model');
-        $pendind_bids['bids'] =$this->company_model->my_Pending_Bids();
+        $pending_bids['bids'] =$this->company_model->my_Pending_Bids();
         $this->load->view('template/header_after_login',$company);
-       $this->load->view('company/my_Pending_Bids',$pendind_bids);
+       $this->load->view('company/my_Pending_Bids',$pending_bids);
         $this->load->view('template/footer');
         $id = $this->uri->segment(3);
         echo $id;
