@@ -84,7 +84,10 @@ class Forgot_pass extends CI_controller{
         }
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ee32c08670b0244dabbcf4c06eb7f80c623526ed
     public function check_code(){
 
     $user = $this->session->userdata('client_or_company'); 
@@ -126,7 +129,7 @@ class Forgot_pass extends CI_controller{
                     redirect('forgot_pass/code', 'refresh');
                 }
             }
-      }
+        }
 
     }
 }
