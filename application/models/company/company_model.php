@@ -203,16 +203,15 @@ class Company_model extends CI_model
          $company_data = $this->session->userdata('logged_in');
          $company_phone = $company_data['phone'];
          echo $company_phone;     
-        $this->db->select('*');
-        $this->db->from('bids_by_rentals');
-        $this->db->join('trip', 'trip.id = bids_by_rentals.trip_id');
-        $this->db->where(array('bids_by_rentals.company_phone' => $company_phone) );
+         $this->db->select('*');
+         $this->db->from('bids_by_rentals');
+         $this->db->join('trip', 'trip.id = bids_by_rentals.trip_id');
+         $this->db->where(array('bids_by_rentals.company_phone' => $company_phone) );
         $this->db->where('trip.trip_status' , 'Bid Completed' );
         $query = $this->db->get();
         $data = $query->result();
         return $data;
     }
-
 
     public function get_bids($id){
 
