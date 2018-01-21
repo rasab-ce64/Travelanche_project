@@ -192,7 +192,7 @@ class Company_model extends CI_model
         $this->db->join('trip', 'trip.id = bids_by_rentals.trip_id');
         $this->db->where(array('bids_by_rentals.company_phone' => $company_phone) );
         $this->db->where('trip.trip_status' , 'Pending' );
- 
+         $this->db->order_by('bids_by_rentals.timestamp', 'DESC');
         $query = $this->db->get();
         $data = $query->result();
         return $data;
@@ -203,11 +203,20 @@ class Company_model extends CI_model
          $company_data = $this->session->userdata('logged_in');
          $company_phone = $company_data['phone'];
          echo $company_phone;     
+<<<<<<< HEAD
          $this->db->select('*');
          $this->db->from('bids_by_rentals');
          $this->db->join('trip', 'trip.id = bids_by_rentals.trip_id');
          $this->db->where(array('bids_by_rentals.company_phone' => $company_phone) );
+=======
+        $this->db->select('*');
+        $this->db->select('accepted_bids_clients.id AS bid_id');
+        $this->db->from('accepted_bids_clients');
+        $this->db->join('trip', 'trip.id = accepted_bids_clients.client_trip_id');
+        $this->db->where(array('accepted_bids_clients.company_phone' => $company_phone) );
+>>>>>>> 6e1fc12217d9d721c14dbc073286fff8d01b6e27
         $this->db->where('trip.trip_status' , 'Bid Completed' );
+        $this->db->order_by('accepted_bids_clients.timestamp', 'DESC');
         $query = $this->db->get();
         $data = $query->result();
         return $data;
