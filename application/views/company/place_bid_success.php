@@ -39,29 +39,41 @@
     .alert{
         background: #ffffff;
         color: #000000;
-        border: solid #ba0710 0.5px
-    ;
+        border: solid #ba0710 0.5px;
         padding: 12px;
         margin-top: 60px;
     }
     .btn{
-        width: 16%;
+        width: 18%;
+        height: 9%;
         background-color: #ba0710;
         color: #ffffff;
     }
     .btn:hover {
-        border: 1px solid #ba0710;
+        border: 0.5px solid #ba0710;
         background-color: #fff !important;
-        color: #ba0710;
+        color: #ba0710; !important;
+    }
+    .centered {
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        font-size: 3em;
+        color: white;
+        transform: translate(-50%, -50%);
+    }
+    #bid_more {
+        position: absolute;
+        top: 52%;
+        left: 14%;
+        font-size: 1.5em;
+        transform: translate(-50%, -50%);
     }
 </style>
 
-<body class="jumbotron">
-<div class="container">
-    <div class="alert alert-success">
-        Your Bid has successfully been placed.
-    </div>
-    <a type="submit" href="<?php echo site_url('company_logged_in/my_Trips'); ?>"  class="btn btn-lg" name="bid_now" >Place More Bids</a>
-</div>
+<body>
+<img class="img-responsive" style="width:100%; height:550px;" src="<?php echo base_url('assets/images/bid1.jpg'); ?>" > </img>
+<div class="centered"  style="">Your Bid has successfully been placed</div>
+    <a type="submit" id="bid_more" href="<?php echo site_url('company_logged_in/my_Trips'); ?>"  class="btn btn-lg" name="bid_now" >Place More Bids</a>
 </body>
 </html>

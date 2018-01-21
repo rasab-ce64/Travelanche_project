@@ -14,11 +14,8 @@ class Forgot_pass extends CI_controller{
     public function forgot(){
         $this->load->view('template/header');
         $this->load->view('forgot_pass');
-<<<<<<< HEAD
-=======
         $this->load->view('template/footer');
         
->>>>>>> b3611731b4ed26d218680edbe6b4bad0c36f31da
     }
     public function code(){
         $this->load->view('template/header');
@@ -56,7 +53,6 @@ class Forgot_pass extends CI_controller{
             }
         }
 
-<<<<<<< HEAD
          $this->load->model('company/company_model');
          $phone = $this->input->post('phone');
          $var = $this->company_model->check_phone($phone);
@@ -78,7 +74,6 @@ class Forgot_pass extends CI_controller{
          }
          else {
             redirect('forgot_pass/forgot' , 'refresh');
-=======
         if($user==1)
         {
             $this->load->model('user_model');
@@ -108,28 +103,11 @@ class Forgot_pass extends CI_controller{
                 redirect('forgot_pass/forgot' , 'refresh');
             }
         }
->>>>>>> b3611731b4ed26d218680edbe6b4bad0c36f31da
     }
+
 
 public function check_code(){
 
-<<<<<<< HEAD
-    if(isset($_POST['submit'])){
-        
-        $code = $_POST['code'];
-        $this->load->model('company/company_model');
-        $sms_code = $this ->company_model->check_otp($code);
-        var_dump($sms_code);
-         if($code == $sms_code[0]['otp']){
-             $data['phone']= $sms_code[0]['phone'];
-             $this->load->view('template/header');
-            $this->load->view('reset_pwd',$data);
-         }
-         else{
-            $sms_code = $this ->company_model->check_otp($code);
-         redirect('forgot_pass/code', 'refresh');
-         }
-=======
     $user = $this->session->userdata('client_or_company'); 
     if(isset($_POST['submit']))
     {
@@ -171,7 +149,6 @@ public function check_code(){
             }
       }
 
->>>>>>> b3611731b4ed26d218680edbe6b4bad0c36f31da
     }
 }
 public function reset(){

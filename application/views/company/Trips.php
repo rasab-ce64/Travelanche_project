@@ -37,7 +37,7 @@
             width: 50%;
             background-color: #ba0710;
         }
-        .item h4 {
+        .h4 {
             font-size: 19px;
             line-height: 1.375em;
             font-weight: 400;
@@ -45,7 +45,6 @@
             margin: 70px 0;
         }
         .panel {
-            /*border: 1px solid #f4511e;*/
             border-radius:0 !important;
             border: 1px solid #ba0710;
             transition: box-shadow 0.5s;
@@ -54,17 +53,14 @@
             box-shadow: 5px 0px 40px rgba(0,0,0, .2);
         }
         .panel-footer .btn:hover {
-            /*border: 1px solid #f4511e;*/
             border: 1px solid #ba0710;
             background-color: #fff !important;
-            /*color: #f4511e;*/
             color: #ba0710;
         }
         .panel-heading {
-            /*color: #fff !important;*/
             color: #ffffff;
             background-color: #ba0710 !important;
-            padding: 1px;
+            padding: 0.5px;
             border-bottom: 0px solid transparent;
             border-top-left-radius: 0px;
             border-top-right-radius: 0px;
@@ -87,12 +83,17 @@
         .panel-footer .btn {
             margin: 5px 0;
             background-color: #ba0710;
-            /*background-color: #f4511e;*/
             color: #fff;
         }
     </style>
 
 <body>
+<div>
+    <h2 style="text-align: center;">My Trips</h2>
+    <hr>
+</div>
+
+<div class="container fadeInUp">
     <div class="row">
         <a type="button" href="<?php echo site_url("company_logged_in/my_Pending_Bids"); ?>" class="btn btn-lg" name="bid_now" >Pending Bids/a>
         <a type="button" href="<?php echo site_url("company_logged_in/my_Accepted_Bids"); ?>" class="btn btn-lg" name="bid_now" >Accepted Bids/a>
@@ -121,14 +122,16 @@
                     <p><strong>Pickup Time: &nbsp; </strong> <?php echo $row->time_pickup; ?></p>
                     <p><strong>Drop Time: &nbsp; </strong> <?php echo $row->time_drop; ?> </p>
                     <p><strong>Vehicle: &nbsp; </strong> <?php echo $row->vehicle; ?> </p>
+
                     <label class="checkbox-inline">
                         <input type="checkbox" onclick="return false" value="checked" <?php if($row->diver==1) echo "checked" ; ?> >Driver
                     </label>
+
                     <label class="checkbox-inline">
                         <input type="checkbox" onclick="return false" value="checked" <?php if($row->ac==1) echo "checked" ; ?>>AC
                     </label>
                 </div>
-                <input type="hidden" name="trip_id" value="<?php echo $row->id; ?>">
+
                 <!--panel footer-->
                 <div class="panel-footer">
                     <h3>Total Bids: <?php  echo $row->bids_on_trip; ?> </h3>
@@ -137,36 +140,10 @@
                     <a type="button" class="btn btn-lg" name="bid_now" data-toggle="modal" data-target="#modal">Bids on Trip</a>
                     <input type="hidden" name="t_id" value="<?php echo $row->id; ?>"/>
                 </div>
-                </div>
             </div>
         </div>
-    <?php } ?>
+        <?php } ?>
     </div>
+</div>
 </body>
-
-<!--<div class="modal fade" id="modal" aria-hidden="true" role="dialog" tabindex="-1">-->
-<!--    <div class="modal-dialog">-->
-<!--        <div class="modal-content">-->
-<!--            <div class="modal-header">-->
-<!--                <button type="button" aria-hidden="true" class="close" data-dismiss="modal">&times;</button>-->
-<!--                <h4 class="modal-title">Choose Bidding Type</h4>-->
-<!--            </div>-->
-<!---->
-<!--            <div class="modal-body">-->
-<!--                <form action="--><?php //echo site_url("Home/bachat/$row->id") ?><!--" >-->
-<!--                    <input type="submit" value="--><?php //echo $row->id; ?><!--Bachat" name="bid"  id="bachat" class="btn btn--border btn--primary" >-->
-<!--                </form>-->
-<!--                <br>-->
-<!--                <form action="--><?php //echo site_url("Home/lambSamb/$row->id")?><!--" >-->
-<!--                    <input type="submit" name="bid" value="LambSamb"   id="lambsamb" class="btn btn--border btn--primary">-->
-<!--                </form>-->
-<!--            </div>-->
-<!---->
-<!--            <div class="modal-footer">-->
-<!--                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
 </html>
