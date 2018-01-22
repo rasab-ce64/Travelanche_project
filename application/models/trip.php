@@ -52,9 +52,27 @@ class Trip extends CI_model
         return $data;
     }
 
-    public function user_Accepted_Bid()
+    public function user_Accepted_Bid($id)
     {
+        // echo $id['trip_id'];
+        // echo $id['bid_id'];
+        $this->db->where('bid_id', $id['bid_id']);
+        $query = $this->db->get('bids_by_rentals');
 
+        foreach($query->result() as $row)
+        {
+            $data = array(
+            'company_name' => $row->company_name,
+            'company_phone' => $row->company_phone,
+            'vehicle' => $row->vehicle,
+            'rate_per_day' => $row->rate_per_day,
+            'total_fare' => $row->total_fare,
+            'client_phone' => $row->client_phone,
+            'client_trip_id' => $row->trip_id,
+            'timestamp' => $row->timestamp
+            );
+        }
+        $this->db->insert('accepted_bids_clients', $data);
     }
     public function edit_Trip($trip_id)
     {

@@ -189,6 +189,9 @@
                         <?php echo "<br>"; ?>
                         <strong>Contact no: &nbsp;</strong> <?php echo "+". $row->company_phone;?>
                         <?php echo "<br>"; ?>
+                        <strong>Client Contact no: &nbsp;</strong> <?php echo "+". $row->user_phone;?>
+                        <?php echo "<br>"; ?>
+
                         <strong>Rate/Day: &nbsp;</strong> <?php if($row->rate_per_day == 0) { echo "N/A"; } else { echo $row->rate_per_day ." Rs.";} ?>
                         <?php echo "<br>"; ?>
                         <strong>Total Fare: &nbsp;</strong><?php if($row->total_fare == 0) { echo "N/A"; } else { echo $row->total_fare ." Rs.";} ?>

@@ -68,14 +68,18 @@ class client_Logged_in extends CI_Controller
 
     }
 
-    public function user_Accepted_Bid($id)
+    public function user_Accepted_Bid($bid_id)
     {
         $trip_id = $this->session->userdata('trip_id');
-        echo $trip_id;
+        $this->load->model('trip');
+        $id = array(
+              'trip_id'=> $trip_id,
+              'bid_id' => $bid_id );               
+        $this->trip->user_Accepted_Bid($id);
+        //echo $trip_id;
         $user['user_name'] = $this->session->userdata('user');
         $this->load->view('template/header_after_login',$user);
-        echo $id;
-        $this->load->view('client/user_Accepted_Bid');
+        $this->load->view('client/user_Accepted_Bids');
         $this->load->view('template/footer');
 
     }

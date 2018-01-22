@@ -195,34 +195,40 @@ class Company_model extends CI_model
 
     public function my_Accepted_Bids()
     {
-<<<<<<< HEAD
-         $company_data = $this->session->userdata('logged_in');
-         $company_phone = $company_data['phone'];
-         echo $company_phone;     
 
-         $this->db->select('*');
-         $this->db->from('bids_by_rentals');
-         $this->db->join('trip', 'trip.id = bids_by_rentals.trip_id');
-         $this->db->where(array('bids_by_rentals.company_phone' => $company_phone) );
-=======
+        //  $company_data = $this->session->userdata('logged_in');
+        //  $company_phone = $company_data['phone'];
+        //  echo $company_phone;     
+
+        //  $this->db->select('*');
+        //  $this->db->from('bids_by_rentals');
+        //  $this->db->join('trip', 'trip.id = bids_by_rentals.trip_id');
+       //  $this->db->where(array('bids_by_rentals.company_phone' => $company_phone) );
+
         $company_data = $this->session->userdata('logged_in');
         $company_phone = $company_data['phone'];
-//        echo $company_phone;
->>>>>>> 7cabd362b70cd7e40256293a9837982f47f1d013
         $this->db->select('*');
         $this->db->select('accepted_bids_clients.id AS bid_id');
         $this->db->from('accepted_bids_clients');
         $this->db->join('trip', 'trip.id = accepted_bids_clients.client_trip_id');
         $this->db->where(array('accepted_bids_clients.company_phone' => $company_phone) );
-<<<<<<< HEAD
-
-=======
->>>>>>> 7cabd362b70cd7e40256293a9837982f47f1d013
         $this->db->where('trip.trip_status' , 'Bid Completed' );
         $this->db->order_by('accepted_bids_clients.timestamp', 'DESC');
         $query = $this->db->get();
         $data = $query->result();
         return $data;
+    }
+    public function bids_By_Other_Companies($trip_id)
+    {
+        $comp_data = $this->session->userdata('logged_in');
+        $Comp_phone = $comp_data['phone'];
+        $this->db->where('trip_id' ,$trip_id);
+        $this->db->where('company_phone !=' ,$Comp_phone);
+        $query = $this->db->get('bids_by_rentals');
+        $data  = $query->result();
+        return $data;
+        
+
     }
 
     public function get_bids($id){

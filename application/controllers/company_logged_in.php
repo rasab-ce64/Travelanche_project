@@ -30,6 +30,16 @@ class Company_logged_in extends CI_Controller
         $this->load->view('template/header_after_login',$user);
         $this->load->view('company/Trips',$comp_trips);
     }
+    public function bids_By_Other_Companies($trip_id)
+    {
+        echo $trip_id;
+        $user['user_name'] = $this->session->userdata('user');                
+        $this->load->model('company/company_model');
+        $comp_bids['result'] = $this->company_model->bids_By_Other_Companies($trip_id); //function call from model
+        $this->load->view('template/header_after_login',$user);
+        $this->load->view('company/bids_By_Other_Companies',$comp_bids);
+        $this->load->view('template/footer');
+    }
 
     public function add_driver(){
         $this->load->model('company/company_model');
