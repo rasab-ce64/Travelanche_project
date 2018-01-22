@@ -58,6 +58,7 @@ class client_Logged_in extends CI_Controller
     }
     public function bids_On_Trip($id)
     {
+        $this->session->set_userdata('trip_id',$id);
         $user['user_name'] = $this->session->userdata('user');
         $this->load->model('trip');
         $bids['id'] = $this->trip->bids_On_Trip($id);
@@ -69,7 +70,8 @@ class client_Logged_in extends CI_Controller
 
     public function user_Accepted_Bid($id)
     {
-        
+        $trip_id = $this->session->userdata('trip_id');
+        echo $trip_id;
         $user['user_name'] = $this->session->userdata('user');
         $this->load->view('template/header_after_login',$user);
         echo $id;
