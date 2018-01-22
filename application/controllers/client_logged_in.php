@@ -87,7 +87,9 @@ class client_Logged_in extends CI_Controller
     {
         $this->load->model('trip');
         $trip_data['trips'] = $this->trip->edit_Trip($trip_id);
+        $this->load->view('template/header');
         $this->load->view('client/edit_Trip',$trip_data);
+        $this->load->view('template/footer');
     }
     public function del_Trip($trip_id)
     {
