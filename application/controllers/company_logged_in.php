@@ -75,7 +75,8 @@ class Company_logged_in extends CI_Controller
     }
     public function bid_options(){
 
-        $this->load->view('template/header');
+        $company['user_name'] = $this->session->userdata('user');
+        $this->load->view('template/header_after_login',$company);
         $this->load->view('company/bid_options');
         $this->load->view('template/footer');
     }
@@ -90,6 +91,38 @@ class Company_logged_in extends CI_Controller
         $this->load->view('template/footer');
         $id = $this->uri->segment(3);
         echo $id;
+    }
+    public function edit_Bid($bid_id)
+    {
+        $company['user_name'] = $this->session->userdata('user');
+        $this->load->model('company/company_model');
+        $edit_bid['bid'] =$this->company_model->edit_Bid($bid_id);
+        $this->load->view('template/header_after_login',$company);
+        $this->load->view('company/edit_Bid',$edit_bid);
+        $this->load->view('template/footer');
+
+    }
+    public function update_Data($bid_id)
+    {
+       $this->load->model('company/company_model');
+        $data = array(
+            'vehicle' => $this->input->post('vehicle'),
+            'driver' => $this->input->post('driver'),
+            'rate_per_day' => $this->input->post('rate_per_day'),
+            'total_fare' => $this->input->post('total_fare'),
+        );
+        $this->company_model->update_Data($bid_id,$data);
+        redirect('company_logged_in/my_Pending_Bids');
+
+    }
+
+
+    public function delete_Bid($bid_id)
+    {
+        $this->load->model('company/company_model');        
+        $this->company_model->delete_Bid($bid_id);
+        redirect('company_logged_in/my_Pending_Bids');
+
     }
     public function my_Accepted_Bids()
     {
