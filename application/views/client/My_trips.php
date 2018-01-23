@@ -37,7 +37,7 @@
             return false;
         }
     }
-    /* delete notification function */
+    /* edit notification function */
     function Edit(bol)
     {
         var user_id = bol;

@@ -33,6 +33,39 @@
     color: #ffffff;
 }
 </style>
+<script type="text/javascript">
+    /* delete notification function */
+    function Delete(id)
+    {
+        var bid_id = id;
+        var con = confirm("Are you sure ,you want to delete bid");
+        if(con == true)
+        {
+            window.location.href="<?php echo site_url('company_logged_in/delete_Bid/'); ?>"+bid_id;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    /* edit notification function */
+    function Edit(id)
+    {
+        var bid_id = id;
+        var con = confirm("Are you sure ,you want to edit bid ?");
+        if(con == true)
+        {
+            window.location.href="<?php echo site_url('company_logged_in/edit_Bid/');?>"+bid_id;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+</script>
 
 <body>
 <section>
@@ -52,6 +85,7 @@
                             <p><strong>End Date: &nbsp; </strong> <?php echo $row->end_date; ?> </p>
                             <p><strong>Pickup Time: &nbsp; </strong> <?php echo $row->time_pickup; ?></p>
                             <p><strong>Drop Time: &nbsp; </strong> <?php echo $row->time_drop; ?> </p>
+                            <p><strong>Trip Id: &nbsp; </strong> <?php echo $row->trip_id; ?> </p>
 
                             <label class="checkbox-inline">
                                 <input type="checkbox" onclick="return false" value="checked" <?php if($row->diver==1) echo "checked" ; ?> >Driver
@@ -63,9 +97,11 @@
 
                         <div class="col-lg-6">
                             <h1 style="color: #000000">Bid details</h1>
-                            <p><strong>Vehicle &nbsp; </strong><?php echo $row->vehicle; ?> </p>
+                            <p><strong>Vehicle &nbsp; </strong><?php echo $row->rental_vehicle; ?> </p>
                             <p><strong>Rate/day &nbsp; </strong><?php if($row->rate_per_day ==0) {echo "N/A"; } else{echo $row->rate_per_day; } ?> </p>
                             <p><strong>Total Fare &nbsp; </strong> <?php if($row->total_fare ==0) {echo "N/A"; } else{echo $row->total_fare; } ?> </p>
+                            <p><strong>Bid Id &nbsp; </strong><?php echo $row->bid_id; ?> </p>
+
                             <label class="checkbox-inline">
                                 <input type="checkbox" onclick="return false" value="checked" <?php if($row->diver==1) echo "checked" ; ?> >Driver
                             </label>
@@ -74,8 +110,11 @@
                             </label>
                             <br>
                             <br>
-                            <a type="submit" href="<?php echo site_url(""); ?>"  class="btn btn-sm" name="bid_now" >Edit Bid</a>
-                            <a type="submit" href="<?php echo site_url(""); ?>" class="btn btn-sm" name="bid_now" >Delete Bid</a>
+<!--                             <a type="submit" href="<?php echo site_url(""); ?>"  class="btn btn-sm" name="bid_now" >Edit Bid</a>
+                             <a type="submit" href="<?php echo site_url(""); ?>" class="btn btn-sm" name="bid_now" >Delete Bid</a>
+-->                         <input type="button" class="btn btn-sm"  name="button" value=" EDIT TRIP"   onclick="Edit( <?php echo $row->bid_id;?>)"/>
+                            <input type="button" class="btn btn-sm"  name="button" value="DELETE TRIP"   onclick="Delete( <?php echo $row->bid_id;?>)"/>
+            
                         </div>
                     </div>
                 </div>

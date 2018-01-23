@@ -134,7 +134,7 @@
                     <h3>Total Bids: <?php  echo $row->bids_on_trip; ?> </h3>
                     <a type="submit" href="<?php echo site_url("Home/bachat/$row->id"); ?>"  class="btn btn-lg" name="bid_now" >Bid by Bachat</a>
                     <a type="submit" href="<?php echo site_url("Home/lambSamb/$row->id"); ?>" class="btn btn-lg" name="bid_now" >Bid by LambSamb</a>
-                    <a type="button" class="btn btn-lg" name="bid_now" data-toggle="modal" data-target="#modal" onclick="window.location='<?php echo site_url("company_logged_in/bids_By_Other_Companies/$row->id");?>'">Bids on Trip</a>
+                    <input type="button" class="btn btn-lg" name="bid_now" value="Bids on Trip <?php echo $row->bids_on_trip ?> " data-toggle="modal" data-target="#modal" onclick="window.location='<?php echo site_url("company_logged_in/bids_By_Other_Companies/$row->id");?>'">
                     <input type="hidden" name="t_id" value="<?php echo $row->id; ?>"/>
                 </div>
             </div>

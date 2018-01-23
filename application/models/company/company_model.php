@@ -158,7 +158,15 @@ class Company_model extends CI_model
         foreach($data as $row)
         {
             $client_phone =$row->user_phone;
+            $bids_on_trip=$row->bids_on_trip;
         }
+        $data = array(
+            'bids_on_trip' =>$bids_on_trip+1
+        );
+        $this->db->where('id', $trip_id);
+        $this->db->update('trip', $data);
+        
+
         if (isset($_POST['bid_by_bachat'])) {
 
             $vehicle = $this->input->post('vehicle');
@@ -182,6 +190,7 @@ class Company_model extends CI_model
         $company_phone = $company_data['phone'];
 //        echo $company_phone;
         $this->db->select('*');
+        $this->db->select('bids_by_rentals.vehicle AS rental_vehicle');
         $this->db->from('bids_by_rentals');
 //        $this->db->from('trip');
         $this->db->join('trip', 'trip.id = bids_by_rentals.trip_id');
@@ -191,6 +200,29 @@ class Company_model extends CI_model
         $query = $this->db->get();
         $data = $query->result();
         return $data;
+    }
+         
+    public function edit_Bid($bid_id)
+    {
+        $this->db->where('bid_id', $bid_id);
+        $query = $this->db->get('bids_by_rentals');
+        $data = $query->result();
+        return $data;
+
+    }
+    public function update_Data($bid_id,$data)
+    {
+        $this->db->where('bid_id', $bid_id);
+        $this->db->update('bids_by_rentals', $data);
+
+    }
+
+    public function delete_Bid($bid_id)
+    {
+        $this -> db -> where('bid_id', $bid_id);
+        $this -> db -> delete('bids_by_rentals');
+
+        
     }
 
     public function my_Accepted_Bids()
