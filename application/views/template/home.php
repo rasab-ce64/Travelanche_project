@@ -85,7 +85,7 @@
                             <img class="img-responsive" src="assets/images/services/services1.png">
                         </div>
                         <div class="media-body">
-                            <h3 class="media-heading">SEO Marketing</h3>
+                            <h3 class="media-heading">Your safety first</h3>
                             <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
                         </div>
                     </div>
@@ -97,7 +97,7 @@
                             <img class="img-responsive" src="assets/images/services/services2.png">
                         </div>
                         <div class="media-body">
-                            <h3 class="media-heading">SEO Marketing</h3>
+                            <h3 class="media-heading">Rentals marketing</h3>
                             <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                             <img class="img-responsive" src="assets/images/services/services3.png">
                         </div>
                         <div class="media-body">
-                            <h3 class="media-heading">SEO Marketing</h3>
+                            <h3 class="media-heading">Sharing a Trip</h3>
                             <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
                         </div>
                     </div>
@@ -121,7 +121,7 @@
                             <img class="img-responsive" src="assets/images/services/services4.png">
                         </div>
                         <div class="media-body">
-                            <h3 class="media-heading">SEO Marketing</h3>
+                            <h3 class="media-heading">Top Rated Rentals</h3>
                             <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
                         </div>
                     </div>
@@ -133,7 +133,7 @@
                             <img class="img-responsive" src="assets/images/services/services5.png">
                         </div>
                         <div class="media-body">
-                            <h3 class="media-heading">SEO Marketing</h3>
+                            <h3 class="media-heading">Share your Fare</h3>
                             <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
                         </div>
                     </div>
@@ -145,7 +145,7 @@
                             <img class="img-responsive" src="assets/images/services/services6.png">
                         </div>
                         <div class="media-body">
-                            <h3 class="media-heading">SEO Marketing</h3>
+                            <h3 class="media-heading">Customer Support</h3>
                             <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
                         </div>
                     </div>
@@ -255,3 +255,4 @@
             </div>
         </div><!--/.container-->    
     </section><!--/#conatcat-info-->
+</html>

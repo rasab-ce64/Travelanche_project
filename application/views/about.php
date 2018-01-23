@@ -31,7 +31,8 @@
         <div class="container">
 			<div class="center wow fadeInDown">
 				<h2>About Travelanche</h2>
-				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+				<p class="lead">Travelanche is such a platform that forms a duo of renting cars and car pooling and <br> integrates the two which not only brings with itself the trust <br> but also the reliability in your travel. Hence, simply: </p>
+				<h2><b>Travelanche = Rentals + carpooling</b></h2>
 			</div>
 			
 			<!-- about us slider -->
@@ -65,64 +66,14 @@
 					</a>
 				</div> <!--/#carousel-slider-->
 			</div><!--/#about-slider-->
-			
-			
-			<!-- Our Skill -->
-			<div class="skill-wrap clearfix">
-			
-				<div class="center wow fadeInDown">
-					<h2>Our Skill</h2>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-				</div>
-				
-				<div class="row">
-		
-					<div class="col-sm-3">
-						<div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-							<div class="joomla-skill">                                   
-								<p><em>85%</em></p>
-								<p>Joomla</p>
-							</div>
-						</div>
-					</div>
-					
-					 <div class="col-sm-3">
-						<div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-							<div class="html-skill">                                  
-								<p><em>95%</em></p>
-								<p>HTML</p>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-sm-3">
-						<div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">
-							<div class="css-skill">                                    
-								<p><em>80%</em></p>
-								<p>CSS</p>
-							</div>
-						</div>
-					</div>
-					
-					 <div class="col-sm-3">
-						<div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms">
-							<div class="wp-skill">
-								<p><em>90%</em></p>
-								<p>Wordpress</p>                                     
-							</div>
-						</div>
-					</div>
-					
-				</div>
-	
-            </div><!--/.our-skill-->
-			
+
+			<br><br>
 
 			<!-- our-team -->
 			<div class="team">
 				<div class="center wow fadeInDown">
-					<h2>Team of Corlate</h2>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+					<h2>Team of Travelanche</h2>
+					<p class="lead">We as a team are trying hard to provide you an easy platform where you can easily arrange your trips and <br> make choice of vehicles, partners and budget as well on your own </p>
 				</div>
 
 				<div class="row clearfix">
@@ -130,14 +81,14 @@
 						<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
 							<div class="media">
 								<div class="pull-left">
-									<a href="#"><img class="media-object" src="<?php echo base_url('assets/images/man1.jpg'); ?>" > alt="" </a>
+									<a href="#"><img class="media-object" src="<?php echo base_url('assets/images/man1.jpg'); ?>" ></a>
 								</div>
 								<div class="media-body">
-									<h4>Jhon Doe</h4>
+									<h4>Salman Ilyas</h4>
 									<h5>Founder and CEO</h5>
 									<ul class="tag clearfix">
 										<li class="btn"><a href="#">Web</a></li>
-										<li class="btn"><a href="#">Ui</a></li>
+										<li class="btn"><a href="#">UI</a></li>
 										<li class="btn"><a href="#">Ux</a></li>
 										<li class="btn"><a href="#">Photoshop</a></li>
 									</ul>
@@ -149,7 +100,7 @@
 									</ul>
 								</div>
 							</div><!--/.media -->
-							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+<!--							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>-->
 						</div>
 					</div><!--/.col-lg-4 -->
 					
@@ -161,13 +112,13 @@
 									<a href="#"><img class="media-object" src="images/man2.jpg" alt=""></a>
 								</div>
 								<div class="media-body">
-									<h4>Jhon Doe</h4>
-									<h5>Founder and CEO</h5>
+									<h4>Muhammad Zubair</h4>
+									<h5>Web Developer</h5>
 									<ul class="tag clearfix">
 										<li class="btn"><a href="#">Web</a></li>
-										<li class="btn"><a href="#">Ui</a></li>
-										<li class="btn"><a href="#">Ux</a></li>
-										<li class="btn"><a href="#">Photoshop</a></li>
+										<li class="btn"><a href="#">iOS</a></li>
+										<li class="btn"><a href="#">ASP.net</a></li> <br>
+										<li class="btn"><a href="#">Codeignitor</a></li>
 									</ul>
 									<ul class="social_icons">
 										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -176,10 +127,11 @@
 									</ul>
 								</div>
 							</div><!--/.media -->
-							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+<!--							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>-->
 						</div>
 					</div><!--/.col-lg-4 -->					
 				</div> <!--/.row -->
+
 				<div class="row team-bar">
 					<div class="first-one-arrow hidden-xs">
 						<hr>
@@ -196,7 +148,7 @@
 					<div class="fourth-arrow hidden-xs">
 						<hr> <i class="fa fa-angle-down"></i>
 					</div>
-				</div> <!--skill_border-->       
+				</div> <!--skill_border-->
 
 				<div class="row clearfix">   
 					<div class="col-md-4 col-sm-6 col-md-offset-2">	
@@ -207,13 +159,13 @@
 								</div>
 
 								<div class="media-body">
-									<h4>Jhon Doe</h4>
-									<h5>Founder and CEO</h5>
+									<h4>Rizwan Sharif</h4>
+									<h5>Co-founder</h5>
 									<ul class="tag clearfix">
-										<li class="btn"><a href="#">Web</a></li>
-										<li class="btn"><a href="#">Ui</a></li>
-										<li class="btn"><a href="#">Ux</a></li>
-										<li class="btn"><a href="#">Photoshop</a></li>
+										<li class="btn"><a href="#">Android</a></li>
+										<li class="btn"><a href="#">UI</a></li>
+										<li class="btn"><a href="#">UX</a></li> <br>
+										<li class="btn"><a href="#">ASP.net</a></li>
 									</ul>
 									<ul class="social_icons">
 										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -222,23 +174,23 @@
 									</ul>
 								</div>
 							</div><!--/.media -->
-							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+<!--							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>-->
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6 col-md-offset-2">
 						<div class="single-profile-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
 							<div class="media">
 								<div class="pull-left">
-									<a href="#"><img class="media-object" src="<?php echo base_url('assets/images/man4.jpg'); ?>" > alt=""></a>
+									<a href="#"><img class="media-object" src="<?php echo base_url('assets/images/man4.jpg'); ?>" > </a>
 								</div>
 								<div class="media-body">
-									<h4>Jhon Doe</h4>
-									<h5>Founder and CEO</h5>
+									<h4>Fahad Qadeer</h4>
+									<h5>Marketing Head</h5>
 									<ul class="tag clearfix">
-										<li class="btn"><a href="#">Web</a></li>
-										<li class="btn"><a href="#">Ui</a></li>
-										<li class="btn"><a href="#">Ux</a></li>
-										<li class="btn"><a href="#">Photoshop</a></li>
+										<li class="btn"><a href="#">Android</a></li>
+										<li class="btn"><a href="#">UI</a></li>
+										<li class="btn"><a href="#">UX</a></li> <br>
+										<li class="btn"><a href="#">SEO</a></li>
 									</ul>
 									<ul class="social_icons">
 										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -247,7 +199,7 @@
 									</ul>
 								</div>
 							</div><!--/.media -->
-							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+<!--							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>-->
 						</div>
 					</div>
 				</div>	<!--/.row-->
