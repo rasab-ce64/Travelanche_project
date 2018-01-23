@@ -1,57 +1,68 @@
-    <section id="feature" >
+<html>
+<head>
+    <meta charset="UTF-8">
+<head>
+    <title>Font Awesome Icons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<section id="feature" >
         <div class="container">
            <div class="center wow fadeInDown">
                 <h2>Features</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <p class="lead">Travelanche is a combination of bidding system and car polling. Our platform provide our users
+                 an easy way of travelling according to their choice and lifestyle. Post a trip, receive bids from other clients and rentals, Choose your vehicle, manage your budget and enjoy your ride</p>
             </div>
 
             <div class="row">
                 <div class="features">
                     <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="feature-wrap">
-                            <i class="fa fa-bullhorn"></i>
-                            <h2>Fresh and Clean</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                            <i class="fa fa-motorcycle"></i>
+                            <h2>Post a trip</h2>
+                            <h3>Post you trip on Travelanche where you want to go</h3>
+                            <h3></h3>
                         </div>
                     </div><!--/.col-md-4-->
                     
                     <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="feature-wrap">
-                            <i class="fa fa-comments"></i>
-                            <h2>Retina ready</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                            <i class="fa fa-car"></i>
+                            <h2>CarPooling</h2>
+                            <h3>Share your journey with more than one persons</h3>
                         </div>
                     </div><!--/.col-md-4-->
 
                     <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="feature-wrap">
-                            <i class="fa fa-cloud-download"></i>
-                            <h2>Easy to customize</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                            <i class="fa fa-home"></i>
+                            <h2>Bids from Rentals</h2>
+                            <h3>Receive bids from Rentals and make choice on your own</h3>
                         </div>
                     </div><!--/.col-md-4-->
                 
                     <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="feature-wrap">
-                            <i class="fa fa-leaf"></i>
-                            <h2>Adipisicing elit</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                            <i class="fa fa-money"></i>
+                            <h2>Budget Comparison</h2>
+                            <h3>Compare your budget and accept bids accordingly</h3>
                         </div>
                     </div><!--/.col-md-4-->
 
                     <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="feature-wrap">
-                            <i class="fa fa-cogs"></i>
-                            <h2>Sed do eiusmod</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                            <i class="fa fa-group"></i>
+                            <h2>Share a Ride</h2>
+                            <h3>Share your ride with others and build trust</h3>
                         </div>
                     </div><!--/.col-md-4-->
 
                     <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="feature-wrap">
-                            <i class="fa fa-heart"></i>
-                            <h2>Labore et dolore</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                            <i class="fa fa-money"></i>
+                            <h2>Share you Fare</h2>
+                            <h3>Share your Fare lets you ride as flat as possible</h3>
                         </div>
                     </div><!--/.col-md-4-->
                 </div><!--/.services-->
@@ -59,126 +70,11 @@
         </div><!--/.container-->
     </section><!--/#feature-->
 
-    <section id="recent-works">
-        <div class="container">
-            <div class="center wow fadeInDown">
-                <h2>Recent Works</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-            </div>
-
-            <div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="<?php echo base_url('assets/images/portfolio/recent/item1.png'); ?>" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme</a> </h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="<?php echo base_url('assets/images/portfolio/full/item1.png'); ?>" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>   
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="<?php echo base_url('assets/images/portfolio/recent/item2.png'); ?>" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme</a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="<?php echo base_url('assets/images/portfolio/full/item2.png'); ?>" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div> 
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="<?php echo base_url('assets/images/portfolio/recent/item3.png'); ?>" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="<?php echo base_url('assets/images/portfolio/full/item3.png'); ?>" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>   
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="<?php echo base_url('assets/images/portfolio/recent/item4.png'); ?>" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="<?php echo base_url('assets/images/portfolio/full/item4.png'); ?>" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>   
-                
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="<?php echo base_url('assets/images/portfolio/recent/item5.png'); ?>" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme</a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="<?php echo base_url('assets/images/portfolio/full/item5.png'); ?>" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>   
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="<?php echo base_url('assets/images/portfolio/recent/item6.png'); ?>" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="<?php echo base_url('assets/images/portfolio/full/item6.png'); ?>" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div> 
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="<?php echo base_url('assets/images/portfolio/recent/item7.png'); ?>" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="<?php echo base_url('assets/images/portfolio/full/item7.png'); ?>" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>   
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="<?php echo base_url('assets/images/portfolio/recent/item8.png'); ?>" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="<?php echo base_url('assets/images/portfolio/full/item8.png'); ?>" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>   
-            </div><!--/.row-->
-        </div><!--/.container-->
-    </section><!--/#recent-works-->
-
     <section id="services" class="service-item">
 	   <div class="container">
             <div class="center wow fadeInDown">
                 <h2>Our Service</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <p class="lead">Our platform provide  <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
             </div>
 
             <div class="row">
@@ -258,142 +154,10 @@
         </div><!--/.container-->
     </section><!--/#services-->
 
-    <section id="middle">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 wow fadeInDown">
-                    <div class="skill">
-                        <h2>Our Skills</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                        <div class="progress-wrap">
-                            <h3>Graphic Design</h3>
-                            <div class="progress">
-                              <div class="progress-bar  color1" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
-                                <span class="bar-width">85%</span>
-                              </div>
-
-                            </div>
-                        </div>
-
-                        <div class="progress-wrap">
-                            <h3>HTML</h3>
-                            <div class="progress">
-                              <div class="progress-bar color2" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
-                               <span class="bar-width">95%</span>
-                              </div>
-                            </div>
-                        </div>
-
-                        <div class="progress-wrap">
-                            <h3>CSS</h3>
-                            <div class="progress">
-                              <div class="progress-bar color3" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                <span class="bar-width">80%</span>
-                              </div>
-                            </div>
-                        </div>
-
-                        <div class="progress-wrap">
-                            <h3>Wordpress</h3>
-                            <div class="progress">
-                              <div class="progress-bar color4" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-                                <span class="bar-width">90%</span>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div><!--/.col-sm-6-->
-
-                <div class="col-sm-6 wow fadeInDown">
-                    <div class="accordion">
-                        <h2>Why People like us?</h2>
-                        <div class="panel-group" id="accordion1">
-                          <div class="panel panel-default">
-                            <div class="panel-heading active">
-                              <h3 class="panel-title">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
-                                  Lorem ipsum dolor sit amet
-                                  <i class="fa fa-angle-right pull-right"></i>
-                                </a>
-                              </h3>
-                            </div>
-
-                            <div id="collapseOne1" class="panel-collapse collapse in">
-                              <div class="panel-body">
-                                  <div class="media accordion-inner">
-                                        <div class="pull-left">
-                                            <img class="img-responsive" src="assets/images/accordion1.png">
-                                        </div>
-                                        <div class="media-body">
-                                             <h4>Adipisicing elit</h4>
-                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                                        </div>
-                                  </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h3 class="panel-title">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1">
-                                  Lorem ipsum dolor sit amet
-                                  <i class="fa fa-angle-right pull-right"></i>
-                                </a>
-                              </h3>
-                            </div>
-                            <div id="collapseTwo1" class="panel-collapse collapse">
-                              <div class="panel-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h3 class="panel-title">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1">
-                                  Lorem ipsum dolor sit amet
-                                  <i class="fa fa-angle-right pull-right"></i>
-                                </a>
-                              </h3>
-                            </div>
-                            <div id="collapseThree1" class="panel-collapse collapse">
-                              <div class="panel-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h3 class="panel-title">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour1">
-                                  Lorem ipsum dolor sit amet
-                                  <i class="fa fa-angle-right pull-right"></i>
-                                </a>
-                              </h3>
-                            </div>
-                            <div id="collapseFour1" class="panel-collapse collapse">
-                              <div class="panel-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
-                              </div>
-                            </div>
-                          </div>
-                        </div><!--/#accordion1-->
-                    </div>
-                </div>
-
-            </div><!--/.row-->
-        </div><!--/.container-->
-    </section><!--/#middle-->
-
     <section id="content">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-8 wow fadeInDown">
+                <div class="col-xs-12 col-sm-12 wow fadeInDown">
                    <div class="tab-wrap"> 
                         <div class="media">
                             <div class="parrent pull-left">
@@ -450,31 +214,6 @@
                     </div><!--/.tab-wrap-->               
                 </div><!--/.col-sm-6-->
 
-                <div class="col-xs-12 col-sm-4 wow fadeInDown">
-                    <div class="testimonial">
-                        <h2>Testimonials</h2>
-                         <div class="media testimonial-inner">
-                            <div class="pull-left">
-                                <img class="img-responsive img-circle" src="assets/images/testimonials1.png">
-                            </div>
-                            <div class="media-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-                                <span><strong>-John Doe/</strong> Director of corlate.com</span>
-                            </div>
-                         </div>
-
-                         <div class="media testimonial-inner">
-                            <div class="pull-left">
-                                <img class="img-responsive img-circle" src="assets/images/testimonials1.png">
-                            </div>
-                            <div class="media-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-                                <span><strong>-John Doe/</strong> Director of corlate.com</span>
-                            </div>
-                         </div>
-
-                    </div>
-                </div>
 
             </div><!--/.row-->
         </div><!--/.container-->

@@ -126,9 +126,6 @@
                     </div>
                 </div>
                 <div class="inputContainer">
-<!--                    <a href="--><?php ////echo base_url('logged_in/bids_On_Trip'); ?><!--<!--" data-toggle="modal"  data-target="#myModal1" class="buy btn-wayra">&nbsp;Bid Now</a>
-<!--                    <a href="#" data-toggle="modal"  data-target="#myModal1" class="buy btn-wayra">&nbsp;Status</a>-->
-<!--                    <a href="#" data-toggle="modal"  data-target="#myModal1" class="buy btn-wayra">&nbsp;Total Bids</a>-->
                     <button class="buy btn-wayra" style="width: 100px "  name="button" value="<?php echo $row->id; ?><"  data-target="##myModal1" data-toggle="modal" onclick="window.location='<?php echo site_url("client_logged_in/bids_On_Trip/$row->id");?>'">BIDS</button>
                    <button class="buy btn-wayra" name="button" value="--><?php echo $row->id; ?>"  data-target="##myModal1" data-toggle="modal" onclick="window.location='<?php echo site_url("client_logged_in/bids_On_Trip/$row->id");?>'">DELETE TRIP</button>
                    <button class="buy btn-wayra" name="button" value="<?php echo $row->id; ?>"  data-target="##myModal1" data-toggle="modal" onclick="window.location='<?php echo site_url("client_logged_in/bids_On_Trip/$row->id");?>'">EDIT TRIP</button>

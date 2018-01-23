@@ -44,16 +44,7 @@ class client_Logged_in extends CI_Controller
         $user_trips['trips'] = $this->trip->My_trips(); //function call from model
         $user_namee['user_name'] = $this->session->userdata('user');
         $this->load->view('template/header_after_login',$user_namee);
-        $var =0;
-      //  foreach($user_trips as $row)
-        //{
-          //  $var= $var+1;
-
-            $this->load->view('client/My_trips',$user_trips);
-
-       // }
-       // echo   $var;
-       // $this->load->view('Login/trip_view',$user_trips);
+        $this->load->view('client/My_trips',$user_trips);
         $this->load->view('template/footer');
     }
     public function bids_On_Trip($id)
@@ -65,7 +56,6 @@ class client_Logged_in extends CI_Controller
         $this->load->view('template/header_after_login',$user);
         $this->load->view('client/bids_By_Rentals',$bids);
         $this->load->view('template/footer');
-
     }
 
     public function user_Accepted_Bid($bid_id)
@@ -76,12 +66,10 @@ class client_Logged_in extends CI_Controller
               'trip_id'=> $trip_id,
               'bid_id' => $bid_id );               
         $this->trip->user_Accepted_Bid($id);
-        //echo $trip_id;
         $user['user_name'] = $this->session->userdata('user');
         $this->load->view('template/header_after_login',$user);
-        $this->load->view('client/user_Accepted_Bids');
+        $this->load->view('client/accept_bid_success');
         $this->load->view('template/footer');
-
     }
     public function edit_Trip($trip_id)
     {
