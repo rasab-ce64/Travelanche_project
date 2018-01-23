@@ -35,6 +35,7 @@ class Trip extends CI_model
             }
 
     }
+    
     public function My_trips()
     {
         $user_data = $this->session->userdata('logged_in');
@@ -44,6 +45,7 @@ class Trip extends CI_model
         $data = $query->result();
         return $data;
     }
+
     public function bids_On_Trip($trip_id){
 
         $this->db->where('trip_id', $trip_id);
@@ -74,6 +76,7 @@ class Trip extends CI_model
         }
         $this->db->insert('accepted_bids_clients', $data);
     }
+
     public function edit_Trip($trip_id)
     {
         $this->db->where('id', $trip_id);
@@ -81,12 +84,14 @@ class Trip extends CI_model
         $data = $query->result();
         return $data;
     }
-      public function update_Data($trip_id,$data)
+
+    public function update_Data($trip_id,$data)
       {
           $this->db->where('id', $trip_id);
           $this->db->update('trip', $data);
 
       }
+
     public function del_Trip($trip_id)
     {
         $this -> db -> where('trip_id', $trip_id);
@@ -102,24 +107,28 @@ class Trip extends CI_model
         $data = $query->result();
         return $data;
     }
+
     public function Vehicle_type()
     {
         $query = $this->db->get('vehicle_type');
         $data = $query->result();
         return $data;
     }
+
     public function Destination()
     {
         $query = $this->db->get('destination');
         $data = $query->result();
         return $data;
     }
+
     public function City()
     {
         $query = $this->db->get('city');
         $data = $query->result();
         return $data;
     }
+
     public function Pickup_location()
     {
         $query = $this->db->get('pickup_location');
