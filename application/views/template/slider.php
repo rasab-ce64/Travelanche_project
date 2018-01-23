@@ -1,3 +1,4 @@
+
  <section id="main-slider" class="no-margin">
         <div class="carousel slide">
             <ol class="carousel-indicators">
@@ -7,63 +8,60 @@
             </ol>
             <div class="carousel-inner">
 
-                <div class="item active" style="background-image: url(assets/images/slider/bg1.jpg)">
+                <div class="item active" style=" background-image: url(assets/images/slider/back4.jpg)">
                     <div class="container">
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
                                     <h1 class="animation animated-item-1">   &nbsp; We Share What Is Rare</h1>
-                                    <h2 class="animation animated-item-2">   &nbsp; An Easy and comfotable way of travelling ...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                    <h2 class="animation animated-item-2">   &nbsp; An Easy and comfortable way of travelling ...</h2>
                                 </div>
                             </div>
 
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="<?php echo base_url('assets/images/slider/img1.png'); ?>" class="img-responsive">
-                                </div>
-                            </div>
+<!--                            <div class="col-sm-6 hidden-xs animation animated-item-4">-->
+<!--                                <div class="slider-img">-->
+<!--                                    <img src="--><?php //echo base_url('assets/images/slider/img1.png'); ?><!--" class="img-responsive">-->
+<!--                                </div>-->
+<!--                            </div>-->
 
                         </div>
                     </div>
                 </div><!--/.item-->
 
-                <div class="item" style="background-image: url(assets/images/slider/bg2.jpg)">
+                <div class="item" style=" background-image: url(assets/images/slider/back5.jpg)" >
                     <div class="container">
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
                                     <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
                                     <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
                                 </div>
                             </div>
 
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="<?php echo base_url('assets/images/slider/img2.png'); ?>" class="img-responsive">
-                                </div>
-                            </div>
+<!--                            <div class="col-sm-6 hidden-xs animation animated-item-4">-->
+<!--                                <div class="slider-img">-->
+<!--                                    <img src="--><?php //echo base_url('assets/images/slider/img2.png'); ?><!--" class="img-responsive">-->
+<!--                                </div>-->
+<!--                            </div>-->
 
                         </div>
                     </div>
                 </div><!--/.item-->
 
-                <div class="item" style="background-image: url(assets/images/slider/bg3.jpg)">
+                <div class="item" style=" background-image: url(assets/images/slider/bid1.jpg)">
                     <div class="container">
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
                                     <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
                                     <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
                                 </div>
                             </div>
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="<?php echo base_url('assets/images/slider/img3.png'); ?>" class="img-responsive">
-                                </div>
-                            </div>
+<!--                            <div class="col-sm-6 hidden-xs animation animated-item-4">-->
+<!--                                <div class="slider-img">-->
+<!--                                    <img src="--><?php //echo base_url('assets/images/slider/img3.png'); ?><!--" class="img-responsive">-->
+<!--                                </div>-->
+<!--                            </div>-->
                         </div>
                     </div>
                 </div><!--/.item-->
