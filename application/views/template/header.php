@@ -43,7 +43,7 @@
 				
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class = "active"><a href="<?php echo site_url(''); ?>" >Home</a> </li>
+                        <li class = ""><a href="<?php echo site_url(''); ?>" >Home</a> </li>
                         <li><a href="<?php echo site_url('client_Home/about'); ?>" >About Us</a> </li>
                         <li><a href="<?php echo site_url('client_Home/services'); ?>">Services</a></li>
                         <li><a href="<?php echo site_url('client_Home/contact'); ?>" >Contact</a></li>
