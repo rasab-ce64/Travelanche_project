@@ -116,7 +116,6 @@ class Trip extends CI_model
         $this -> db -> delete('bids_by_rentals');
         $this -> db -> where('id', $trip_id);
         $this -> db -> delete('trip');
-
     }
 
     public function Trip_data()

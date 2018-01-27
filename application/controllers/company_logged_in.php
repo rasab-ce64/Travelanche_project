@@ -32,7 +32,7 @@ class Company_logged_in extends CI_Controller
     }
     public function bids_By_Other_Companies($trip_id)
     {
-        echo $trip_id;
+        // echo $trip_id;
         $user['user_name'] = $this->session->userdata('user');                
         $this->load->model('company/company_model');
         $comp_bids['result'] = $this->company_model->bids_By_Other_Companies($trip_id); //function call from model

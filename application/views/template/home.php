@@ -21,7 +21,7 @@
                         <div class="feature-wrap">
                             <i class="fa fa-motorcycle"></i>
                             <h2>Post a trip</h2>
-                            <h3>Post you trip on Travelanche where you want to go</h3>
+                            <h3>Post your trip on Travelanche where you want to go</h3>
                             <h3></h3>
                         </div>
                     </div><!--/.col-md-4-->
@@ -54,7 +54,7 @@
                         <div class="feature-wrap">
                             <i class="fa fa-group"></i>
                             <h2>Share a Ride</h2>
-                            <h3>Share your ride with others and build trust</h3>
+                            <h3>Share your ride, build trust and save money</h3>
                         </div>
                     </div><!--/.col-md-4-->
 
@@ -62,7 +62,7 @@
                         <div class="feature-wrap">
                             <i class="fa fa-money"></i>
                             <h2>Share you Fare</h2>
-                            <h3>Share your Fare lets you ride as flat as possible</h3>
+                            <h3>Sharing fare lets you ride as flat as possible</h3>
                         </div>
                     </div><!--/.col-md-4-->
                 </div><!--/.services-->
@@ -78,7 +78,6 @@
             </div>
 
             <div class="row">
-
                 <div class="col-sm-6 col-md-4">
                     <div class="media services-wrap wow fadeInDown">
                         <div class="pull-left">
