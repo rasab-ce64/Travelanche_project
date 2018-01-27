@@ -93,7 +93,8 @@ class Company_model extends CI_model
     {
         $this->load->database();
         $query = $this->db->get('trip');
-        return $result = $query->result();
+        $data = $query->result();
+        return $data;
     }
 
     public function add_driver(){

@@ -125,13 +125,19 @@
                         </div>
                     </div>
                 </div>
+                <br>
                 <div class="inputContainer">
-                    <button class="buy btn-wayra" style="width: 100px "  name="button" value="<?php echo $row->id; ?><"  data-target="##myModal1" data-toggle="modal" onclick="window.location='<?php echo site_url("client_logged_in/bids_On_Trip/$row->id");?>'">BIDS</button>
-                   <button class="buy btn-wayra" name="button" value="--><?php echo $row->id; ?>"  data-target="##myModal1" data-toggle="modal" onclick="window.location='<?php echo site_url("client_logged_in/bids_On_Trip/$row->id");?>'">DELETE TRIP</button>
-                   <button class="buy btn-wayra" name="button" value="<?php echo $row->id; ?>"  data-target="##myModal1" data-toggle="modal" onclick="window.location='<?php echo site_url("client_logged_in/bids_On_Trip/$row->id");?>'">EDIT TRIP</button>
-                    <input type="button" class="buy btn-wayra" style="color:#0086b3" name="button" value=" BIDS <?php echo $row->id; ?>"  data-target="##myModal1" data-toggle="modal" onclick="window.location='<?php echo site_url("client_logged_in/bids_On_Trip/$row->id");?>'">
-                    <input type="button" class="buy btn-wayra" style="color:#0086b3" name="button" value=" EDIT TRIP"  data-target="##myModal1" data-toggle="modal" onclick="Edit( <?php echo $row->id;?>)"/>
-                    <input type="button" class="buy btn-wayra" style="color:#0086b3" name="button" value="DELETE TRIP"  data-target="##myModal1" data-toggle="modal" onclick="Delete( <?php echo $row->id;?>)"/>
+                    <br><br><br>
+                    <button class="btn btn-sm" name="button" onclick="Edit(<?php echo $row->id; ?>)" value="<?php echo $row->id; ?>">Edit Trip</button>
+                    <button class="btn btn-sm" name="button" onclick="Delete(<?php echo $row->id; ?>)" value="<?php echo $row->id; ?>">Delete Trip</button>
+                    <button class="btn btn-sm" name="button" onclick="window.location='<?php echo site_url("client_logged_in/bids_On_Trip/$row->id");?>'" value="<?php echo $row->id; ?>">Bids on Trip</button>
+                    <?php echo $row->id; ?>
+<!--                    <button class="buy btn-wayra" style="width: 100px "  name="button" value="--><?php //echo $row->id; ?><!--<"  data-target="##myModal1" data-toggle="modal" onclick="window.location='--><?php //echo site_url("client_logged_in/bids_On_Trip/$row->id");?></button>
+<!--//                    <button class="buy    btn-wayra" name="button" value="--><?php ////echo $row->id; ?><!--<!--"  data-target="##myModal1" data-toggle="modal" onclick="window.location='--><?php ////echo site_url("client_logged_in/bids_On_Trip/$row->id");?></button>
+<!--//                    <button class="buy btn-wayra" name="button" value="--><?php ////echo $row->id; ?><!--<!--"  data-target="##myModal1" data-toggle="modal" onclick="window.location='--><?php ////echo site_url("client_logged_in/bids_On_Trip/$row->id");?></button>
+<!--//                    <input type="button" class="buy btn-wayra" style="color:#0086b3" name="button" value=" BIDS --><?php ////echo $row->id; ?><!--<!--" onclick="window.location='--><?php ////echo site_url("client_logged_in/bids_On_Trip/$row->id");?>
+<!--//                    <input type="button" class="buy btn-wayra" style="color:#0086b3" name="button" value=" EDIT TRIP" onclick="Edit( --><?php ////echo $row->id;?>
+<!--//                    <input type="button" class="buy btn-wayra" style="color:#0086b3" name="button" value="DELETE TRIP" onclick="Delete( --><?php ////echo $row->id;?>
                 </div>
             </div>
                 <div class="bnr-btm-left two grid">

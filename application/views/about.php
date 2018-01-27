@@ -109,7 +109,7 @@
 						<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
 							<div class="media">
 								<div class="pull-left">
-									<a href="#"><img class="media-object" src="images/man2.jpg" alt=""></a>
+									<a href="#"><img class="media-object" src="<?php echo base_url('assets/images/man2.jpg'); ?>" alt=""></a>
 								</div>
 								<div class="media-body">
 									<h4>Muhammad Zubair</h4>
@@ -155,7 +155,7 @@
 						<div class="single-profile-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
 							<div class="media">
 								<div class="pull-left">
-									<a href="#"><img class="media-object" src="images/man3.jpg" alt=""></a>
+									<a href="#"><img class="media-object" src="<?php echo base_url('assets/images/man3.jpg');?> " alt=""></a>
 								</div>
 
 								<div class="media-body">
