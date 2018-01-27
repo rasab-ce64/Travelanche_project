@@ -37,7 +37,7 @@
 <body>
 
 <body>
-<img class="img-responsive" style="width:100%; height:600px;" src="<?php echo base_url('assets/images/trip.jpg'); ?>" > </img>
+<img class="img-responsive" style="width:100%; height:600px;" src="<?php echo base_url('assets/images/muree.jpg'); ?>" > </img>
         <?php foreach($trips as $trip) $id =$trip->id ?>
         <form class="form-horizontal" id="centered" action="<?php echo site_url("client_logged_in/update_Data/$id"); ?> " method="post"  id="contact_form">
                 <?php  foreach($trips as $trip) { ?>

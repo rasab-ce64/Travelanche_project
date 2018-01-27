@@ -37,8 +37,17 @@ class client_Logged_in extends CI_Controller
         $this->load->view('success');
         $this->load->view('template/footer');   
     }
+
+    public function trip_option()
+    {
+        $user_namee['user_name'] = $this->session->userdata('user');
+        $this->load->view('template/header_after_login',$user_namee);
+        $this->load->view('client/trip_option');
+        $this->load->view('template/footer');
+        
+    }
     
-    public function my_Trips()
+    public function my_Pending_Trips()
     {
         $this->load->model('trip');
         $user_trips['trips'] = $this->trip->My_trips(); //function call from model
@@ -47,6 +56,16 @@ class client_Logged_in extends CI_Controller
         $this->load->view('client/My_trips',$user_trips);
         $this->load->view('template/footer');
     }
+     public function my_Accepted_Trips()
+     {
+        $this->load->model('trip');
+        $user_trips['trips'] = $this->trip->My_Accepted_trips(); //function call from model
+        $user_namee['user_name'] = $this->session->userdata('user');
+        $this->load->view('template/header_after_login',$user_namee);
+        $this->load->view('client/my_Accepted_Trips',$user_trips);
+        $this->load->view('template/footer');
+         
+     }
     public function bids_On_Trip($id)
     {
         $this->session->set_userdata('trip_id',$id);
@@ -64,12 +83,17 @@ class client_Logged_in extends CI_Controller
         $this->load->model('trip');
         $id = array(
               'trip_id'=> $trip_id,
-              'bid_id' => $bid_id );               
+              'bid_id' => $bid_id );        
+       
         $this->trip->user_Accepted_Bid($id);
         $user['user_name'] = $this->session->userdata('user');
         $this->load->view('template/header_after_login',$user);
         $this->load->view('client/accept_bid_success');
         $this->load->view('template/footer');
+        $data= array(
+            'trip_status'=> 'Bid Completed'
+        );  
+        $this->db->update('trip', $data);
     }
     public function edit_Trip($trip_id)
     {

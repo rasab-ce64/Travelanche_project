@@ -13,11 +13,6 @@ class client_Home extends CI_Controller {
 			$this->load->view('template/slider');
 			$this->load->view('template/home');
 			$this->load->view('template/footer');
-                        // // $this->template['header'] = $this->load->view('template/header' , $this->data , TRUE);
-			// $this->template['slider'] = $this->load->view('template/slider' , $this->data , TRUE);
-			// $this->template['home'] = $this->load->view('template/home' , $this->data , TRUE);
-			// $this->template['footer'] = $this->load->view('template/footer' , $this->data , TRUE);
-			// $this->load->view('template/main' , $this->template);
 		}
 		public function about(){
 			$this->load->view('template/header');

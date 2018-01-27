@@ -67,9 +67,10 @@ class Company_logged_in extends CI_Controller
 
     public function place_bid()
     {
+        $company['user_name'] = $this->session->userdata('user');
         $this->load->model('company/company_model');
         $this->company_model->bid_by_rental();
-        $this->load->view('template/header');
+        $this->load->view('template/header_after_login',$company);
         $this->load->view('company/place_bid_success');
         $this->load->view('template/footer');
     }

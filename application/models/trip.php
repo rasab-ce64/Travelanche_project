@@ -41,11 +41,23 @@ class Trip extends CI_model
         $user_data = $this->session->userdata('logged_in');
         $phone = $user_data['phone'];
         $this->db->where('user_phone', $phone);
+        $this->db->where('trip_status' ,'Pending');
         $query = $this->db->get('trip');
         $data = $query->result();
         return $data;
     }
 
+    public function My_Accepted_trips()
+    {
+        $user_data = $this->session->userdata('logged_in');
+        $phone = $user_data['phone'];
+        $this->db->where('user_phone', $phone);
+        $this->db->where('trip_status' ,'Bid Completed');
+        $query = $this->db->get('trip');
+        $data = $query->result();
+        return $data;
+        
+    }
     public function bids_On_Trip($trip_id){
 
         $this->db->where('trip_id', $trip_id);
@@ -60,8 +72,7 @@ class Trip extends CI_model
         // echo $id['bid_id'];
         $this->db->where('bid_id', $id['bid_id']);
         $query = $this->db->get('bids_by_rentals');
-
-        foreach($query->result() as $row)
+        foreach( $query->result() as $row)
         {
             $data = array(
             'company_name' => $row->company_name,
@@ -72,13 +83,20 @@ class Trip extends CI_model
             'client_phone' => $row->client_phone,
             'client_trip_id' => $row->trip_id,
             'timestamp' => $row->timestamp
+            
             );
         }
         $this->db->insert('accepted_bids_clients', $data);
+        $this->db->where('trip_id',$id['trip_id']);
+        $this->db->delete('bids_by_rentals');   
+
     }
 
     public function edit_Trip($trip_id)
     {
+        $this->db->where('trip_id', $trip_id);
+        $this->db->delete('bids_by_rentals');   
+
         $this->db->where('id', $trip_id);
         $query = $this->db->get('trip');
         $data = $query->result();

@@ -92,6 +92,7 @@ class Company_model extends CI_model
     public function My_trips()
     {
         $this->load->database();
+        $this->db->where('trip_status','Pending');
         $query = $this->db->get('trip');
         return $result = $query->result();
     }
