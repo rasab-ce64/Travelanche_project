@@ -30,7 +30,7 @@
 <section id="contact-info">
         <div class="center">                
             <h2>How to Reach Us?</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            <p class="lead">Contact us for more information and your queries</p>
         </div>
         <div class="gmap-area">
             <div class="container">

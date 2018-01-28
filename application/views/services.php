@@ -57,11 +57,24 @@
 
 
             <div class="clients-area center wow fadeInDown">
-                <h2>What our client says</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <h2>What is in it for the Vendors?</h2>
+                 <p class="lead" >The reasons that the vendors under question i.e. rental car companies must shift to such a proposition are:</p>
             </div>
 
-            <div class="row">
+            <div class="container">
+                <div class="center-block">
+                    <ul>
+                        <li>Ease-of-access to the suer</li>
+                        <li>Marketing opportunity of their companies</li>
+                        <li>Consistent deals with the user</li>
+                        <li>More intra city flow for the rentals</li>
+                        <li>Complete knowledge about the fare rates of their competitor rentals </li>
+                        <li>A chance to get back on the user-interest after many car sharing start-ups </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- <div class="row">
                 <div class="col-md-4 wow fadeInDown">
                     <div class="clients-comments text-center">
                         <img src="<?php echo base_url('assets/images/client1.png'); ?>" class="img-circle" alt="">
@@ -83,7 +96,7 @@
                         <h4><span>-John Doe /</span>  Director of corlate.com</h4>
                     </div>
                 </div>
-           </div>
+           </div> -->
 
         </div><!--/.container-->
     </section><!--/#feature-->
