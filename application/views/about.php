@@ -250,38 +250,6 @@
 							<div class="media">
 								<div class="pull-right">
 									<h4><b>Contact: </b> </h4>
-									+92 &nbsp; 306 &nbsp; 4067606
-									<hr>
-									<h4><b>Address</b></h4>
-									Johar Town Lahore, Pakistan
-<!--									<a href="#"><img class="media-object" src="--><?php //echo base_url('assets/images/man4.jpg'); ?><!--" > </a>-->
-								</div>
-								<div class="media-body">
-									<h4>Rasab Zulfiqar Ali</h4>
-									<h5>Web Developer</h5>
-									<ul class="tag clearfix">
-										<li class="btn"><a href="">Codeignitor</a></li>
-										<li class="btn"><a href="">ASP.net</a></li>
-										<li class="btn"><a href="">Web Design</a></li> <br>
-										<li class="btn"><a href="">PhotoShop</a></li>
-										<li class="btn"><a href=""></a>PHP</li>
-									</ul>
-									<ul class="social_icons">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li> 
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								</div>
-							</div><!--/.media -->
-<!--							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>-->
-						</div>
-					</div>
-
-				<div class="col-md-4 col-sm-6 col-md-offset-2">
-						<div class="single-profile-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-							<div class="media">
-								<div class="pull-right">
-									<h4><b>Contact: </b> </h4>
 									+92 &nbsp; 336 &nbsp; 1767570
 									<hr>
 									<h4><b>Address</b></h4>

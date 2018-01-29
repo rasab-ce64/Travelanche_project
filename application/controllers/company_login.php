@@ -2,6 +2,7 @@
 
 class Company_login extends CI_Controller{
     public function __construct() {
+
     parent::__construct();
     $this->load->helper('form'); //loading form helper
     $this->load->helper('url'); //loading url helper
@@ -9,9 +10,15 @@ class Company_login extends CI_Controller{
     $this->load->library('form_validation');
     $this->load->model('company/company_model');
     }
+    public function index(){
+
+    }
+
     public function signup(){
+
         $this->load->model('company/company_model');
         $this->company_model->signup(); //function call from model
+//        $this->load->view('success');
         $company_name['user_name'] = $_POST['name'];
         $this->load->view('template/header_after_login',$company_name);
         $this->load->view('company/main_company');
@@ -25,10 +32,10 @@ class Company_login extends CI_Controller{
     public function company(){
 
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('phone' , 'Phone', 'required');
-        $this->form_validation->set_rules('password' , 'Password' , 'required');
+        $this->form_validation->set_rules('phone' , 'Phone', 'required' , array('requires' , "Phone No. is required"));
+        $this->form_validation->set_rules('password' , 'Password' , 'trim|required|min_length[4]|max_length[40]');
 
-        if($this->form_validation->run()){ // if true
+        if($this->form_validation->run() == true){ // if true
             echo "success";
             $phone = $this->input->post('phone');
             $pass = $this->input->post('password');

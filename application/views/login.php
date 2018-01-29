@@ -74,11 +74,11 @@ body {
 
       <input type="text" class="form-control" name="phone" placeholder="Phone no."  autofocus="" />
 
-      <span class="text-danger"> <?php echo form_error('phone'); ?></span>
+      <span class="text-danger"> <?php echo form_error('Phone'); ?></span>
 
       <input type="password" class="form-control" name="password" placeholder="Password" autofocus="" />
 
-      <span class="text-danger"> <?php echo form_error('password'); ?></span> 
+      <span class="text-danger"> <?php echo form_error('Password'); ?></span>
 
         <label class="checkbox">
            <input type="checkbox" value="remember-me" id="rememberMe" name="remember_me"> Remember me

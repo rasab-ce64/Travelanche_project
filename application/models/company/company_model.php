@@ -7,27 +7,31 @@ class Company_model extends CI_model
     {
         parent::_construct();
         $this->load->helper(array('form', 'url', 'form_validation'));
-        $this->load->library('session');
+        $this->load->library(array('session' , 'form_validation'));
         $this->load->database();
     }
 
     public function signup()
     {
+        $this->load->library('form_validation');
         $this->load->database();
-        if (isset($_POST['submit'])) {
 
-            $company_name = $_POST['name'];
-            $company_reg_no = $_POST['reg_number'];
-            $phone = $_POST['phone'];
-            $password = $_POST['password'];
-            $contact_person = $_POST['contact_person'];
-            $address = $_POST['address'];
-            $city = $_POST['city'];
-        }
+        if ($this->form_validation->run() == true) {
+            if (isset($_POST['submit'])) {
 
-        $sql = "INSERT INTO companies( password, company_name, company_registration_no, phone, address, city, contact_person)
+                $company_name = $_POST['name'];
+                $company_reg_no = $_POST['reg_number'];
+                $phone = $_POST['phone'];
+                $password = $_POST['password'];
+                $contact_person = $_POST['contact_person'];
+                $address = $_POST['address'];
+                $city = $_POST['city'];
+            }
+
+            $sql = "INSERT INTO companies( password, company_name, company_registration_no, phone, address, city, contact_person)
                           VALUES('$password','$company_name','$company_reg_no','$phone', '$address','$city', '$contact_person')";
-        $this->db->query($sql);
+            $this->db->query($sql);
+        }
     }
 
     public function fetch_data($phone, $password)
