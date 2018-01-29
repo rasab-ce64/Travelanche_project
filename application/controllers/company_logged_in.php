@@ -20,6 +20,29 @@ class Company_logged_in extends CI_Controller
         $this->load->view('company/bachat', $get_dropdown);
         //$this->load->view('lambSamb' , $get_dropdown);
     }
+    public function plan_a_Trip()
+    {
+        $this->load->model('trip');
+        //function call from model
+        $user['vehicle_type'] = $this->trip->Vehicle_type();
+        $user['city'] = $this->trip->City();
+        $user['destination'] = $this->trip->Destination();
+        $user['pickup_location'] = $this->trip->Pickup_location();
+        $user_namee['user_name'] = $this->session->userdata('company');
+        $this->load->view('client/header_after_login',$user_namee);
+        $this->load->view('company/plan_a_trip',$user);
+        $this->load->view('template/footer');
+    }
+    public function Trip_info()
+    {
+        $this->load->model('company/company_model');
+        $this->company_model->Trip_details(); //function call from model
+        $user_namee['user_name'] = $this->session->userdata('company');
+        $this->load->view('company/header_after_login',$user_namee);
+        $this->load->view('company/plan_trip_success');
+        $this->load->view('template/footer');   
+
+    }
 
     public function my_Trips()
     {

@@ -34,7 +34,7 @@ class client_Logged_in extends CI_Controller
         $this->trip->Trip_details(); //function call from model
         $user_namee['user_name'] = $this->session->userdata('user');
         $this->load->view('client/header_after_login',$user_namee);
-        $this->load->view('plan_trip_success');
+        $this->load->view('client/plan_trip_success');
         $this->load->view('template/footer');   
     }
 

@@ -60,7 +60,7 @@ $session_data = $this->session->userdata('logged_in');
     <h2 style="text-align: center;">Choose Whatever you want</h2>
     <hr>
     <div class="row">
-        <a href="<?php echo site_url('client_logged_in/Choice'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="plan_a_trip">Plan a Trip</a>
+        <a href="<?php echo site_url('company_logged_in/plan_a_Trip'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="plan_a_trip">Plan a Trip</a>
         <a href="<?php echo site_url('Home/add_driver'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="share_a_ride">Add Driver</a>
         <a href="<?php echo site_url('Home/add_vehicle'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="share_a_ride">Add vehicle</a>
         <a href="<?php echo site_url('company_logged_in/companies'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="share_a_ride">Companies</a>
