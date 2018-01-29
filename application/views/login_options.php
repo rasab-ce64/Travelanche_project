@@ -121,9 +121,9 @@
         <div class="centered">Choose the options</div>
         <br>
         <div class="img-overlay">
-                <a href="<?php echo site_url('client_Home/user_login'); ?>" class="btn btn--border btn--primary btn--animated" >Login as a Customer</a>
+                <a href="<?php echo site_url('client_Home/login'); ?>" class="btn btn--border btn--primary btn--animated" >Login as a Customer</a>
             <br> <br>
-               <a href="<?php echo site_url('client_Home/company_login'); ?>" class="btn btn--border btn--primary btn--animated"> Login as a Company</a>
+               <a href="<?php echo site_url('company_login/login'); ?>" class="btn btn--border btn--primary btn--animated"> Login as a Company</a>
         </div>
     </div>
     </body>

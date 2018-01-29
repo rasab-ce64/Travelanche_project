@@ -23,20 +23,20 @@ class Company_logged_in extends CI_Controller
 
     public function my_Trips()
     {
-        $user['user_name'] = $this->session->userdata('user');                
+        $user['user_name'] = $this->session->userdata('company');                
         $comp_trips = array();
         $this->load->model('company/company_model');
         $comp_trips['result'] = $this->company_model->My_trips(); //function call from model
-        $this->load->view('template/header_after_login',$user);
+        $this->load->view('company/header_after_login',$user);
         $this->load->view('company/Trips',$comp_trips);
     }
     public function bids_By_Other_Companies($trip_id)
     {
         // echo $trip_id;
-        $user['user_name'] = $this->session->userdata('user');                
+        $user['user_name'] = $this->session->userdata('company');                
         $this->load->model('company/company_model');
         $comp_bids['result'] = $this->company_model->bids_By_Other_Companies($trip_id); //function call from model
-        $this->load->view('template/header_after_login',$user);
+        $this->load->view('company/header_after_login',$user);
         $this->load->view('company/bids_By_Other_Companies',$comp_bids);
         $this->load->view('template/footer');
     }
@@ -54,11 +54,11 @@ class Company_logged_in extends CI_Controller
     }
     public function companies()
     {
-        $user['user_name'] = $this->session->userdata('user'); 
+        $user['user_name'] = $this->session->userdata('company'); 
         $this->load->model('company/company_model');
         $data['companies'] = $this->company_model->companies();
 
-        $this->load->view('template/header_after_login',$user);
+        $this->load->view('company/header_after_login',$user);
         $this->load->view('company/companies', $data);
 
 //        $this->load->view('template/footer');
@@ -67,27 +67,27 @@ class Company_logged_in extends CI_Controller
 
     public function place_bid()
     {
-        $company['user_name'] = $this->session->userdata('user');
+        $company['user_name'] = $this->session->userdata('company');
         $this->load->model('company/company_model');
         $this->company_model->bid_by_rental();
-        $this->load->view('template/header_after_login',$company);
+        $this->load->view('company/header_after_login',$company);
         $this->load->view('company/place_bid_success');
         $this->load->view('template/footer');
     }
     public function bid_options(){
 
-        $company['user_name'] = $this->session->userdata('user');
-        $this->load->view('template/header_after_login',$company);
+        $company['user_name'] = $this->session->userdata('company');
+        $this->load->view('company/header_after_login',$company);
         $this->load->view('company/bid_options');
         $this->load->view('template/footer');
     }
     public function my_Pending_Bids()
     {
 
-        $company['user_name'] = $this->session->userdata('user');
+        $company['user_name'] = $this->session->userdata('company');
         $this->load->model('company/company_model');
         $pending_bids['bids'] =$this->company_model->my_Pending_Bids();
-        $this->load->view('template/header_after_login',$company);
+        $this->load->view('company/header_after_login',$company);
        $this->load->view('company/my_Pending_Bids',$pending_bids);
         $this->load->view('template/footer');
         $id = $this->uri->segment(3);
@@ -95,10 +95,10 @@ class Company_logged_in extends CI_Controller
     }
     public function edit_Bid($bid_id)
     {
-        $company['user_name'] = $this->session->userdata('user');
+        $company['user_name'] = $this->session->userdata('company');
         $this->load->model('company/company_model');
         $edit_bid['bid'] =$this->company_model->edit_Bid($bid_id);
-        $this->load->view('template/header_after_login',$company);
+        $this->load->view('company/header_after_login',$company);
         $this->load->view('company/edit_Bid',$edit_bid);
         $this->load->view('template/footer');
 
@@ -116,8 +116,6 @@ class Company_logged_in extends CI_Controller
         redirect('company_logged_in/my_Pending_Bids');
 
     }
-
-
     public function delete_Bid($bid_id)
     {
         $this->load->model('company/company_model');        
@@ -127,15 +125,14 @@ class Company_logged_in extends CI_Controller
     }
     public function my_Accepted_Bids()
     {
-        $company['user_name'] = $this->session->userdata('user');
+        $company['user_name'] = $this->session->userdata('company');
         $this->load->model('company/company_model');
         $accepted_bids['bids'] =$this->company_model->my_Accepted_Bids();
 
-        $this->load->view('template/header_after_login',$company);
+        $this->load->view('company/header_after_login',$company);
         $this->load->view('company/my_Accepted_Bids',$accepted_bids);
         $this->load->view('template/footer');        
     }
-
 
     public function success(){
         $this->load->view('template/header');

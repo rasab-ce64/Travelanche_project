@@ -15,7 +15,7 @@
 
 <body>
 <div class="container">
-<form class="form-horizontal" action="<?php echo site_url('client_home/user'); ?> " method="post"  id="contact_form">
+<form class="form-horizontal" action="<?php echo site_url('client_home/signed_up'); ?> " method="post"  id="contact_form">
 <fieldset>
 <!-- Form Name -->
 <legend><center><h2><b>Create your Account</b></h2></center></legend>

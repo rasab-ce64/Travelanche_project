@@ -19,17 +19,13 @@ class client_User_login extends CI_Controller{
 
     public function user()
     {
-        /* Retrieve session data */
-        $user_or_company = $this->session->userdata('client_or_company');
-        if($user_or_company==1)
-        {
-        $session_set_value = $this->session->all_userdata();
+       $session_set_value = $this->session->all_userdata();
         // Check for remember_me data in retrieved session data
-        if (isset($session_set_value['remember_me']) && $session_set_value['remember_me'] == "1") 
+        if (isset($session_set_value['remember_user']) && $session_set_value['remember_user'] == "1")
         {
                 $this->load->model('user_model');
                 $user_namee['user_name'] = $this->session->userdata('user');
-                $this->load->view('template/header_after_login',$user_namee);
+                $this->load->view('client/header_after_login',$user_namee);
                 $this->load->view('client/main');
                 $this->load->view('template/footer');
         } 
@@ -56,16 +52,13 @@ class client_User_login extends CI_Controller{
                     if ($remember) 
 	                {
                     // Set remember me value in session
-                    $this->session->set_userdata('remember_me', TRUE);
+                    $this->session->set_userdata('remember_user', TRUE);
 	                }
                         $sess_data = array(
                         'phone' => $phone,
                         'password' => $pass
                                             );
-                        $this->session->set_userdata('logged_in', $sess_data);
-                        // $this->session->set_userdata($session_data);
-                    /* same controller called with method "enter" */
-                        //redirect('user_login/enter' , 'refresh');
+                        $this->session->set_userdata('user_logged_in', $sess_data);
                         $this->load->model('user_model');
                         $user_name = $this->user_model->user_name();
                         foreach($user_name as $row)
@@ -75,10 +68,8 @@ class client_User_login extends CI_Controller{
                         }
                         $userr =   $user['user_name'];
                         $this->session->set_userdata('user', $userr);
-                        $this->load->view('template/header_after_login',$user);
-                       // $this->load->view('template/side_navbar');
+                        $this->load->view('client/header_after_login',$user);
                         $this->load->view('client/main');
-                        
                         $this->load->view('template/footer');
                 }
                 else
@@ -88,80 +79,8 @@ class client_User_login extends CI_Controller{
                     redirect('client_user_login/login' ,'refresh'); 
                 }
             }
-
         }
     }
-    if($user_or_company==2)
-    {
-        $session_set_value = $this->session->all_userdata();
-        // Check for remember_me data in retrieved session data
-        if (isset($session_set_value['remember_me']) && $session_set_value['remember_me'] == "1") 
-        {
-                $this->load->model('company/company_model');
-                $user_namee['user_name'] = $this->session->userdata('user');
-                $this->load->view('template/header_after_login',$user_namee);
-                $this->load->view('company/main_company');
-                $this->load->view('template/footer');
-        } 
-        else
-        {
-            $this->load->library('form_validation');
-            $this->form_validation->set_rules('phone' , 'Phone', 'required');
-            $this->form_validation->set_rules('password' , 'Password' , 'required');
-            if($this->form_validation->run()==false)
-            {
-                $this->load->view('template/header');
-                $this->load->view('login');
-                $this->load->view('template/footer');
-                
-            } // if true
-            else
-            { 
-                $phone = $this->input->post('phone');
-                $pass = $this->input->post('password');
-                $this->load->model('company/company_model');
-                if($this->company_model->fetch_data($phone,$pass))
-                {
-                    $remember = $this->input->post('remember_me');
-                    if ($remember) 
-	                {
-                    // Set remember me value in session
-                    $this->session->set_userdata('remember_me', TRUE);
-	                }
-                        $sess_data = array(
-                        'phone' => $phone,
-                        'password' => $pass
-                                            );
-                        $this->session->set_userdata('logged_in', $sess_data);
-                        // $this->session->set_userdata($session_data);
-                    /* same controller called with method "enter" */
-                        //redirect('user_login/enter' , 'refresh');
-                        $this->load->model('company/company_model');
-                        $user_name = $this->company_model->user_name();
-                        foreach($user_name as $row)
-                        {
-                            $user['user_name'] = $row->company_name;
-                            
-                        }
-                        $userr =   $user['user_name'];
-                        $this->session->set_userdata('user', $userr);
-                        $this->load->view('template/header_after_login',$user);
-                        $this->load->view('company/main_company');
-                        
-                        $this->load->view('template/footer');
-                }
-                else
-                {
-                    $this->session->set_flashdata('error' , 'Invalid Phone number and Password');
-                    /* will redirect to same login page to enter correct info */
-                    redirect('client_user_login/login' ,'refresh'); 
-                }
-            }
-
-        }
-        
-    }
-}
 
     /* after login */
     public function enter()
@@ -180,11 +99,9 @@ class client_User_login extends CI_Controller{
 
     public function logout()
     {
-       // $this->session->unset_userdata('email');
-      //  redirect('user_login/login' , 'refresh');
-
-        $this->session->sess_destroy();
-        $data['message_display'] = 'Successfully Logout';
+        $this->session->unset_userdata('remember_user');
+        $this->session->unset_userdata('user_logged_in');
+        $this->session->unset_userdata('user');
         $this->load->view('template/header');
         $this->load->view('login_options');
         $this->load->view('template/footer');

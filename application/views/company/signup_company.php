@@ -11,7 +11,7 @@
 </style>
 
 <body>
-<form class="well form-horizontal" action="<?php echo site_url('company_login/signup'); ?> " method="post"  id="contact_form">
+<form class="well form-horizontal" action="<?php echo site_url('company_login/signed_up'); ?> " method="post"  id="contact_form">
 <fieldset>
 <!-- Form Name -->
 <legend><center><h2><b>Create your Account</b></h2></center></legend>

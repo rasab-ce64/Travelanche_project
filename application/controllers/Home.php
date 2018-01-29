@@ -46,7 +46,7 @@ class Home extends CI_Controller {
 	}
 	public function bachat($trip_id){
 		$this->session->set_userdata('trip_id',$trip_id);
-		$user['user_name'] = $this->session->userdata('user');                
+		$user['user_name'] = $this->session->userdata('company');                
 		$this->load->view('template/header_after_login',$user);
 		$this->load->model('company/company_model');
 		$get_dropdown['vehicle_name'] = $this->company_model->dropdown_vehicle();
