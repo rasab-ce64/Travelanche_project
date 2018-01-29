@@ -15,7 +15,7 @@
 
 <body>
 <div class="container">
-<form class="well form-horizontal" action="<?php echo site_url('client_home/user'); ?> " method="post"  id="contact_form">
+<form class="form-horizontal" action="<?php echo site_url('client_home/user'); ?> " method="post"  id="contact_form">
 <fieldset>
 <!-- Form Name -->
 <legend><center><h2><b>Create your Account</b></h2></center></legend>
@@ -60,6 +60,17 @@
     </div>
   </div>
 </div>
+
+    <div class="form-group">
+        <label class="col-md-4 control-label" >Confirm Password</label>
+        <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input name="confPassword" placeholder="Password" class="form-control" id="pass1" required=""  type="password">
+                <span class="text-danger"> <?php echo form_error('Password Match'); ?></span>
+            </div>
+        </div>
+    </div>
 
 <!-- Text input-->
        

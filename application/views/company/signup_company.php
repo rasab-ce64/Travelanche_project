@@ -71,6 +71,7 @@
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
   <input name="password" placeholder="Password" class="form-control" required=""  type="password">
+      <span class="text-danger"> <?php echo form_error('Password'); ?></span>
     </div>
   </div>
 </div>
@@ -83,6 +84,7 @@
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
   <input name="confirm_password" placeholder="Confirm Password" class="form-control" required=""  type="password">
+      <span class="text-danger"> <?php echo form_error('Password Match'); ?></span>
     </div>
   </div>
 </div>

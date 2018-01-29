@@ -76,7 +76,6 @@
 <img class="img-responsive" style="width:100%; height:550px;" src="<?php echo base_url('assets/images/trip_plan.jpg'); ?>" > </img>
 <form class="form-horizontal" action="<?php echo site_url('client_logged_in/Trip_info'); ?> " method="post"  id="contact_form">
   <fieldset>
-
     <legend><center><h2><b>Plan Your Trip</b></h2></center></legend>
     <br>
 
@@ -175,6 +174,23 @@
       </div>
     </div>
 
+
+    <div class="form-group">
+      <label class="col-md-4 control-label">Select Your City .</label>
+      <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+          <select name="city" class ="form-control" required="" placeholder="  Trip Discription" >
+            <option value="none" selected="selected"  >Select your City</option>
+            <!----- Displaying fetched cities in options using foreach loop ---->
+            <?php foreach($city as $row):?>
+              <option value="<?php echo $row->city?>"><?php echo $row->city?></option>
+            <?php endforeach;?>
+          </select>
+        </div>
+      </div>
+    </div>
+
     <div class="form-group">
       <label class="col-md-4 control-label">Driver</label>
       <div class="col-md-4 inputGroupContainer">
@@ -197,44 +213,10 @@
 
     <!-- Text input-->
 
-    <div class="form-group">
-      <label class="col-md-4 control-label">Select Your City .</label>
-      <div class="col-md-4 inputGroupContainer">
-        <div class="input-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-          <select name="city" class ="form-control" required="" placeholder="  Trip Discription" >
-            <option value="none" selected="selected"  >Select City</option>
-            <!----- Displaying fetched cities in options using foreach loop ---->
-            <?php foreach($city as $row):?>
-              <option value="<?php echo $row->city?>"><?php echo $row->city?></option>
-            <?php endforeach;?>
-          </select>
-        </div>
-      </div>
+
+
     </div>
-
-
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label">Any Discription for Trip.</label>
-      <div class="col-md-4 inputGroupContainer">
-        <div class="input-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-          <input name="trip_disc" placeholder="  Trip Discription" class="form-control" required=""  type="text">
-        </div>
-      </div>
     </div>
-
-    <!-- Success message -->
-    <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>
-    <!-- Button -->
-    <div class="form-group">
-      <label class="col-md-4 control-label"></label>
-      <div class="col-md-4"><br>
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button name="Enter" type="submit" class="btn btn-warning" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
-      </div>
-    </div>
-
   </fieldset>
 </form>
 </body>
