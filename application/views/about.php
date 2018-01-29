@@ -32,7 +32,7 @@
 			<div class="center wow fadeInDown">
 				<h2>About Travelanche</h2>
 				<p class="lead">Travelanche is such a platform that forms a duo of renting cars and car pooling and integrates the <br> two which not only brings with itself the trust but also the <br> reliability in your travel. Hence, simply: </p>
-				<h2><b>Travelanche = Rentals + carpooling</b></h2>
+				<h2><b>Travelanche = Rentals + Pooling</b></h2>
 			</div>
 			
 			<!-- about us slider -->

@@ -120,9 +120,9 @@
         <div class="centered">Choose the one</div>
         <br>
         <div class="img-overlay">
-            <a href="<?php echo site_url('company_logged_in/my_Accepted_Bids'); ?>" class="btn btn--border btn--primary btn--animated" >Accepted Bids</a>
+            <a href="<?php echo site_url('company_logged_in/my_Accepted_Bids'); ?>" class="btn btn--border btn--primary btn--animated" style="background-color:black" >Accepted Bids</a>
             <br> <br>
-            <a href="<?php echo site_url('company_logged_in/my_Pending_Bids'); ?>" class="btn btn--border btn--primary btn--animated"> Pending Bids</a>
+            <a href="<?php echo site_url('company_logged_in/my_Pending_Bids'); ?>" class="btn btn--border btn--primary btn--animated" style="background-color:black"> Pending Bids</a>
         </div>
     </div>
     </body>

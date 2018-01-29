@@ -64,7 +64,7 @@
             <div class="container">
                 <div class="center-block">
                     <ul>
-                        <li>Ease-of-access to the suer</li>
+                        <li>Ease-of-access to the user</li>
                         <li>Marketing opportunity of their companies</li>
                         <li>Consistent deals with the user</li>
                         <li>More intra city flow for the rentals</li>

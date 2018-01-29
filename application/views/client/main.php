@@ -27,7 +27,6 @@ a.btn-default{
                 <!-- <a href = "<?php echo site_url('client_logged_in/Choice'); ?>" class = "btn btn-lg btn-success"> Plan a trip </a> -->
         
       <!-- Sidebar -->
-
     
     <div class="container">
     

@@ -112,8 +112,8 @@
                             <br>
 <!--                             <a type="submit" href="<?php echo site_url(""); ?>"  class="btn btn-sm" name="bid_now" >Edit Bid</a>
                              <a type="submit" href="<?php echo site_url(""); ?>" class="btn btn-sm" name="bid_now" >Delete Bid</a>
--->                         <input type="button" class="btn btn-sm"  name="button" value=" EDIT TRIP"   onclick="Edit( <?php echo $row->bid_id;?>)"/>
-                            <input type="button" class="btn btn-sm"  name="button" value="DELETE TRIP"   onclick="Delete( <?php echo $row->bid_id;?>)"/>
+-->                         <input type="button" class="btn btn-sm"  name="button" value=" EDIT BID"   onclick="Edit( <?php echo $row->bid_id;?>)"/>
+                            <input type="button" class="btn btn-sm"  name="button" value="DELETE BID"   onclick="Delete( <?php echo $row->bid_id;?>)"/>
             
                         </div>
                     </div>

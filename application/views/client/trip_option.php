@@ -120,9 +120,9 @@
         <div class="centered">Choose the one</div>
         <br>
         <div class="img-overlay">
-            <a href="<?php echo site_url('client_logged_in/my_Accepted_Trips'); ?>" class="btn btn--border btn--primary btn--animated" >Accepted Bids</a>
+            <a href="<?php echo site_url('client_logged_in/my_Accepted_Trips'); ?>" class="btn btn--border btn--primary btn--animated" style="background-color:black"  >Accepted Trips</a>
             <br> <br>
-            <a href="<?php echo site_url('client_logged_in/my_Pending_Trips'); ?>" class="btn btn--border btn--primary btn--animated"> Pending Bids</a>
+            <a href="<?php echo site_url('client_logged_in/my_Pending_Trips'); ?>" class="btn btn--border btn--primary btn--animated" style="background-color:black"> Pending Trips</a>
         </div>
     </div>
     </body>
