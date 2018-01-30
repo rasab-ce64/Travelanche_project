@@ -67,13 +67,13 @@ class Company_logged_in extends CI_Controller
     public function add_driver(){
         $this->load->model('company/company_model');
         $this->company_model->add_driver();
-        $this->load->view('company/success');
+        $this->load->view('company/driver_added_success');
     }
 
     public function vehicle(){
         $this->load->model('company/company_model');
         $this->company_model->add_vehicle();
-        $this->load->view('company/success');
+        $this->load->view('company/vehicle_added_success');
     }
     public function companies()
     {
