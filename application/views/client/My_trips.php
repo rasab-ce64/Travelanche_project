@@ -20,6 +20,7 @@
     <!--Custom-Theme-files-->
     <input type="hidden" value="<?php echo site_url(); ?>" id="baseurl"/>
 </head>
+
 <script type="text/javascript">
     /* delete notification function */
     function Delete(bol)

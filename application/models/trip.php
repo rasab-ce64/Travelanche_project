@@ -56,8 +56,8 @@ class Trip extends CI_model
         $query = $this->db->get('trip');
         $data = $query->result();
         return $data;
-        
     }
+
     public function bids_On_Trip($trip_id){
 
         $this->db->where('trip_id', $trip_id);
@@ -88,8 +88,7 @@ class Trip extends CI_model
         }
         $this->db->insert('accepted_bids_clients', $data);
         $this->db->where('trip_id',$id['trip_id']);
-        $this->db->delete('bids_by_rentals');   
-
+        $this->db->delete('bids_by_rentals');
     }
 
     public function edit_Trip($trip_id)
@@ -99,15 +98,15 @@ class Trip extends CI_model
 
         $this->db->where('id', $trip_id);
         $query = $this->db->get('trip');
+
         $data = $query->result();
         return $data;
     }
 
     public function update_Data($trip_id,$data)
       {
-          $this->db->where('id', $trip_id);
-          $this->db->update('trip', $data);
-
+          $this-> db-> where('id', $trip_id);
+          $this-> db-> update('trip', $data);
       }
 
     public function del_Trip($trip_id)

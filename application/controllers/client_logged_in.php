@@ -95,6 +95,7 @@ class client_Logged_in extends CI_Controller
         );  
         $this->db->update('trip', $data);
     }
+
     public function edit_Trip($trip_id)
     {
         $this->load->model('trip');
