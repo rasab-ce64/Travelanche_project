@@ -28,8 +28,6 @@ class User_model extends CI_model{
     }
     public function fetch_data($phone,$pass){
         
-        //$this->db->select('email','pass');
-        //$this->db->from('users');
         $this->db->where('phone', $phone);
         $this->db->where('pass', $pass); 
         $this->db->limit(1);
@@ -44,7 +42,7 @@ class User_model extends CI_model{
 
   public function user_name()
     {
-        $user_data = $this->session->userdata('logged_in');
+        $user_data = $this->session->userdata('user_logged_in');
         $phone = $user_data['phone'];
         $this->db->where('phone', $phone);
         $query = $this->db->get('users');
@@ -79,7 +77,6 @@ class User_model extends CI_model{
 
         $phone = $this->session->userdata('fone');
         echo $phone;
-       // $this->load->database();
         $this->db->where('user_phone',$phone);        
         $this->db->where('otp' , $otp);
         $query = $this->db->get('users');

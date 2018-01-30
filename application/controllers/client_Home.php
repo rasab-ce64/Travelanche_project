@@ -34,35 +34,23 @@ class client_Home extends CI_Controller {
 			$this->load->view('login_options');
 			$this->load->view('template/footer');
 		}
-		public function user_login(){
-			$this->session->set_userdata('client_or_company', 1);
+		public function login(){
 			$this->load->view('template/header');
-			$this->load->view('login');
-			$this->load->view('template/footer');
-		}
-		public function company_login(){
-			$this->session->set_userdata('client_or_company', 2);
-			$this->load->view('template/header');
-			$this->load->view('login');
+			$this->load->view('client/login');
 			$this->load->view('template/footer');
 		}
 
 		public function signup(){
 			/*  retrieve  session and check whether it is a client or company  */
-			$var = $this->session->userdata('client_or_company');
-			
 			$this->load->view('template/header');
-			if($var == 2)
-			$this->load->view('company/signup_company');
-			else
-			$this->load->view('signup');
+			$this->load->view('client/signup');
 			$this->load->view('template/footer');
 		}
-        public function user(){
+        public function signed_up(){
 			$this->load->model('user_model');
 			$this->user_model->insert_data(); //function call from model
 			$this->load->view('template/header');
-	 		$this->load->view('success');
+	 		$this->load->view('client/signup_success');
 			$this->load->view('template/footer');
 		}
         public function forgot_pass(){

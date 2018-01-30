@@ -13,51 +13,89 @@ class Company_login extends CI_Controller{
     public function index(){
 
     }
-
-    public function signup(){
-
+    public function signed_up(){
         $this->load->model('company/company_model');
         $this->company_model->signup(); //function call from model
-//        $this->load->view('success');
         $company_name['user_name'] = $_POST['name'];
-        $this->load->view('template/header_after_login',$company_name);
-        $this->load->view('company/main_company');
+        $this->load->view('company/header_after_login',$company_name);
+        $this->load->view('company/signup_success');
         $this->load->view('template/footer');        
     }
+
+        public function company_signup(){
+
+        $this->load->view('template/header');
+        $this->load->view('company/signup_company');
+        $this->load->view('template/footer');
+    }
+
     public function login(){
-        $this->load->view('company/template/header');
+        $this->load->view('template/header');
         $this->load->view('company/login');
-        $this->load->view('company/template/footer');
+        $this->load->view('template/footer');
     }
     public function company(){
 
-        $this->load->library('form_validation');
-        $this->form_validation->set_rules('phone' , 'Phone', 'required' , array('requires' , "Phone No. is required"));
-        $this->form_validation->set_rules('password' , 'Password' , 'trim|required|min_length[4]|max_length[40]');
-
-        if($this->form_validation->run() == true){ // if true
-            echo "success";
-            $phone = $this->input->post('phone');
-            $pass = $this->input->post('password');
+        $session_set_value = $this->session->all_userdata();
+        // Check for remember_me data in retrieved session data
+        if (isset($session_set_value['remember_company']) && $session_set_value['remember_company'] == "1")
+        {
             $this->load->model('company/company_model');
-
-            if($this->company_model->fetch_data($phone,$pass)){
-                $session_data = array(
-                    'phone' => $phone
-                );
-                $this->session->set_userdata($session_data);
-
-                redirect('company_login/enter' , 'refresh'); // same controller called with method "enter"
-            }
-            else{
-                $this->session->set_flashdata('error' , 'Invalid Phone and Password');
-                redirect('company_login/login' ,'refresh'); // will redirect to same login page to enter correct info
-            }
+            $user_namee['user_name'] = $this->session->userdata('company');
+            $this->load->view('company/header_after_login',$user_namee);
+            $this->load->view('company/main_company');
+            $this->load->view('template/footer');
         }
-        else{
-            //echo validation_errors();
-            $this->load->view('company/template/header.php');
-            $this->load->view('company/login.php');
+        else
+        {
+            $this->load->library('form_validation');
+            $this->form_validation->set_rules('phone' , 'Phone', 'required');
+            $this->form_validation->set_rules('password' , 'Password' , 'required');
+            if($this->form_validation->run()==false)
+            {
+                $this->load->view('template/header');
+                $this->load->view('login');
+                $this->load->view('template/footer');
+
+            } // if true
+            else
+            {
+                $phone = $this->input->post('phone');
+                $pass = $this->input->post('password');
+                $this->load->model('company/company_model');
+                if($this->company_model->fetch_data($phone,$pass))
+                {
+                    $remember = $this->input->post('remember_me');
+                    if ($remember)
+                    {
+                        // Set remember me value in session
+                        $this->session->set_userdata('remember_company', TRUE);
+                    }
+                    $sess_data = array(
+                        'phone' => $phone,
+                        'password' => $pass
+                    );
+                    $this->session->set_userdata('company_logged_in', $sess_data);
+                    $this->load->model('company/company_model');
+                    $user_name = $this->company_model->company_name();
+                    foreach($user_name as $row)
+                    {
+                        $user['user_name'] = $row->company_name;
+
+                    }
+                    $userr =   $user['user_name'];
+                    $this->session->set_userdata('company', $userr);
+                    $this->load->view('company/header_after_login',$user);
+                    $this->load->view('company/main_company');
+                    $this->load->view('template/footer');
+                }
+                else
+                {
+                    $this->session->set_flashdata('error' , 'Invalid Phone number and Password');
+                    /* will redirect to same login page to enter correct info */
+                    redirect('company_login/login' ,'refresh');
+                }
+            }
         }
     }
     // after login
@@ -69,12 +107,16 @@ class Company_login extends CI_Controller{
             $this->load->view('company/main_company');
         }
         else{
-            redirect('company/company_login/login' , 'refresh');
+            redirect('company_login/login' , 'refresh');
         }
     }
     public function logout(){
-        $this->session->unset_userdata('phone');
-        redirect('company/company_login/login' , 'refresh');
+        $this->session->unset_userdata('remember_company');
+        $this->session->unset_userdata('company_logged_in');
+        $this->session->unset_userdata('company');
+        $this->load->view('template/header');
+        $this->load->view('login_options');
+        $this->load->view('template/footer');
     }
 }
 ?>

@@ -14,7 +14,7 @@ class Trip extends CI_model
     public function Trip_details()
     {
         $this->load->database();
-        $user_data = $this->session->userdata('logged_in');
+        $user_data = $this->session->userdata('user_logged_in');
         $phone = $user_data['phone'];
         if (isset($_POST['Enter']))
         {
@@ -38,7 +38,7 @@ class Trip extends CI_model
     
     public function My_trips()
     {
-        $user_data = $this->session->userdata('logged_in');
+        $user_data = $this->session->userdata('user_logged_in');
         $phone = $user_data['phone'];
         $this->db->where('user_phone', $phone);
         $this->db->where('trip_status' ,'Pending');
@@ -49,7 +49,7 @@ class Trip extends CI_model
 
     public function My_Accepted_trips()
     {
-        $user_data = $this->session->userdata('logged_in');
+        $user_data = $this->session->userdata('user_logged_in');
         $phone = $user_data['phone'];
         $this->db->where('user_phone', $phone);
         $this->db->where('trip_status' ,'Bid Completed');
@@ -68,8 +68,6 @@ class Trip extends CI_model
 
     public function user_Accepted_Bid($id)
     {
-        // echo $id['trip_id'];
-        // echo $id['bid_id'];
         $this->db->where('bid_id', $id['bid_id']);
         $query = $this->db->get('bids_by_rentals');
         foreach( $query->result() as $row)
@@ -82,10 +80,17 @@ class Trip extends CI_model
             'total_fare' => $row->total_fare,
             'client_phone' => $row->client_phone,
             'client_trip_id' => $row->trip_id,
-            'timestamp' => $row->timestamp
+            'timestamp' => date("Y-m-d h:i:sa ")
             
             );
+
         }
+        $dat= array(
+            'trip_status'=> 'Bid Completed'
+        );  
+        $this->db->where('id',$id['trip_id']);
+        $this->db->update('trip', $dat);
+
         $this->db->insert('accepted_bids_clients', $data);
         $this->db->where('trip_id',$id['trip_id']);
         $this->db->delete('bids_by_rentals');

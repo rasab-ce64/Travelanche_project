@@ -1,6 +1,4 @@
-<?php
-$session_data = $this->session->userdata('logged_in');
-?>
+<!DOCTYPE HTML>
 <html>
 <head>
     <meta charset="utf-8">
@@ -12,7 +10,6 @@ $session_data = $this->session->userdata('logged_in');
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>Home | Travelanche</title>
 
     <!-- core CSS -->
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -35,38 +32,30 @@ $session_data = $this->session->userdata('logged_in');
 </head><!--/head-->
 
 <style>
-    a.btn-default{
-        width:100%;
-        border:1px solid #111111;
-        margin:10px;
-        border-radius: 10px;
-        color: #bf0f09;
-    }
-    .centered {
-        position: absolute;
-        top: 35%;
-        left: 50%;
-        font-size: 4em;
-        color: white;
-        transform: translate(-50%, -50%);
+    h2{
+    text_align: center;
+    color: black;
+}
+    .btn{
+        background-color: #ba0710;
+        color: #ffffff;
     }
 </style>
 
 <body>
-<img class="img-responsive" style="width:100%; height:400px;" src="<?php echo base_url('assets/images/Bost.png'); ?>" > </img>
-<div class="centered"  style="">Travelanche</div>
 
 <div class="container">
-    <h2 style="text-align: center;">Choose Whatever you want</h2>
-    <hr>
-    <div class="row">
-        <a href="<?php echo site_url('company_logged_in/plan_a_Trip'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="plan_a_trip">Plan a Trip</a>
-        <a href="<?php echo site_url('Home/add_driver'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="share_a_ride">Add Driver</a>
-        <a href="<?php echo site_url('Home/add_vehicle'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="share_a_ride">Add vehicle</a>
-        <a href="<?php echo site_url('company_logged_in/companies'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="share_a_ride">Companies</a>
-        <a href="<?php echo site_url('company_Logged_in/my_Trips'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="my_trips">Trips</a>
-        <a href="<?php echo site_url('company_Logged_in/bid_options'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="my_trips">My Bids</a>
+    <div class="center">
+        <br> <br> <br> <br> <br>
+        <h2 style="text_align: center;"> Forgot Your Password</h2> <hr> <br>
+        <form action="<?php echo site_url('forgot_pass/send_code_company') ?>" method="POST">
+            <span class="text-danger"> <?php echo form_error('phone'); ?></span>
+            Enter Phone Number:  <input type="text" name="phone" placeholder="Enter Phone number" autofocus="" required=""/> <br> <br>
+            <button class="btn btn-sm btn-primary" style="text-align: center;" type="submit" name="submit">Send Code</button>
+        </form>
     </div>
 </div>
+
 </body>
-</html>
+
+
