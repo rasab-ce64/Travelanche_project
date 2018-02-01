@@ -38,12 +38,19 @@
 <body>
 
 <body>
+<<<<<<< HEAD
+<img class="img-responsive" style="width:100%; height:600px;" src="<?php echo base_url('assets/images/back4.jpg'); ?>" > </img>
+        <?php foreach($trips as $trip) $id = $trip->id ?>
+<form class="form-horizontal" id="centered" action="<?php echo site_url("client_logged_in/update_Data/$id"); ?> " method="post"  id="contact_form">
+        <?php  foreach($trips as $trip) { ?>
+=======
 
 <img class="img-responsive" style="width:100%; height:600px;" src="<?php echo base_url('assets/images/trip.jpg'); ?>" > </img>
         <?php foreach($trips as $trip) $id = $trip->id ?>
 <form class="form-horizontal" id="centered" action="<?php echo site_url("client_logged_in/update_Data/$id"); ?> " method="post"  id="contact_form">
                 <?php  foreach($trips as $trip) { ?>
 
+>>>>>>> 8b0e8d8761f60ed359c7851117e439b29602ab52
         <fieldset>
                 <legend><h2><b>Edit Trip</b></h2></legend>
                 <div class="form-group">
@@ -134,7 +141,6 @@
                                         <button name="submit" type="submit" class="btn btn-md" >Edit Trip</button>
                                 </div>
                         </div>
-                </div>
         </fieldset>
 </form>
 <?php } ?>

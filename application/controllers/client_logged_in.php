@@ -92,6 +92,7 @@ class client_Logged_in extends CI_Controller
         $this->load->view('template/footer');
         
     }
+
     public function edit_Trip($trip_id)
     {
         $user['user_name'] = $this->session->userdata('user');
