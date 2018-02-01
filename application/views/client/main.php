@@ -1,5 +1,7 @@
 <?php
-$session_data = $this->session->userdata('logged_in');
+$session_data = $this->session->userdata('user_logged_in');
+// header("Cache-Control: no cache");
+// session_cache_limiter("private_no_expire");
 ?>
 
 <style>

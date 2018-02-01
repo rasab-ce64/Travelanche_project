@@ -58,7 +58,10 @@
 </script>
 <body>
 <!--top_section2-->
-<?php  foreach ($trips as $row){ ?>
+<?php  
+// header("Cache-Control: no cache");
+// session_cache_limiter("private_no_expire");
+foreach ($trips as $row){ ?>
         <div class="top_section two">
             <div class="bnr-btm-right two">
                 <h3>User Trip Details</h3>

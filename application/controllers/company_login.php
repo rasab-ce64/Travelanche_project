@@ -54,7 +54,7 @@ class Company_login extends CI_Controller{
             if($this->form_validation->run()==false)
             {
                 $this->load->view('template/header');
-                $this->load->view('login');
+                $this->load->view('company/login');
                 $this->load->view('template/footer');
 
             } // if true

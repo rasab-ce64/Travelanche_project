@@ -1,6 +1,8 @@
 <?php
 
 class client_User_login extends CI_Controller{
+
+	
     
     public function __construct() {
     parent::__construct();
@@ -11,11 +13,23 @@ class client_User_login extends CI_Controller{
     $this->load->model('user_model');
     }
     
-    public function login(){
-        $this->load->view('template/header');
-        $this->load->view('login');
-        $this->load->view('template/footer');
-    }
+//    public function login(){
+//
+//        $var = $this->session->userdata('user_logged_in');
+//        echo $var['phone'];
+//        if ($var['phone']!=NULL )
+//        {
+//            redirect('client_Home','refresh');
+//
+//        }
+//        else{
+//        $this->load->view('template/header');
+//        $this->load->view('login');
+//        $this->load->view('template/footer');
+//
+//        }
+//
+//    }
 
     public function user()
     {
@@ -28,7 +42,7 @@ class client_User_login extends CI_Controller{
                 $this->load->view('client/header_after_login',$user_namee);
                 $this->load->view('client/main');
                 $this->load->view('template/footer');
-        } 
+        }
         else
         {
             $this->load->library('form_validation');
@@ -37,19 +51,19 @@ class client_User_login extends CI_Controller{
             if($this->form_validation->run()==false)
             {
                 $this->load->view('template/header');
-                $this->load->view('login');
+                $this->load->view('client/login');
                 $this->load->view('template/footer');
-                
+
             } // if true
             else
-            { 
+            {
                 $phone = $this->input->post('phone');
                 $pass = $this->input->post('password');
                 $this->load->model('user_model');
                 if($this->user_model->fetch_data($phone,$pass))
                 {
                     $remember = $this->input->post('remember_me');
-                    if ($remember) 
+                    if ($remember)
 	                {
                     // Set remember me value in session
                     $this->session->set_userdata('remember_user', TRUE);
@@ -64,7 +78,7 @@ class client_User_login extends CI_Controller{
                         foreach($user_name as $row)
                         {
                             $user['user_name'] = $row->first_name;
-                            
+
                         }
                         $userr =   $user['user_name'];
                         $this->session->set_userdata('user', $userr);
@@ -76,11 +90,11 @@ class client_User_login extends CI_Controller{
                 {
                     $this->session->set_flashdata('error' , 'Invalid Phone number and Password');
                     /* will redirect to same login page to enter correct info */
-                    redirect('client_user_login/login' ,'refresh'); 
+                    redirect('client_Home/login' ,'refresh');
                 }
             }
         }
-    }
+            }
 
     /* after login */
     public function enter()
@@ -102,9 +116,11 @@ class client_User_login extends CI_Controller{
         $this->session->unset_userdata('remember_user');
         $this->session->unset_userdata('user_logged_in');
         $this->session->unset_userdata('user');
-        $this->load->view('template/header');
-        $this->load->view('login_options');
-        $this->load->view('template/footer');
+        redirect('client_Home/login_option' , 'refresh');
+
+        // $this->load->view('template/header');
+        // $this->load->view('login_options');
+        // $this->load->view('template/footer');
        
     }
 }
