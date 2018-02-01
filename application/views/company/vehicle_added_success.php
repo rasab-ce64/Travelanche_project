@@ -28,7 +28,7 @@
         <strong>Congratulations! </strong> You have successfully add your vehicle. Click the button below to Bid on trips
     </div>
 
-    <button id="btn" class="btn btn-sm" href="<?php echo site_url('company_login/login'); ?>">Back to Trips</button>
+    <button id="btn" class="btn btn-sm" href="<?php echo site_url(''); ?>">Back to Menu</button>
 </div>
 
 </body>
