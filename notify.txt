@@ -1,0 +1,14 @@
+https://fcm.googleapis.com/fcm/send
+Content-Type: application/json
+Authorization: key=AIzaSyC...akjgSX0e4
+
+
+{ "notification": {
+    "title": "Background Message Title",
+    "body": "Background message body",
+    "click_action" : "https://dummypage.com"
+  },
+
+  "to" : "eEz-Q2sG8nQ:APA91bHJQRT0JJ..."
+
+}

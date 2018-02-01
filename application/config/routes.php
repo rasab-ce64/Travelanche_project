@@ -55,3 +55,4 @@ $route['default_controller'] = 'client_home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+

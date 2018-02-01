@@ -24,6 +24,38 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo base_url('assets/images/ico/apple-touch-icon-72-precomposed.png'); ?> ">
     <link rel="apple-touch-icon-precomposed" href="<?php echo base_url('assets/images/ico/apple-touch-icon-57-precomposed.png'); ?> ">
 </head><!--/head-->
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyALpBrZOBUJR7jwRe-jR1niW9-CM4K5KZk",
+    authDomain: "zubair-f0c10.firebaseapp.com",
+    databaseURL: "https://zubair-f0c10.firebaseio.com",
+    projectId: "zubair-f0c10",
+    storageBucket: "",
+    messagingSenderId: "796738553551"
+  };
+  firebase.initializeApp(config);
+  const messaging = firebase.messaging();
+  messaging.requestPermission()
+  .then(function()
+  {
+      console.log('Have permission');
+      return messaging.getToken();
+  })
+  .then(function(token){
+      console.log(token);
+  })
+
+  .catch(function(err)
+  {
+      console.log('Error Occured.');
+  })
+  messaging.onMessage(function(payload) {
+  console.log('Message received:', payload);
+  // ...
+});
+</script>
 
 <body class="homepage">
 
@@ -48,6 +80,7 @@
                         <li><a href="<?php echo site_url('client_Home/services'); ?>">Services</a></li>
                         <li><a href="<?php echo site_url('client_Home/contact'); ?>" >Contact</a></li>
                         <li><a href="<?php echo site_url('client_Home/login_option'); ?>">Login</a></li>                        
+
                     </ul>
                 </div>
             </div><!--/.container-->

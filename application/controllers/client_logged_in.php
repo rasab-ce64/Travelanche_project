@@ -90,6 +90,7 @@ class client_Logged_in extends CI_Controller
         $this->load->view('client/header_after_login',$user);
         $this->load->view('client/accept_bid_success');
         $this->load->view('template/footer');
+        
     }
     public function edit_Trip($trip_id)
     {

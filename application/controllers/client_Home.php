@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class client_Home extends CI_Controller {
-	
+
 		public function _construct(){
 			parent::_construct();
 			$this->load->model('insert');
@@ -35,20 +35,31 @@ class client_Home extends CI_Controller {
 			$this->load->view('template/footer');
 		}
 		public function login(){
-			$this->load->view('template/header');
-			$this->load->view('client/login');
-			$this->load->view('template/footer');
-		}
+      /*  $var = $this->session->userdata('user_logged_in');
+        echo $var['phone'];
+        if ($var['phone']!=NULL )
+        {
+            redirect('client_Home','refresh');
+
+        }
+        else{*/
+        $this->load->view('template/header');
+        $this->load->view('client/login');
+        $this->load->view('template/footer');
+
+        //}
+
+        }
 
 		public function signup(){
-			/*  retrieve  session and check whether it is a client or company  */
+
 			$this->load->view('template/header');
 			$this->load->view('client/signup');
 			$this->load->view('template/footer');
 		}
         public function signed_up(){
 			$this->load->model('user_model');
-			$this->user_model->insert_data(); //function call from model
+			$this->user_model->insert_data();
 			$this->load->view('template/header');
 	 		$this->load->view('client/signup_success');
 			$this->load->view('template/footer');

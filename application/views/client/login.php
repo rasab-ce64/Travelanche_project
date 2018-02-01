@@ -1,6 +1,13 @@
 
 <!DOCTYPE html>
 <html lang='en-US'>
+<head>
+    <!--  jquery  -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script language="javascript" type="text/javascript"> </script>
+
+</head>
 
 <style>
     
