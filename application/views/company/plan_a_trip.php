@@ -3,7 +3,9 @@
 
 <head>
 <!--  jquery  -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css" rel="stylesheet">
   <!--link jquery ui css-->
 </head>
 
@@ -13,9 +15,7 @@
 
 
 <body>
-<div class="container" >
-
-<form class="well form-horizontal" action="<?php echo site_url('company_logged_in/Trip_info'); ?> " method="post"  id="contact_form">
+<form class="form-horizontal" action="<?php echo site_url('company_logged_in/Trip_info'); ?> " method="post"  id="contact_form">
 <fieldset>
 <!-- Form Name -->
 <legend><center><h2><b>Plan Your Trip</b></h2></center></legend>
@@ -28,9 +28,9 @@
   <label class="col-md-4 control-label">Choose Destination</label>  
   <div class="col-md-4 inputGroupContainer">
      <div class="input-group">
-       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+       <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
        <select name="destination" class ="form-control" required=""  >
-         <option value="none" selected="selected"  >-----------------Select City----------------------</option>
+         <option value="none" selected="selected"  >Select destination</option>
          <!----- Displaying fetched cities in options using foreach loop ---->
          <?php foreach($destination as $row):?>
            <option value="<?php echo $row->destination?>"><?php echo $row->destination?></option>
@@ -46,9 +46,9 @@
   <label class="col-md-4 control-label" >Choose Vehicle</label> 
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
-  <span class="input-group-addon"><i class="	glyphicon glyphicon-plane"></i></span>
+  <span class="input-group-addon"><i class="fa fa-car"></i></span>
       <select name="vehicle" class ="form-control" required=""  >
-        <option value="none" selected="selected"  >-----------------Select City----------------------</option>
+        <option value="none" selected="selected"  >Select Vehicle</option>
         <!----- Displaying fetched cities in options using foreach loop ---->
         <?php foreach($vehicle_type as $row):?>
           <option value="<?php echo $row->vehicle_type?>"><?php echo $row->vehicle_type?></option>
@@ -66,7 +66,7 @@
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
     <select name="pickup_location" class ="form-control" required=""  >
-      <option value="none" selected="selected"  >-----------------Select City----------------------</option>
+      <option value="none" selected="selected"  >Select Pickup location</option>
       <!----- Displaying fetched cities in options using foreach loop ---->
       <?php foreach($pickup_location as $row):?>
         <option value="<?php echo $row->pickup_location?>"><?php echo $row->pickup_location?></option>
@@ -133,12 +133,32 @@
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
         <select name="city" class ="form-control" required="" placeholder="  Trip Discription" >
-          <option value="none" selected="selected"  >-----------------Select City----------------------</option>
+          <option value="none" selected="selected"  >Select your City</option>
           <!----- Displaying fetched cities in options using foreach loop ---->
           <?php foreach($city as $row):?>
             <option value="<?php echo $row->city?>"><?php echo $row->city?></option>
           <?php endforeach;?>
         </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-4 control-label">Driver</label>
+    <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="	glyphicon glyphicon-user"></i></span>
+        <input name="drop_time" placeholder="Enter Yes or No" class="form-control" required="" type="text">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-4 control-label">AC</label>
+    <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-rocket"></i></span>
+        <input name="drop_time" placeholder="Enter Yes or No" class="form-control" required="" type="text">
       </div>
     </div>
   </div>
@@ -171,8 +191,6 @@
   </div>
 </fieldset>
 </form>
-</div>
-</div><!-- /.container -->
 
 </body>
 </html>
