@@ -93,6 +93,16 @@ class client_Logged_in extends CI_Controller
         
     }
 
+    public function companies()
+    {
+        $user['user_name'] = $this->session->userdata('company');
+        $this->load->model('company/company_model');
+        $data['companies'] = $this->company_model->companies();
+        $this->load->view('company/header_after_login',$user);
+        $this->load->view('client/companies', $data);
+        $this->load->view('template/footer');
+    }
+
     public function edit_Trip($trip_id)
     {
         $user['user_name'] = $this->session->userdata('user');
@@ -102,6 +112,7 @@ class client_Logged_in extends CI_Controller
         $this->load->view('client/edit_Trip',$trip_data);
         $this->load->view('template/footer');
     }
+
     public function del_Trip($trip_id)
     {
         $this->load->model('trip');
@@ -124,11 +135,27 @@ class client_Logged_in extends CI_Controller
             'time_drop' => $this->input->post('drop_time'),
             'user_city' => $this->input->post('city'),
             'trip_description' => $this->input->post('trip_disc')
-
         );
         $this->trip->update_Data($trip_id,$data);
         redirect('client_logged_in/my_Pending_Trips');
 
+    }
+
+    public function view_drivers($phone){
+
+//        echo 'company phone = ' .$phone;
+        $this->load->model('trip');
+        $data['result'] = $this->trip->company_drivers($phone);
+        $this->load->view('template/header');
+        $this->load->view('client/company_drivers' , $data);
+    }
+    public function view_vehicles($phone){
+
+        //echo 'company phone = ' .$phone;
+        $this->load->model('trip');
+        $data['result'] = $this->trip->company_vehicles($phone);
+        $this->load->view('template/header');
+        $this->load->view('client/company_vehicles' , $data);
     }
 }
 ?>

@@ -26,6 +26,7 @@ class User_model extends CI_model{
                 $this->db->query($sql);
         }
     }
+
     public function fetch_data($phone,$pass){
         
         $this->db->where('phone', $phone);
@@ -40,7 +41,7 @@ class User_model extends CI_model{
             }
     }
 
-  public function user_name()
+    public function user_name()
     {
         $user_data = $this->session->userdata('user_logged_in');
         $phone = $user_data['phone'];
@@ -50,7 +51,8 @@ class User_model extends CI_model{
         return $data;
     }
 
-      public function check_phone($phone){
+    public function check_phone($phone){
+
         if (isset($_POST['phone'])) 
        //  $phone = $_POST['phone'];
          $this->db->where('user_phone', $phone);
@@ -65,6 +67,7 @@ class User_model extends CI_model{
              return true; 
          }
      }
+
     public function update_otp($phone,$otp){
 
         $this->db->where('otp' , $otp);
@@ -89,5 +92,6 @@ class User_model extends CI_model{
         $sql = "UPDATE users SET pass = '$pwd' WHERE user_phone = $phone ";
         $this->db->query($sql);
     }
+
 }
 ?>

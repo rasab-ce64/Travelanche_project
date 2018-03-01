@@ -134,7 +134,6 @@ class Company_model extends CI_model
         $this->load->database();
         $this->db->insert('company_drivers' , $data);
     }
-
     public function add_vehicle(){
 
         $this->load->database();
@@ -306,8 +305,6 @@ class Company_model extends CI_model
         $query = $this->db->get('companies');
         $data = $query->result();
         return $data;
-
- }   
-
+ }
 }
 ?>
