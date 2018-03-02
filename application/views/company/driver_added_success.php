@@ -28,7 +28,7 @@
         <strong>Congratulations! </strong> You have successfully added your driver. Click the button below to bid on trips
     </div>
 
-    <button id="btn" class="btn btn-sm" href="<?php echo site_url(''); ?>">Back to Trips</button>
+    <button id="btn" class="btn btn-sm" href="<?php echo site_url(''); ?>">Back to Menu</button>
 </div>
 
 </body>

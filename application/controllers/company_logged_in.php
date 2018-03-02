@@ -6,7 +6,7 @@ class Company_logged_in extends CI_Controller
     {
         parent::_construc();
         $this->load->helper(array('form_validation','url','form'));
-        $this->load->library('session');
+        $this->load->library(array('session' , 'upload'));
         $this->load->model('company/company_model');
         $this->load->database();
     }
@@ -20,6 +20,7 @@ class Company_logged_in extends CI_Controller
         $this->load->view('company/bachat', $get_dropdown);
         //$this->load->view('lambSamb' , $get_dropdown);
     }
+
     public function plan_a_Trip()
     {
         $this->load->model('trip');
@@ -33,6 +34,7 @@ class Company_logged_in extends CI_Controller
         $this->load->view('company/plan_a_trip',$user);
         $this->load->view('template/footer');
     }
+
     public function Trip_info()
     {
         $this->load->model('company/company_model');
@@ -53,6 +55,7 @@ class Company_logged_in extends CI_Controller
         $this->load->view('company/header_after_login',$user);
         $this->load->view('company/Trips',$comp_trips);
     }
+
     public function bids_By_Other_Companies($trip_id)
     {
         // echo $trip_id;
@@ -64,29 +67,58 @@ class Company_logged_in extends CI_Controller
         $this->load->view('template/footer');
     }
 
-    public function add_driver(){
-        $this->load->model('company/company_model');
-        $this->company_model->add_driver();
-        $this->load->view('company/driver_added_success');
+    public function do_upload()
+    {
+        $comp_data = $this->session->userdata('company_logged_in');
+        $phone = $comp_data['phone'];
+
+        $driver_name = $this->input->post('driver_name');
+        $driver_phone = $this->input->post('driver_phone');
+        $driver_cnic = $this->input->post('driver_cnic');
+        $driver_license = $this->input->post('driver_license');
+
+        $config['upload_path'] = '.uploads/';
+        $config['allowed_types'] = 'gif|jpg|png';
+
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
+
+        if (!$this->upload->do_upload('userfile')) {
+            $error = array('error', $this->upload->display_errors());
+            $this->load->view('company/driver', $error);
+        }
+        else {
+            $this->load->model('company/company_model');
+            $data = array(
+                'driver_name' => $driver_name,
+                'driver_phone' => $driver_phone,
+                'driver_cnic' => $driver_cnic,
+                'driver_licenseNo' => $driver_license,
+                'driver_picture' => $this->upload->data(),
+                'company' => $phone,
+            );
+            $this->company_model->add_driver($data);
+            $this->load->view('template/header');
+            $this->load->view('company/driver_added_success', $data);
+        }
     }
 
     public function vehicle(){
+
         $this->load->model('company/company_model');
         $this->company_model->add_vehicle();
         $this->load->view('company/vehicle_added_success');
     }
-    public function companies()
-    {
-        $user['user_name'] = $this->session->userdata('company'); 
-        $this->load->model('company/company_model');
-        $data['companies'] = $this->company_model->companies();
 
-        $this->load->view('company/header_after_login',$user);
-        $this->load->view('company/companies', $data);
-
+//    public function companies()
+//    {
+//        $user['user_name'] = $this->session->userdata('company');
+//        $this->load->model('company/company_model');
+//        $data['companies'] = $this->company_model->companies();
+//        $this->load->view('company/header_after_login',$user);
+//        $this->load->view('client/companies', $data);
 //        $this->load->view('template/footer');
-   
-    }
+//    }
 
     public function place_bid()
     {
@@ -97,6 +129,7 @@ class Company_logged_in extends CI_Controller
         $this->load->view('company/place_bid_success');
         $this->load->view('template/footer');
     }
+
     public function bid_options(){
 
         $company['user_name'] = $this->session->userdata('company');
@@ -104,6 +137,7 @@ class Company_logged_in extends CI_Controller
         $this->load->view('company/bid_options');
         $this->load->view('template/footer');
     }
+
     public function my_Pending_Bids()
     {
 
@@ -116,6 +150,7 @@ class Company_logged_in extends CI_Controller
         $id = $this->uri->segment(3);
         echo $id;
     }
+
     public function edit_Bid($bid_id)
     {
         $company['user_name'] = $this->session->userdata('company');
@@ -126,6 +161,7 @@ class Company_logged_in extends CI_Controller
         $this->load->view('template/footer');
 
     }
+
     public function update_Data($bid_id)
     {
        $this->load->model('company/company_model');
@@ -139,6 +175,7 @@ class Company_logged_in extends CI_Controller
         redirect('company_logged_in/my_Pending_Bids');
 
     }
+
     public function delete_Bid($bid_id)
     {
         $this->load->model('company/company_model');        
@@ -146,6 +183,7 @@ class Company_logged_in extends CI_Controller
         redirect('company_logged_in/my_Pending_Bids');
 
     }
+
     public function my_Accepted_Bids()
     {
         $company['user_name'] = $this->session->userdata('company');

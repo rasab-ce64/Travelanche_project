@@ -53,7 +53,7 @@ $session_data = $this->session->userdata('logged_in');
 </style>
 
 <body>
-<img class="img-responsive" style="width:100%; height:400px;" src="<?php echo base_url('assets/images/Bost.png'); ?>" > </img>
+<img class="img-responsive" style="width:100%; height:500px;" src="<?php echo base_url('assets/images/Bost.png'); ?>" > </img>
 <div class="centered"  style="">Travelanche</div>
 
 <div class="container">

@@ -17,8 +17,8 @@
 </style>
 
 <body>
-    <form class="well form-horizontal" action="<?php echo site_url('company_logged_in/add_driver'); ?>" method="post"  id="contact_form">
-        <fieldset>
+<form class="well form-horizontal" method="post" action="<?php echo site_url('company_logged_in/do_upload'); ?>" enctype="multipart/form-data">
+<fieldset>
             <!-- Form Name -->
             <legend><center><h1 style="color: #000000;"><b>Add Driver</b></h1></center></legend>
             <br>
@@ -74,7 +74,11 @@
                 <div class="col-md-4 inputGroupContainer">
                     <div class="input-group">
                         <span class="input-group-addon" id="file_upload"><i class="fa fa-file-image-o"></i></span>
+<<<<<<< HEAD
                         <input type="file" name="file_nm" id="file_nm" class="form-control" placeholder="" aria-describedby="file_upload" accept="image/*" >
+=======
+                        <input type="file" name="userfile" size="20" class="form-control">
+>>>>>>> 2036c678f82a4d40405a4507f5baac4e51d4a725
                     </div>
                 </div>
             </div>

@@ -6,8 +6,9 @@ class Company_model extends CI_model
     public function _construct()
     {
         parent::_construct();
-        $this->load->helper(array('form', 'url', 'form_validation'));
-        $this->load->library(array('session' , 'form_validation'));
+        $this->load->helper(array('form', 'url', 'form_validation' , 'file'));
+        $this->load->library('upload');
+        $this->load->library(array('session' , 'form_validation' , 'upload'));
         $this->load->database();
     }
 
@@ -129,28 +130,11 @@ class Company_model extends CI_model
         return $data;
     }
 
-    public function add_driver(){
-
+    public function add_driver($data)
+    {
         $this->load->database();
-        if (isset($_POST['add_driver'])) {
-
-            $comp_data = $this->session->userdata('company_logged_in');
-             $phone = $comp_data['phone'];
-             // matching user phone with session
-            $this->db->where('phone' , $phone);
-
-            $driver_name = $_POST['driver_name'];
-            $driver_phone = $_POST['driver_phone'];
-            $driver_cnic = $_POST['driver_cnic'];
-            $driver_license = $_POST['driver_license'];
-            $photo = $_POST['file_nm'];
-        }
-
-        $sql = "INSERT INTO company_drivers( driver_name, driver_phone, driver_cnic, driver_licenseNo, driver_picture, company)
-                          VALUES('$driver_name','$driver_phone','$driver_cnic','$driver_license','$photo' , '$phone')";
-        $this->db->query($sql);
+        $this->db->insert('company_drivers' , $data);
     }
-
     public function add_vehicle(){
 
         $this->load->database();
@@ -322,8 +306,6 @@ class Company_model extends CI_model
         $query = $this->db->get('companies');
         $data = $query->result();
         return $data;
-
- }   
-
+ }
 }
 ?>

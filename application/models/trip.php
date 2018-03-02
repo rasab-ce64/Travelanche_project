@@ -18,7 +18,6 @@ class Trip extends CI_model
         $phone = $user_data['phone'];
         if (isset($_POST['Enter']))
         {
-
             $destination = $_POST['destination'];
             $vehicle = $_POST['vehicle'];
             $pickup_location = $_POST['pickup_location'];
@@ -154,6 +153,22 @@ class Trip extends CI_model
     public function Pickup_location()
     {
         $query = $this->db->get('pickup_location');
+        $data = $query->result();
+        return $data;
+    }
+
+    public function company_drivers($phone){
+
+        $this->db->where('company' , $phone);
+        $query = $this->db->get('company_drivers');
+        $data = $query->result();
+        return $data;
+    }
+
+    public function company_vehicles($phone){
+
+        $this->db->where('company' , $phone);
+        $query = $this->db->get('company_vehicles');
         $data = $query->result();
         return $data;
     }

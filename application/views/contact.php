@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,69 +26,51 @@
 </head><!--/head-->
 
 <section id="contact-info">
-        <div class="center">                
+
+        <div class="center">
             <h2>How to Reach Us?</h2>
-            <p class="lead">Contact us for more information and your queries</p>
+            <p class="lead">Contact us for more information</p>
         </div>
-        <div class="gmap-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-5 text-center">
-                        <div class="gmap">
-                            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=JoomShaper,+Dhaka,+Dhaka+Division,+Bangladesh&amp;aq=0&amp;oq=joomshaper&amp;sll=37.0625,-95.677068&amp;sspn=42.766543,80.332031&amp;ie=UTF8&amp;hq=JoomShaper,&amp;hnear=Dhaka,+Dhaka+Division,+Bangladesh&amp;ll=23.73854,90.385504&amp;spn=0.001515,0.002452&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=1073661719450182870&amp;output=embed"></iframe>
-                        </div>
-                    </div>
+    <div class="row">
+        <div id="googleMap" style="width:100%;height:400px;"></div>
+    </div>
+    <script>
+        function myMap() {
+            var myCenter = new google.maps.LatLng(31.5823792,74.2858782);
+            var mapCanvas = document.getElementById("googleMap");
+            var mapOptions = {center: myCenter, zoom: 5};
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+            var marker = new google.maps.Marker({position:myCenter});
+            marker.setMap(map);
 
-                    <div class="col-sm-7 map-content">
-                        <ul class="row">
-                            <li class="col-sm-6">
-                                <address>
-                                    <h5>Head Office</h5>
-                                    <p>1537 Flint Street <br>
-                                    Tumon, MP 96911</p>
-                                    <p>Phone:670-898-2847 <br>
-                                    Email Address:info@domain.com</p>
-                                </address>
+            google.maps.event.addListener(marker,'click',function() {
+                var pos = map.getZoom();
+                map.setZoom(9);
+                map.setCenter(marker.getPosition());
+                window.setTimeout(function() {map.setZoom(pos);},3000);
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
 
-                                <address>
-                                    <h5>Zonal Office</h5>
-                                    <p>1537 Flint Street <br>
-                                    Tumon, MP 96911</p>                                
-                                    <p>Phone:670-898-2847 <br>
-                                    Email Address:info@domain.com</p>
-                                </address>
-                            </li>
+</section>  <!--/gmap_area -->
 
-
-                            <li class="col-sm-6">
-                                <address>
-                                    <h5>Zone#2 Office</h5>
-                                    <p>1537 Flint Street <br>
-                                    Tumon, MP 96911</p>
-                                    <p>Phone:670-898-2847 <br>
-                                    Email Address:info@domain.com</p>
-                                </address>
-
-                                <address>
-                                    <h5>Zone#3 Office</h5>
-                                    <p>1537 Flint Street <br>
-                                    Tumon, MP 96911</p>
-                                    <p>Phone:670-898-2847 <br>
-                                    Email Address:info@domain.com</p>
-                                </address>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>  <!--/gmap_area -->
+<div class="center">
+    <address>
+        <h2>Head Office</h2>
+        <p>Uuniversity of Engineering and Technology,<br>
+            Lahore</p>
+        <p><b>Phone: </b> +92 316-4434854 <br>
+            <b>Email Address:</b> &nbsp;info@domain.com</p>
+    </address>
+    <hr>
+</div>
 
     <section id="contact-page">
         <div class="container">
             <div class="center">        
                 <h2>Drop Your Message</h2>
-                <p class="lead">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="lead">For custom queries and complaints, We are here to listen you!</p>
             </div> 
             <div class="row contact-wrap"> 
                 <div class="status alert alert-success" style="display: none"></div>
@@ -130,3 +110,6 @@
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#contact-page-->
+
+
+
