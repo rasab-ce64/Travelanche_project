@@ -30,7 +30,7 @@
      <div class="input-group">
        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
        <select name="destination" class ="form-control" required=""  >
-         <option value="none" selected="selected"  >-----------------Select City----------------------</option>
+         <option value="none" selected="selected"  >--------------------Destination------------------</option>
          <!----- Displaying fetched cities in options using foreach loop ---->
          <?php foreach($destination as $row):?>
            <option value="<?php echo $row->destination?>"><?php echo $row->destination?></option>
@@ -48,7 +48,7 @@
     <div class="input-group">
   <span class="input-group-addon"><i class="	glyphicon glyphicon-plane"></i></span>
       <select name="vehicle" class ="form-control" required=""  >
-        <option value="none" selected="selected"  >-----------------Select City----------------------</option>
+        <option value="none" selected="selected"  >-------------------Vehicle Type-------------------</option>
         <!----- Displaying fetched cities in options using foreach loop ---->
         <?php foreach($vehicle_type as $row):?>
           <option value="<?php echo $row->vehicle_type?>"><?php echo $row->vehicle_type?></option>
@@ -66,7 +66,7 @@
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
     <select name="pickup_location" class ="form-control" required=""  >
-      <option value="none" selected="selected"  >-----------------Select City----------------------</option>
+      <option value="none" selected="selected"  >-----------------Pickup Location--------------------</option>
       <!----- Displaying fetched cities in options using foreach loop ---->
       <?php foreach($pickup_location as $row):?>
         <option value="<?php echo $row->pickup_location?>"><?php echo $row->pickup_location?></option>
@@ -133,7 +133,7 @@
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
         <select name="city" class ="form-control" required="" placeholder="  Trip Discription" >
-          <option value="none" selected="selected"  >-----------------Select City----------------------</option>
+          <option value="none" selected="selected"  >-----------------Choose City--------------------</option>
           <!----- Displaying fetched cities in options using foreach loop ---->
           <?php foreach($city as $row):?>
             <option value="<?php echo $row->city?>"><?php echo $row->city?></option>

@@ -9,7 +9,7 @@
 
             <input type="hidden" name="phone" value="<?php if(isset($phone)){echo $phone;}?>" >
 
-            Enter New Password &nbsp; &nbsp; &nbsp; <input type="password"  id ="password" autofocus="" required="" name="new_pass"> <br> <br>
+            Enter New Password &nbsp; &nbsp; &nbsp; <input type="password"  id ="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" autofocus="" required="" name="new_pass"> <br> <br>
             <span class="text-danger"> <?php echo form_error('phone'); ?></span>
 
             Confirm New Password &nbsp; <input type="password" id ="confirm_password" autofocus="" required="" name="rep_pass"> <br>

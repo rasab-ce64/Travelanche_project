@@ -7,6 +7,8 @@ class client_Home extends CI_Controller {
 			parent::_construct();
 			$this->load->model('insert');
 			$this->load->helper('path');
+			$this->load->helper('form_validation');
+			$this->load->library('upload');
 		}
 		public function index(){
 			$this->load->view('template/header');
@@ -34,35 +36,23 @@ class client_Home extends CI_Controller {
 			$this->load->view('login_options');
 			$this->load->view('template/footer');
 		}
-		public function login(){
-      /*  $var = $this->session->userdata('user_logged_in');
-        echo $var['phone'];
-        if ($var['phone']!=NULL )
-        {
-            redirect('client_Home','refresh');
-
+		public function login(){	
+			$this->load->view('template/header');
+			$this->load->view('client/login');
+			$this->load->view('template/footer');
         }
-        else{*/
-        $this->load->view('template/header');
-        $this->load->view('client/login');
-        $this->load->view('template/footer');
-
-        //}
-
-        }
-
 		public function signup(){
-
 			$this->load->view('template/header');
 			$this->load->view('client/signup');
 			$this->load->view('template/footer');
 		}
         public function signed_up(){
+
 			$this->load->model('user_model');
 			$this->user_model->insert_data();
 			$this->load->view('template/header');
 	 		$this->load->view('client/signup_success');
-			$this->load->view('template/footer');
+			$this->load->view('template/footer');		
 		}
         public function forgot_pass(){
 			$this->load->view('forgot_pass');

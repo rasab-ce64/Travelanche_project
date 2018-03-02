@@ -63,7 +63,7 @@
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-car"></i></span>
-                    <input name="model" placeholder="Enter Modal of vehicle" class="form-control" required=""  type="text">
+                    <input name="model" placeholder="Enter Modal of vehicle" class="form-control" required=""  type="month">
                 </div>
             </div>
         </div>
@@ -85,7 +85,7 @@
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon" id="file_upload"><i class="glyphicon glyphicon-upload"></i></span>
-                    <input type="file" name="file_nm" id="file_nm" class="form-control" placeholder="Add photos" aria-describedby="file_upload">
+                    <input type="file" name="file_nm" id="file_nm" class="form-control" placeholder="Add photos" aria-describedby="file_upload" accept="image/*">
                 </div>
             </div>
         </div>

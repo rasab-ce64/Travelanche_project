@@ -93,7 +93,7 @@
 								</div>
 								<div class="media-body">
 									<h4>Salman Ilyas</h4>
-									<h5>Founder and CEO</h5>
+									<h5>Co Founder and CEO</h5>
 									<ul class="tag clearfix">
 										<li class="btn"><a href="#">Web</a></li>
 										<li class="btn"><a href="#">UI</a></li>
@@ -126,7 +126,7 @@
 								</div>
 								<div class="media-body">
 									<h4>Muhammad Zubair</h4>
-									<h5>Web Developer</h5>
+									<h5>Co Founder and Web Lead</h5>
 									<ul class="tag clearfix">
 										<li class="btn"><a href="#">Web</a></li>
 										<li class="btn"><a href="#">iOS</a></li>
@@ -178,7 +178,7 @@
 
 								<div class="media-body">
 									<h4>Rizwan Sharif</h4>
-									<h5>Co-founder</h5>
+									<h5>Co founder and Android Lead </h5>
 									<ul class="tag clearfix">
 										<li class="btn"><a href="#">Android</a></li>
 										<li class="btn"><a href="#">UI</a></li>
@@ -208,7 +208,7 @@
 								</div>
 								<div class="media-body">
 									<h4>Fahad Qadeer</h4>
-									<h5>Marketing Head</h5>
+									<h5>Co Founder and Marketing Head</h5>
 									<ul class="tag clearfix">
 										<li class="btn"><a href="#">Android</a></li>
 										<li class="btn"><a href="#">UI</a></li>
@@ -258,7 +258,7 @@
 								</div>
 								<div class="media-body">
 									<h4>Muneeb Afzal</h4>
-									<h5>iOS Developer</h5>
+									<h5>Co Founder and iOS Developer</h5>
 									<ul class="tag clearfix">
 										<li class="btn"><a href="#">Android</a></li>
 										<li class="btn"><a href="#">UI</a></li>
@@ -276,8 +276,41 @@
 <!--							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>-->
 						</div>
 					</div>
+									<div class="row clearfix">
+					<div class="col-md-4 col-sm-6">	
+						<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+							<div class="media">
+								<div class="pull-right">
+									<h4><b>Contact: </b> </h4>
+									+92 &nbsp; 306 &nbsp; 4067606
+									<hr>
+									<h4><b>Address</b></h4>
+									DHA Lahore
+<!--									<a href="#"><img class="media-object" src="--><?php //echo base_url('assets/images/man1.jpg'); ?><!--" ></a>-->
+								</div>
+								<div class="media-body">
+									<h4>Rasab Zulfiqar</h4>
+									<h5>Co Founder and Design lead</h5>
+									<ul class="tag clearfix">
+										<li class="btn"><a href="#">Web</a></li>
+										<li class="btn"><a href="#">UI</a></li>
+										<li class="btn"><a href="#">Ux</a></li>
+										<li class="btn"><a href="#">Photoshop</a></li>
+									</ul>
+									
+									<ul class="social_icons">
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li> 
+										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+									</ul>
+								</div>
+							</div><!--/.media -->
+<!--							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>-->
+						</div>
+					</div><!--/.col-lg-4 -->
+
 
 			</div><!--section-->
 		</div>
 <!--		</div><!--/.container-->
-    </section><!--/about-us-->
+    </section><!--/<about-us--></about-us-->

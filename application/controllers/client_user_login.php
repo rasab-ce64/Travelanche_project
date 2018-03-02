@@ -50,9 +50,12 @@ class client_User_login extends CI_Controller{
             $this->form_validation->set_rules('password' , 'Password' , 'required');
             if($this->form_validation->run()==false)
             {
-                $this->load->view('template/header');
-                $this->load->view('client/login');
-                $this->load->view('template/footer');
+                // $this->load->view('template/header');
+                // $this->load->view('client/login');
+                // $this->load->view('template/footer');
+                    $this->session->set_flashdata('error' , 'Invalid Phone number and Password');
+
+                    redirect('client_Home/login' ,'refresh');
 
             } // if true
             else

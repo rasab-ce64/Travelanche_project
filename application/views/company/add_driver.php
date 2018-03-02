@@ -29,7 +29,7 @@
                 <div class="col-md-4 inputGroupContainer">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input  name="driver_name" placeholder="Enter Name" class="form-control" required=""  type="text">
+                        <input  name="driver_name" placeholder="Enter Name" class="form-control" required pattern="[A-Za-z]{1,}" title="Must contain uppercase or lowercase letters"  type="text">
                     </div>
                 </div>
             </div>
@@ -41,7 +41,7 @@
                 <div class="col-md-4 inputGroupContainer">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-                        <input name="driver_phone" placeholder="(+92)" class="form-control" required=""  type="tel">
+                        <input name="driver_phone" placeholder="(+92)" class="form-control" required  minlength="11" maxlength="11" title="Phone number should be in format like 3144355616"  type="tel">
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                 <div class="col-md-4 inputGroupContainer">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                        <input name="driver_cnic" placeholder="Enter National ID" class="form-control" required=""   type="text">
+                        <input name="driver_cnic" placeholder="Enter National ID" class="form-control" required  minlength="13" maxlength="13" title="CNIC should be in format like 3520180287455"   type="tel">
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                 <div class="col-md-4 inputGroupContainer">
                     <div class="input-group">
                         <span class="input-group-addon" id="file_upload"><i class="fa fa-file-image-o"></i></span>
-                        <input type="file" name="file_nm" id="file_nm" class="form-control" placeholder="" aria-describedby="file_upload">
+                        <input type="file" name="file_nm" id="file_nm" class="form-control" placeholder="" aria-describedby="file_upload" accept="image/*" >
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label"></label>
                 <div class="col-md-4"><br>
-                    <button id="button" name="add_driver" type="submit" class="btn btn-default" > Add Driver </button>
+                    <button id="button" name="add_driver" type="submit" class="btn btn-default" required =""> Add Driver </button>
                 </div>
             </div>
 
