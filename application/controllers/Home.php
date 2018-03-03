@@ -35,8 +35,9 @@ class Home extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 */	public function add_driver(){
+
 		$this->load->view('template/header');
-		$this->load->view('company/driver');
+		$this->load->view('company/add_driver');
 		$this->load->view('template/footer');
 	}
 	public function add_vehicle(){

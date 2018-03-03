@@ -6,8 +6,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 </head>
 <body>
 
-<?php //echo $error; ?>
-<form action="<?= site_url('add_driver/do_upload') ?>" method="post" enctype="multipart/form-data">
+<?php echo $error; ?>
+<form action="<?= site_url('add_driver/image') ?>" method="post" enctype="multipart/form-data">
     <input type="file" name="userfile" size="20"/>
 
     <br/><br/>

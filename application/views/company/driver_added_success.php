@@ -16,7 +16,7 @@
     }
     #btn:hover{
         background-color: #ffffff; !important;
-        color: #ba0710;
+        color: #000000;
         border: solid #ba0710 1px;
     }
 </style>
@@ -29,6 +29,9 @@
     </div>
 
     <button id="btn" class="btn btn-sm" href="<?php echo site_url(''); ?>">Back to Menu</button>
+    <h3>Your file was successfully uploaded!</h3>
+
+    <p><?php echo anchor('company_logged_in/add_driver', 'Upload Another File!'); ?></p>
 </div>
 
 </body>
