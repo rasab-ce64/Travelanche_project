@@ -32,7 +32,8 @@ class Trip extends CI_model
 
             $this->db->query($sql);
             }
-
+            
+            
     }
     
     public function My_trips()

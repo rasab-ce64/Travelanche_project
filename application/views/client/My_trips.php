@@ -126,6 +126,7 @@ foreach ($trips as $row){ ?>
                     <label class="col-md-6 control-label">Trip Discription.</label>
                     <div class="col-md-6 inputGroupContainer">
                         <div class="input-group">
+                            <strong> <?php echo $row->trip_description; ?> </strong>
                         </div>
                     </div>
                 </div>

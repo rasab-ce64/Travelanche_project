@@ -78,7 +78,7 @@ class User_model extends CI_model{
 
     public function check_otp($otp){
 
-        $phone = $this->session->userdata('fone');
+        $phone = $this->session->userdata('user_fone');
         echo $phone;
         $this->db->where('user_phone',$phone);        
         $this->db->where('otp' , $otp);

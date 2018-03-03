@@ -63,7 +63,7 @@
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-car"></i></span>
-                    <input name="model" placeholder="Enter Modal of vehicle" class="form-control" required=""  type="text">
+                    <input name="model" placeholder="Enter Modal of vehicle" class="form-control" required=""  type="month">
                 </div>
             </div>
         </div>
@@ -84,6 +84,7 @@
             <label class="col-md-4 control-label">Front Side<br></label>
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
+<<<<<<< HEAD
                     <span class="input-group-addon" id="file_upload"><i class="fa fa-image"></i></span>
                     <input type="file" name="image" required="" class="form-control">
                 </div>
@@ -116,6 +117,10 @@
                 <div class="input-group">
                     <span class="input-group-addon" id="file_upload"><i class="fa fa-image"></i></span>
                     <input type="file" name="image" class="form-control" >
+=======
+                    <span class="input-group-addon" id="file_upload"><i class="glyphicon glyphicon-upload"></i></span>
+                    <input type="file" name="file_nm" id="file_nm" class="form-control" placeholder="Add photos" aria-describedby="file_upload" accept="image/*">
+>>>>>>> 35aa43c48545dfa85d82adf23ec0d1b2aeccb74f
                 </div>
             </div>
         </div>
