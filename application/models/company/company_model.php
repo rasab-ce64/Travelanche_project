@@ -135,23 +135,10 @@ class Company_model extends CI_model
         $this->load->database();
         $this->db->insert('company_drivers' , $data);
     }
-    public function add_vehicle(){
+    public function add_vehicle($data){
 
         $this->load->database();
-        if (isset($_POST['add_vehicle'])) {
-
-            $comp_data = $this->session->userdata('company_logged_in');
-            $phone = $comp_data['phone'];
-            $this->db->where('phone' , $phone);
-
-            $vehicle_name = $_POST['name'];
-            $vehicle_number = $_POST['number'];
-            $vehicle_model = $_POST['model'];
-            $vehicle_photo = $_POST['file_nm'];
-        }
-        $sql = "INSERT INTO company_vehicles(vehicle_name, vehicle_model, vehicle_number , image , company )
-                          VALUES('$vehicle_name' , '$vehicle_model' ,'$vehicle_number', '$vehicle_photo' , $phone)";
-        $this->db->query($sql);
+        $this->db->insert('company_vehicles' , $data);
     }
 
     public function dropdown_vehicle()

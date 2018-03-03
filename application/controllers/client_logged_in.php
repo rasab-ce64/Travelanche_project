@@ -140,7 +140,6 @@ class client_Logged_in extends CI_Controller
         );
         $this->trip->update_Data($trip_id,$data);
         redirect('client_logged_in/my_Pending_Trips');
-
     }
 
     public function view_drivers($phone){

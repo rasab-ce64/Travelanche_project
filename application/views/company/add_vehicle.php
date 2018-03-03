@@ -38,7 +38,7 @@
 </style>
 
 <body>
-<form class="well form-horizontal" action="<?php echo site_url('company_logged_in/vehicle'); ?> " method="post"  id="contact_form">
+<form class="well form-horizontal" action="<?php echo site_url('add_vehicle/vehicle'); ?> " method="post"  id="contact_form">
     <fieldset>
         <!-- Form Name -->
         <legend><center><h1 style="color: #000000;"><b>Add Vehicle</b></h1></center></legend>
@@ -81,11 +81,46 @@
         </div>
 
         <div class="form-group">
-            <label class="col-md-4 control-label">Photo<br></label>
+            <label class="col-md-4 control-label">Front Side<br></label>
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
+<<<<<<< HEAD
+                    <span class="input-group-addon" id="file_upload"><i class="fa fa-image"></i></span>
+                    <input type="file" name="image" required="" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">Back Side<br></label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon" id="file_upload"><i class="fa fa-image"></i></span>
+                    <input type="file" name="image" required="" class="form-control" >
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">Left Side<br></label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon" id="file_upload"><i class="fa fa-image"></i></span>
+                    <input type="file" name="image" required="" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">Right Side<br></label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon" id="file_upload"><i class="fa fa-image"></i></span>
+                    <input type="file" name="image" class="form-control" >
+=======
                     <span class="input-group-addon" id="file_upload"><i class="glyphicon glyphicon-upload"></i></span>
                     <input type="file" name="file_nm" id="file_nm" class="form-control" placeholder="Add photos" aria-describedby="file_upload" accept="image/*">
+>>>>>>> 35aa43c48545dfa85d82adf23ec0d1b2aeccb74f
                 </div>
             </div>
         </div>

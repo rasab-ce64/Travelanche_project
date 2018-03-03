@@ -67,42 +67,6 @@ class Company_logged_in extends CI_Controller
         $this->load->view('template/footer');
     }
 
-    public function do_upload()
-    {
-        $comp_data = $this->session->userdata('company_logged_in');
-        $phone = $comp_data['phone'];
-
-        $driver_name = $this->input->post('driver_name');
-        $driver_phone = $this->input->post('driver_phone');
-        $driver_cnic = $this->input->post('driver_cnic');
-        $driver_license = $this->input->post('driver_license');
-
-        $config['upload_path'] = '.uploads/';
-        $config['allowed_types'] = 'gif|jpg|png';
-
-        $this->load->library('upload', $config);
-        $this->upload->initialize($config);
-
-        if (!$this->upload->do_upload('userfile')) {
-            $error = array('error', $this->upload->display_errors());
-            $this->load->view('company/driver', $error);
-        }
-        else {
-            $this->load->model('company/company_model');
-            $data = array(
-                'driver_name' => $driver_name,
-                'driver_phone' => $driver_phone,
-                'driver_cnic' => $driver_cnic,
-                'driver_licenseNo' => $driver_license,
-                'driver_picture' => $this->upload->data(),
-                'company' => $phone,
-            );
-            $this->company_model->add_driver($data);
-            $this->load->view('template/header');
-            $this->load->view('company/driver_added_success', $data);
-        }
-    }
-
     public function vehicle(){
 
         $this->load->model('company/company_model');

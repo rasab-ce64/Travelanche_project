@@ -17,7 +17,7 @@
 </style>
 
 <body>
-<form class="well form-horizontal" method="post" action="<?php echo site_url('company_logged_in/do_upload'); ?>" enctype="multipart/form-data">
+<form class="well form-horizontal" method="post" action="<?php echo site_url('add_driver/driver'); ?>" enctype="multipart/form-data">
 <fieldset>
             <!-- Form Name -->
             <legend><center><h1 style="color: #000000;"><b>Add Driver</b></h1></center></legend>

@@ -1,4 +1,3 @@
-
 <?php
 
 class Add_driver extends CI_Controller {
@@ -8,46 +7,50 @@ class Add_driver extends CI_Controller {
         parent::__construct();
         $this->load->helper(array('form', 'url'));
     }
+
     public function index()
     {
-        $this->load->view('company/driver', array('error' => ' ' ));
+        $this->load->view('company/add_driver', array('error' => ' ' ));
     }
 
-    public function do_upload()
+    public function driver()
     {
-//        $comp_data = $this->session->userdata('company_logged_in');
-//        $phone = $comp_data['phone'];
-//
-//        $driver_name = $this->input->post('driver_name');
-//        $driver_phone = $this->input->post('driver_phone');
-//        $driver_cnic = $this->input->post('driver_cnic');
-//        $driver_license = $this->input->post('driver_license');
+        $comp_data = $this->session->userdata('company_logged_in');
+        $phone = $comp_data['phone'];
 
-        $config['upload_path']   = '.assets/images/uploads/';
+        $driver_name = $this->input->post('driver_name');
+        $driver_phone = $this->input->post('driver_phone');
+        $driver_cnic = $this->input->post('driver_cnic');
+        $driver_license = $this->input->post('driver_license');
+
+        $config['upload_path']   = './uploads/';
         $config['allowed_types']   = 'gif|jpg|png|jpeg';
+		$config['max_size']             = 100;
 
         $this->load->library('upload', $config);
 
         if ( ! $this->upload->do_upload('userfile'))
         {
             $error = array('error' => $this->upload->display_errors());
-            $this->load->view('company/driver', $error);
+            $this->load->view('company/add_driver', $error);
         }
         else
         {
-//            $data = array('upload_data' => $this->upload->data());
-            $this->load->model('company/company_model');
+            $image_data = $this->upload->data();
+
             $data = array(
-//                'driver_name' => $driver_name,
-//                'driver_phone' => $driver_phone,
-//                'driver_cnic' => $driver_cnic,
-//                'driver_licenseNo' => $driver_license,
-                'driver_picture' => array('upload_data' => $this->upload->data()),
-//                'company' => $phone,
+                'driver_name' => $driver_name,
+                'driver_phone' => $driver_phone,
+                'driver_cnic' => $driver_cnic,
+                'driver_licenseNo' => $driver_license,
+                'driver_picture' => $image_data['full_path'],
+                'company' => $phone,
             );
+            
+            $this->load->model('company/company_model');
             $this->company_model->add_driver($data);
             $this->load->view('template/header');
-            $this->load->view('company/driver_added_success', $data);
+            $this->load->view('company/driver_added_success', $image_data);
         }
     }
 }
