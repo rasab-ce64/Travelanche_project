@@ -67,12 +67,8 @@ class Forgot_pass extends CI_controller{
         
         $this->load->model('company/company_model');
         $phone = $this->input->post('phone');
-<<<<<<< HEAD
         $this->session->set_userdata('company_fone',$phone);
-=======
         $this->session->set_userdata('fone',$phone);
-
->>>>>>> 2036c678f82a4d40405a4507f5baac4e51d4a725
         $var = $this->company_model->check_phone($phone);
         if($var==true)
         {

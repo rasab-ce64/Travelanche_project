@@ -38,16 +38,16 @@ class Add_vehicle extends CI_Controller
         }
         else {
 
-            $image_1[] = $this->upload->data();
+            $image_data = $this->upload->data();
 
                 $data = array(
                     'driver_name' => $vehicle_name,
                     'driver_phone' => $vehicle_model,
                     'driver_cnic' => $vehicle_number,
-                    'image_1' => $image_1['full_path'],
-                    'image_2' => $image_1['full_path'],
-                    'image_3' => $image_1['full_path'],
-                    'image_4' => $image_1['full_path'],
+                    'image_1' => $image_data['full_path'],
+                    'image_2' => $image_data['full_path'],
+                    'image_3' => $image_data['full_path'],
+                    'image_4' => $image_data['full_path'],
                     'company' => $phone,
                 );
                 $this->load->model('company/company_model');
