@@ -12,7 +12,10 @@
     <br>
     <?php echo $row->driver_phone; ?>
     <br>
-    <br>
+    <img src="<?php echo base_url().$row->driver_picture; ?>" style="width: 100px; height: 100px; ">
+    <br> <br>
+    <?php echo "<img src='" . base_url().$row->driver_picture."' width=150px; height=100px;>";?>
+    <br> <br>
 <?php } ?>
 </body>
 </html>

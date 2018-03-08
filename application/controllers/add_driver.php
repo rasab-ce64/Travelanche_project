@@ -23,7 +23,7 @@ class Add_driver extends CI_Controller {
         $driver_cnic = $this->input->post('driver_cnic');
         $driver_license = $this->input->post('driver_license');
 
-        $config['upload_path']   = './uploads/';
+        $config['upload_path']   = '/uploads/';
         $config['allowed_types']   = 'gif|jpg|png|jpeg';
 		$config['max_size']             = 100;
 

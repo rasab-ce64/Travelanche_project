@@ -11,7 +11,9 @@ class Add_vehicle extends CI_Controller
 
     public function index()
     {
+        $this->load->view('template/header');
         $this->load->view('company/add_vehicle', array('error' => ' '));
+        $this->load->view('template/footer');
     }
 
     public function vehicle()
@@ -29,24 +31,23 @@ class Add_vehicle extends CI_Controller
 
         $this->load->library('upload', $config);
 
-        if (!$this->upload->do_upload('image') && !$this->upload->do_upload('image') && !$this->upload->do_upload('image') && !$this->upload->do_upload('image')) {
-                $error = array('error' => $this->upload->display_errors());
-                $this->load->view('company/add_vehicle', $error);
-            }
+        if (!$this->upload->do_upload(array('image1', 'image2' , 'image3' , 'image4')))
+        {
+            $error = array('error' => $this->upload->display_errors());
+            $this->load->view('company/add_driver', $error);
+        }
         else {
-                $image_1 = $this->upload->data();
-                $image_2 = $this->upload->data();
-                $image_3 = $this->upload->data();
-                $image_4 = $this->upload->data();
+
+            $image_1[] = $this->upload->data();
 
                 $data = array(
                     'driver_name' => $vehicle_name,
                     'driver_phone' => $vehicle_model,
                     'driver_cnic' => $vehicle_number,
                     'image_1' => $image_1['full_path'],
-                    'image_2' => $image_2['full_path'],
-                    'image_3' => $image_3['full_path'],
-                    'image_4' => $image_4['full_path'],
+                    'image_2' => $image_1['full_path'],
+                    'image_3' => $image_1['full_path'],
+                    'image_4' => $image_1['full_path'],
                     'company' => $phone,
                 );
                 $this->load->model('company/company_model');
