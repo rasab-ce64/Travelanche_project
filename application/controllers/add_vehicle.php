@@ -11,7 +11,9 @@ class Add_vehicle extends CI_Controller
 
     public function index()
     {
+        $this->load->view('template/header');
         $this->load->view('company/add_vehicle', array('error' => ' '));
+        $this->load->view('template/footer');
     }
 
     public function vehicle()
@@ -29,17 +31,14 @@ class Add_vehicle extends CI_Controller
 
         $this->load->library('upload', $config);
 
-        $count = count($_FILES['image']['name']);
+        if (!$this->upload->do_upload(array('image1', 'image2' , 'image3' , 'image4')))
+        {
+            $error = array('error' => $this->upload->display_errors());
+            $this->load->view('company/add_driver', $error);
+        }
+        else {
 
-        for ($i = 0; $i < $count; $i++) {
-
-            if (!$this->upload->do_upload('image', $i)) {
-
-                $error = array('error' => $this->upload->display_errors());
-                $this->load->view('company/add_vehicle', $error);
-            }
-            else {
-                $image_data = $this->upload->data($i);
+            $image_data = $this->upload->data();
 
                 $data = array(
                     'driver_name' => $vehicle_name,
@@ -54,9 +53,8 @@ class Add_vehicle extends CI_Controller
                 $this->load->model('company/company_model');
                 $this->company_model->add_vehicle($data);
                 $this->load->view('template/header');
-                $this->load->view('company/add_vehicle_success', $image_data);
+                $this->load->view('company/add_vehicle_success');
             }
-        }
     }
 }
 ?>
