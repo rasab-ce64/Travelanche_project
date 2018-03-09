@@ -208,8 +208,9 @@
                         </h5>
                     </div>
                 </div>
-
+              <a  href="<?php echo site_url('client_logged_in/view_drivers/'.$row->phone); ?>" >
                 <div class="col-md-6">
+  
                     <div class="quote">
                         <strong>Company name: &nbsp;</strong> <?php echo $row->company_name;?>
                         <?php echo "<br>"; ?>
@@ -218,12 +219,15 @@
                         <strong>Address: &nbsp;</strong> <?php echo $row->address;?>
                         <?php echo "<br>"; ?>
                         <br>
+                   
                         <a id="drivers" href="<?php echo site_url('client_logged_in/view_drivers/'.$row->phone); ?>" class="btn btn-sm"> View Drivers</a> &nbsp;
                         <a id="drivers" href="<?php echo site_url('client_logged_in/view_vehicles/'.$row->phone); ?>" class="btn btn-sm"> View Vehicles</a>
 
                         <input name="company_phone" type="hidden" value="<?php echo $row->phone; ?>" />
                     </div>
+                    
                 </div>
+</a>
             </div>
             <?php echo "<br>"; ?>
         <?php } ?>

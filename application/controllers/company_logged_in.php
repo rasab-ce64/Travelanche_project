@@ -74,15 +74,15 @@ class Company_logged_in extends CI_Controller
         $this->load->view('company/vehicle_added_success');
     }
 
-//    public function companies()
-//    {
-//        $user['user_name'] = $this->session->userdata('company');
-//        $this->load->model('company/company_model');
-//        $data['companies'] = $this->company_model->companies();
-//        $this->load->view('company/header_after_login',$user);
-//        $this->load->view('client/companies', $data);
-//        $this->load->view('template/footer');
-//    }
+   public function companies()
+   {
+       $user['user_name'] = $this->session->userdata('company');
+       $this->load->model('company/company_model');
+       $data['companies'] = $this->company_model->companies();
+       $this->load->view('company/header_after_login',$user);
+       $this->load->view('client/companies', $data);
+       $this->load->view('template/footer');
+   }
 
     public function place_bid()
     {

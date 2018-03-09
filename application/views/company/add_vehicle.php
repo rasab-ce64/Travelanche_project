@@ -84,9 +84,8 @@
             <label class="col-md-4 control-label">Front Side<br></label>
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
-<<<<<<< HEAD
                     <span class="input-group-addon" id="file_upload"><i class="fa fa-image"></i></span>
-                    <input type="file" name="image" required="" class="form-control">
+                    <input type="file" name="image" required="" class="form-control" accept="image/*">
                 </div>
             </div>
         </div>
@@ -96,7 +95,7 @@
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon" id="file_upload"><i class="fa fa-image"></i></span>
-                    <input type="file" name="image" required="" class="form-control" >
+                    <input type="file" name="image" required="" class="form-control" accept="image/*">
                 </div>
             </div>
         </div>
@@ -106,7 +105,7 @@
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon" id="file_upload"><i class="fa fa-image"></i></span>
-                    <input type="file" name="image" required="" class="form-control">
+                    <input type="file" name="image" required="" class="form-control" accept="image/*">
                 </div>
             </div>
         </div>
@@ -116,12 +115,8 @@
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon" id="file_upload"><i class="fa fa-image"></i></span>
-                    <input type="file" name="image" class="form-control" >
-=======
-                    <span class="input-group-addon" id="file_upload"><i class="glyphicon glyphicon-upload"></i></span>
-                    <input type="file" name="file_nm" id="file_nm" class="form-control" placeholder="Add photos" aria-describedby="file_upload" accept="image/*">
->>>>>>> 35aa43c48545dfa85d82adf23ec0d1b2aeccb74f
-                </div>
+                    <input type="file" name="image" class="form-control" accept="image/*" >
+                        </div>
             </div>
         </div>
 

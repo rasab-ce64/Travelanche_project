@@ -147,9 +147,16 @@ class client_Logged_in extends CI_Controller
 //        echo 'company phone = ' .$phone;
         $this->load->model('trip');
         $data['result'] = $this->trip->company_drivers($phone);
-        $this->load->view('template/header');
-        $this->load->view('client/company_drivers' , $data);
-    }
+       // $this->load->view('template/header');
+        if($data['result']==NULL)
+        {  
+            $this->load->view('company_profile');
+        }
+        else 
+        {
+            $this->load->view('client/company_drivers' , $data);
+            $this->load->view('template/footer'); }
+        }
     public function view_vehicles($phone){
 
         //echo 'company phone = ' .$phone;
