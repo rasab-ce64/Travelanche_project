@@ -74,11 +74,7 @@
                 <div class="col-md-4 inputGroupContainer">
                     <div class="input-group">
                         <span class="input-group-addon" id="file_upload"><i class="fa fa-file-image-o"></i></span>
-<<<<<<< HEAD
-                        <input type="file" name="file_nm" id="file_nm" class="form-control" placeholder="" aria-describedby="file_upload" accept="image/*" >
-=======
                         <input type="file" name="userfile" size="20" class="form-control">
->>>>>>> 2036c678f82a4d40405a4507f5baac4e51d4a725
                     </div>
                 </div>
             </div>
