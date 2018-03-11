@@ -85,11 +85,8 @@
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon" id="file_upload"><i class="fa fa-image"></i></span>
-<<<<<<< HEAD
-                    <input type="file" name="image" required="" class="form-control" accept="image/*">
-=======
                     <input type="file" name="image1" id="file_nm" class="form-control" placeholder="Add photos" aria-describedby="file_upload" accept="image/*">
->>>>>>> 7fb2394da27c9d396988ed7af166b268c912cd21
+
                 </div>
             </div>
         </div>
@@ -99,11 +96,7 @@
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon" id="file_upload"><i class="fa fa-image"></i></span>
-<<<<<<< HEAD
-                    <input type="file" name="image" required="" class="form-control" accept="image/*">
-=======
                     <input type="file" name="image2" id="file_nm" class="form-control" placeholder="Add photos" aria-describedby="file_upload" accept="image/*">
->>>>>>> 7fb2394da27c9d396988ed7af166b268c912cd21
                 </div>
             </div>
         </div>
@@ -113,11 +106,7 @@
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon" id="file_upload"><i class="fa fa-image"></i></span>
-<<<<<<< HEAD
-                    <input type="file" name="image" required="" class="form-control" accept="image/*">
-=======
                     <input type="file" name="image3" id="file_nm" class="form-control" placeholder="Add photos" aria-describedby="file_upload" accept="image/*">
->>>>>>> 7fb2394da27c9d396988ed7af166b268c912cd21
                 </div>
             </div>
         </div>
@@ -128,13 +117,8 @@
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon" id="file_upload"><i class="fa fa-image"></i></span>
-<<<<<<< HEAD
-                    <input type="file" name="image" class="form-control" accept="image/*" >
-                        </div>
-=======
                     <input type="file" name="image4" id="file_nm" class="form-control" placeholder="Add photos" aria-describedby="file_upload" accept="image/*">
                 </div>
->>>>>>> 7fb2394da27c9d396988ed7af166b268c912cd21
             </div>
         </div>
 
