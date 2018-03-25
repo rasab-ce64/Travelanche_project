@@ -43,17 +43,36 @@
 				
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class = "active"><a href="<?php echo site_url(''); ?>" >Home</a> </li>
-                        <li><a href="<?php echo site_url('client_Home/about'); ?>" >About Us</a> </li>
-                        <li><a href="<?php echo site_url('client_Home/services'); ?>">Services</a></li>
-                        <li><a href="<?php echo site_url('client_Home/contact'); ?>" >Contact</a></li>
-                         <li class="dropdown">
+                        <li class = "active"><a href="<?php echo site_url('company_Logged_in/my_Trips'); ?>" >Trips</a> </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php  echo "My Bids"; ?>
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="<?php echo site_url('company_logged_in/my_Pending_Bids'); ?>">Pending Bids</a></li>
+                                <li id="logout"><a href="<?php echo site_url('company_logged_in/my_Accepted_Bids'); ?>">Accepted Bids</a><li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php  echo "My Account"; ?>
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Drivers</a></li>
+                                <li id="logout"><a href="#">Vehicles</a><li>
+                                <li><a href="<?php echo site_url('Home/add_driver'); ?>">Add Drivers</a></li>
+                                <li><a href="<?php echo site_url('Home/add_vehicle'); ?>">Add Vehilces</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php  echo $user_name; ?>
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Link 2</a></li>
-                                <li id="logout"><a href="<?php echo site_url('company_login/logout'); ?>">Logout</a><li>
+                                <li><a href="#">Profile</a></li>
+                                <li id="logout"><a href="<?php echo site_url('company_login/logout'); ?>"><em>Logout</em></a><li>
                             </ul>
                         </li>                        
                     </ul>

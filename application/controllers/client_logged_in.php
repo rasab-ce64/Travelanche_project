@@ -165,5 +165,11 @@ class client_Logged_in extends CI_Controller
         $this->load->view('template/header');
         $this->load->view('client/company_vehicles' , $data);
     }
+    public function carBooking()
+    {
+        $user['user_name'] = $this->session->userdata('user');
+        $this->load->view('client/header_after_login',$user);
+        $this->load->view('client/carBooking');
+    }
 }
 ?>

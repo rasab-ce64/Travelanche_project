@@ -43,16 +43,25 @@
 				
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class = "active"><a href="<?php echo site_url(''); ?>" >Home</a> </li>
-                        <li><a href="<?php echo site_url('client_Home/about'); ?>" >About Us</a> </li>
-                        <li><a href="<?php echo site_url('client_Home/services'); ?>">Services</a></li>
-                        <li><a href="<?php echo site_url('client_Home/contact'); ?>" >Contact</a></li>
+                        <li class = "active"><a href="<?php echo site_url('client_logged_in/Choice'); ?>" > Plan a Trip</a> </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php  echo "My Trips"; ?>
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="<?php echo site_url('client_logged_in/my_Accepted_Trips'); ?>">Accepted Trips</a></li>
+                                <li id="logout"><a href="<?php echo site_url('client_logged_in/my_Pending_Trips'); ?>">Pending Trips</a><li>
+                                <li><a href="#">History</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="<?php echo site_url('client_logged_in/companies'); ?>" >Companies</a> </li>
                          <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php  echo $user_name; ?>
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Link 2</a></li>
+                                <li><a href="#">Profile</a></li>
                                 <li id="logout"><a href="<?php echo site_url('client_user_login/logout'); ?>">Logout</a><li>
                             </ul>
                         </li>                        

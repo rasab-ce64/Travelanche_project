@@ -85,8 +85,7 @@ class client_User_login extends CI_Controller{
                         }
                         $userr =   $user['user_name'];
                         $this->session->set_userdata('user', $userr);
-                        $this->load->view('client/header_after_login',$user);
-                        //$this->load->view('template/side_navbar');
+                        $this->load->view('template/header');
                         $this->load->view('client/main');
                         $this->load->view('template/footer');
                 }
