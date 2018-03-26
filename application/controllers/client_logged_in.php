@@ -171,5 +171,18 @@ class client_Logged_in extends CI_Controller
         $this->load->view('client/header_after_login',$user);
         $this->load->view('client/carBooking');
     }
+    public function vanBooking()
+    {
+        $user['user_name'] = $this->session->userdata('user');
+        $this->load->view('client/header_after_login',$user);
+        $this->load->view('client/vanBooking');
+    }
+    public function coasterBooking()
+    {
+        $user['user_name'] = $this->session->userdata('user');
+        $this->load->view('client/header_after_login',$user);
+        $this->load->view('client/coasterBooking');
+    }
+
 }
 ?>

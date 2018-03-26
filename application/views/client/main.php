@@ -42,8 +42,8 @@ ul, li {
 
     <ul>
         <li><a href="<?php echo site_url('client_logged_in/carBooking'); ?>">  <img src="<?php echo base_url('assets/images/car.jpg'); ?>" class="img-circle" alt="Cinque Terre" width="304" height="236"></a></li>
-        <li><a href="#">  <img src="<?php echo base_url('assets/images/van.png'); ?>" class="img-circle" alt="Cinque Terre" width="304" height="236"> </a></li>
-        <li><a href="#">  <img src="<?php echo base_url('assets/images/car.jpg'); ?>" class="img-circle" alt="Cinque Terre" width="304" height="236"> </a></li>
+        <li><a href="<?php echo site_url('client_logged_in/vanBooking'); ?>">  <img src="<?php echo base_url('assets/images/van.png'); ?>" class="img-circle" alt="Cinque Terre" width="304" height="236"> </a></li>
+        <li><a href="<?php echo site_url('client_logged_in/coasterBooking'); ?>">  <img src="<?php echo base_url('assets/images/car.jpg'); ?>" class="img-circle" alt="Cinque Terre" width="304" height="236"> </a></li>
     </ul>
 </div>
 

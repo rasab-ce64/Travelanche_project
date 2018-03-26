@@ -81,42 +81,45 @@ body {
     <body>
     <div class="container">
 
-        <form class="form-signin" method="POST" action="<?php echo site_url("company_logged_in/place_bid"); ?>" >
+        <form class="form-signin" method="POST" action="<?php echo site_url("PlanTrip/carTripType"); ?>" >
 
             <h2 class="form-signin-heading">Trip Details</h2>
 
             <div>
                 <label> Cars</label>
-                <input class="form-check-input" name="group102" value="0" type="radio" id="radio1">
+                <input class="form-check-input" name="car" value="0" type="radio" id="radio101">
                 <label class="form-check-label" for="radio101">Specific car</label>
-                <input class="form-check-input" name="group102" value="1" type="radio" id="radio2" checked>
+                <input class="form-check-input" name="car" value="1" type="radio" id="radio102" checked>
                 <label class="form-check-label" for="radio102">All cars</label>
             </div>
 
-            <script>
+<!--            <select name="vehicle" class="form-control">-->
+<!--                <option value="" selected data-default> Select Car</option>-->
+<!--                --><?php //foreach($vehicle_name as $row):?>
+<!--                    <option value="--><?php //echo $row->vehicle_name ?><!--">--><?php //echo $row->vehicle_name; ?><!--</option>-->
+<!--                --><?php //endforeach; ?>
+<!--            </select>-->
+<!--            <select name="vehicle" class="form-control" datalist >-->
+<!--                <option value="" selected data-default> Select Car</option>-->
+<!--                --><?php //foreach($vehicle_name as $row):?>
+<!--            <option value="--><?php //echo $row->vehicle_name ?><!--">--><?php //echo $row->vehicle_name; ?><!--</option>-->
+<!--                --><?php //endforeach; ?>
+              <input list="cities" name="city" placeholder="                        Choose Car  " class="form-control" required=""  type="text">
+                <datalist id="cities">
+                    <option value="Lahore">
+                    <option value="Karachi">
+                    <option value="Faisalabad">
+                    <option value="Multan">
+                    <option value="Islamabad">
+                    <option value="Quetta">
+                    <option value="Abottabad">
+                    <option value="Sargodha">
+                    <option value="Bhawalpur">
+                    <option value="Sawat">
 
+                </datalist>
 
-                $('#radio1').click(function() {
-                    if($(this).val() == "0") {
-                        $("#totalFare").toggle(this.checked);
-
-                    }
-
-                });
-
-            </script>
-            <select name="vehicle" class="form-control">
-                <option value="" selected data-default> Select Car</option>
-                <?php foreach($vehicle_name as $row):?>
-                    <option value="<?php echo $row->vehicle_name ?>"><?php echo $row->vehicle_name; ?></option>
-                <?php endforeach; ?>
-            </select>
-            <select name="vehicle" class="form-control">
-                <option value="" selected data-default> Select Car</option>
-                <?php foreach($vehicle_name as $row):?>
-            <option value="<?php echo $row->vehicle_name ?>"><?php echo $row->vehicle_name; ?></option>
-                <?php endforeach; ?>
-            </select>
+<!--            </select>
 <span class="text-danger"> <?php echo form_error('text'); ?></span>
 
 
@@ -125,23 +128,21 @@ body {
 
 <!--rate per day-->
 
-<input type="number"  class="form-control" name="rate_per_day" placeholder="Enter your Rate/day" autofocus="" required=""/>
-<span class="text-danger"> <?php echo form_error('number'); ?></span>
 
 
 <div>
             <label> Driver</label>
-            <input class="form-check-input" name="group100" type="radio" id="radio100">
+            <input class="form-check-input" name="group100" type="radio" id="radio100" checked>
             <label class="form-check-label" for="radio100">Yes</label>
-            <input class="form-check-input" name="group100" type="radio" id="radio101" checked>
+            <input class="form-check-input" name="group100" type="radio" id="radio101" >
             <label class="form-check-label" for="radio101">No</label>
 </div>
             <div>
             <label> Trip Type</label>
-            <input class="form-check-input" name="group101" type="radio" id="radio100">
-            <label class="form-check-label" for="radio101">Round Trip</label>
-            <input class="form-check-input" name="group101" type="radio" id="radio101" checked>
-            <label class="form-check-label" for="radio102">Single Trip</label>
+            <input class="form-check-input" name="trip_type"  value ="0" type="radio" id="radio100" checked>
+            <label class="form-check-label" for="radio100">Round Trip</label>
+            <input class="form-check-input" name="trip_type" type="radio" value ="1" id="radio101" >
+            <label class="form-check-label" for="radio101">Single Trip</label>
             </div>
 
 <button class="btn btn-sm btn-primary" name="bid_by_bachat" type="submit">Next</button>
