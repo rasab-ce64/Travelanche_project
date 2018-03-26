@@ -25,6 +25,12 @@
     <link rel="apple-touch-icon-precomposed" href="<?php echo base_url('assets/images/ico/apple-touch-icon-57-precomposed.png'); ?> ">
 </head><!--/head-->
 
+<style>
+    .navbar-inverse{
+        background-color: #ba0710;
+    }
+</style>
+
 <body class="homepage">
 
     <header id="header">
