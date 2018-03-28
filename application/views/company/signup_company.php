@@ -11,6 +11,7 @@
 </style>
 
 <body>
+
 <form class="well form-horizontal" action="<?php echo site_url('company_login/signed_up'); ?> " method="post"  id="contact_form">
 <fieldset>
 <!-- Form Name -->

@@ -1,22 +1,46 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: hp
- * Date: 26/03/2018
- * Time: 13:43
- */?>
-
-<!DOCTYPE html>
-<html lang='en-US'>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Edit Trip</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<style>
 
-    /*@import "bourbon";*/
-    body {
-        background: #eee !important;
+<style>
+    #success_message{ display: none;}
+
+    .form-group, .input-group, .inputGroupContainer{
+        text-align: center;
+        width: 100%;
+        background-color: transparent;
     }
+    .input-group:focus{
+        border: 1px #ba0710;
+        border-radius: 30px ;
+    }
+    .well{
+        background-color: #ffffff;
+    }
+    #centered{
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        width: 90%;
+        color: white;
+        transform: translate(-50%, -50%);
+    }
+    .btn-md:hover{
+        color: #ba0710; !important;
+        background-color: #ffffff;
+        border: solid 1px #ba0710;
+    }
+    .btn-md{
+        background-color: #ba0710;
+        color: #ffffff;
+        text-align: center;
+        width: 30%;
+
+    }
+
+    /*fazooll*/
 
     .wrapper {
         margin-top: 80px;
@@ -27,7 +51,7 @@
         max-width: 380px;
         padding: 15px 35px 45px;
         margin: 0 auto;
-        background-color: #fff;
+        background-color: #fff; !important;
         border: 1px solid rgba(0,0,0,0.1);
     }
     .checkbox {
@@ -75,42 +99,73 @@
     }
 </style>
 
-<div class="wrapper">
-    <body>
-    <div class="container">
-        <form class="form-signin" method="POST" action="<?php echo site_url("PlanTrip/vanTripType"); ?>" >
-            <h2 class="form-signin-heading">Trip Details</h2>
-            <label> Select seats</label>
+<body>
 
-                <input class="form-check-input" name="seats" value="8" type="radio" id="radio101">
-                <label class="form-check-label" for="radio101">8</label>
-                <input class="form-check-input" name="seats" value="10" type="radio" id="radio102" checked>
-                <label class="form-check-label" for="radio102">10</label>
-                <input class="form-check-input" name="seats" value="12" type="radio" id="radio103">
-                <label class="form-check-label" for="radio103">12</label>
-                <input class="form-check-input" name="seats" value="15" type="radio" id="radio104" checked>
-                <label class="form-check-label" for="radio104">15</label>
+<body>
+<img class="img-responsive" style="width:100%; height:600px;" src="<?php echo base_url('assets/images/backgnd.jpg'); ?>" > </img>
+<form class="form-horizontal" id="centered" action="<?php echo site_url("PlanTrip/carTripType"); ?> " method="post"  id="contact_form">
 
-<span class="text-danger"> <?php echo form_error('text'); ?></span>
+    <fieldset>
+        <h2 style="text-align: center; color: #000000">Van Booking</h2>
+        <!--            <h3 style="text-align: center; color: #000000;">Trip Details</h3>-->
 
-            <div>
-                <label> Driver</label>
-                <input class="form-check-input" name="group100" type="radio" id="radio100" checked>
-                <label class="form-check-label" for="radio100">Yes</label>
-                <input class="form-check-input" name="group100" type="radio" id="radio101" >
-                <label class="form-check-label" for="radio101">No</label>
+        <div class="form-group">
+            <label class="col-md-4 control-label">Van Seats</label>
+            <div class="col-md-6 inputGroupContainer">
+                <div class="input-group">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="">8-Seater
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="">10-Seater
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="">12-Seater
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="">15-Seater
+                    </label>
+                </div>
             </div>
-            <div>
-                <label> Trip Type</label>
-                <input class="form-check-input" name="trip_type"  value ="1" type="radio" id="radio100" checked>
-                <label class="form-check-label" for="radio100">Round Trip</label>
-                <input class="form-check-input" name="trip_type" type="radio" value ="0" id="radio101" >
-                <label class="form-check-label" for="radio101">Single Trip</label>
-            </div>
+        </div>
 
-            <button class="btn btn-sm btn-primary" name="next" type="submit">Next</button>
-        </form>
-    </div>
-    </body>
-</div>
+        <div class="form-group">
+            <label class="col-md-4 control-label">Driver</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="">Yes
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="">No
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">Trip Type</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="">Round Trip
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="">Single Trip
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>
+        <div class="form-group">
+            <label class="col-md-4 control-label"></label>
+            <div class="col-md-4"><br>
+                <button name="submit" type="submit" class="btn btn-md" >Next</button>
+            </div>
+        </div>
+
+    </fieldset>
+</form>
+</body>
 </html>
