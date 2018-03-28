@@ -10,6 +10,8 @@
     .form-group, .input-group, .inputGroupContainer{
         text-align: center;
         width: 100%;
+        background-color: #ffffff;
+        color: #000000;
         background-color: transparent;
     }
     .input-group:focus{
@@ -102,13 +104,12 @@
 <body>
 
 <body>
-<img class="img-responsive" style="width:100%; height:600px;" src="<?php echo base_url('assets/images/car1.jpg'); ?>" > </img>
+<!--<img class="img-responsive" style="width:100%; height:600px;" src="--><?php //echo base_url('assets/images/car1.jpg'); ?><!--" > </img>-->
 <form class="form-horizontal" id="centered" action="<?php echo site_url("PlanTrip/carTripType"); ?> " method="post"  id="contact_form">
 
     <h2 style="color: #000000" ><b>Car Booking</b></h2>
     <fieldset>
             <h2 style="text-align: center; color: #000000">CAR BOOKING</h2>
-<<<<<<< HEAD
 <!--            <h3 style="text-align: center; color: #000000;">Trip Details</h3>-->
 
         <div class="form-group">
@@ -167,30 +168,6 @@
             <label class="col-md-4 control-label"></label>
             <div class="col-md-4"><br>
                 <button name="submit" type="submit" class="btn btn-md" >Next</button>
-=======
-            <h3 class="form-signin-heading">Trip Details</h3>
-
-
-                <label> Cars</label>
-                <input class="form-check-input" name="car" value="0" type="checkbox" id="radio101" >
-                <label class="form-check-label" for="radio101">Specific car</label>
-                <input class="form-check-input" name="car" value="1" type="radio" id="radio102">
-                <label class="form-check-label" for="radio102">All cars</label>
-            <script>
-
-                $('#radio101').click(function() {
-                    $("#abc").toggle(this.checked);
-                });
-
-            </script>
-
-            <select name="car"  id="abc" class="form-control">
-                    <option value="" selected data-default> Select Car</option>
-                    <?php foreach($driver_name as $row):?>
-                        <option  value="<?php echo $row->driver_name ?>"><?php echo $row->driver_name; ?></option>
-                    <?php endforeach; ?>
-                </select>
-
 
 
 
