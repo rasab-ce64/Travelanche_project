@@ -58,7 +58,6 @@ ul, li {
             <a type="button" class="btn btn-default" href="<?php echo site_url('client_logged_in/carBooking'); ?>" >Book a Car</a>
         </div>
 
-<<<<<<< HEAD
         <div class="col-lg-4">
             <img style="width: 260px" src="<?php echo base_url('assets/images/van1.png');?>">
             <a type="button" class="btn btn-default" href="<?php echo site_url(''); ?>" >Book a Van</a>
@@ -70,13 +69,12 @@ ul, li {
         </div>
 
     </div>
-=======
     <ul>
         <li><a href="<?php echo site_url('client_logged_in/carBooking'); ?>">  <img src="<?php echo base_url('assets/images/car.jpg'); ?>" class="img-circle" alt="Cinque Terre" width="304" height="236"></a></li>
         <li><a href="<?php echo site_url('client_logged_in/vanBooking'); ?>">  <img src="<?php echo base_url('assets/images/van.png'); ?>" class="img-circle" alt="Cinque Terre" width="304" height="236"> </a></li>
         <li><a href="<?php echo site_url('client_logged_in/coasterBooking'); ?>">  <img src="<?php echo base_url('assets/images/car.jpg'); ?>" class="img-circle" alt="Cinque Terre" width="304" height="236"> </a></li>
     </ul>
->>>>>>> ba3be87bee14e3a5398b5cec521d3b3bf53aca19
+
 </div>
 
 </body>
