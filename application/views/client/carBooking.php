@@ -84,48 +84,38 @@ body {
             <h2 style="text-align: center; color: #000000">CAR BOOKING</h2>
             <h3 class="form-signin-heading">Trip Details</h3>
 
-            <div>
+
                 <label> Cars</label>
-                <input class="form-check-input" name="car" value="0" type="radio" id="radio101">
+                <input class="form-check-input" name="car" value="0" type="checkbox" id="radio101" >
                 <label class="form-check-label" for="radio101">Specific car</label>
-                <input class="form-check-input" name="car" value="1" type="radio" id="radio102" checked>
+                <input class="form-check-input" name="car" value="1" type="radio" id="radio102">
                 <label class="form-check-label" for="radio102">All cars</label>
-            </div>
+            <script>
 
-<!--            <select name="vehicle" class="form-control">-->
-<!--                <option value="" selected data-default> Select Car</option>-->
-<!--                --><?php //foreach($vehicle_name as $row):?>
-<!--                    <option value="--><?php //echo $row->vehicle_name ?><!--">--><?php //echo $row->vehicle_name; ?><!--</option>-->
-<!--                --><?php //endforeach; ?>
-<!--            </select>-->
-<!--            <select name="vehicle" class="form-control" datalist >-->
-<!--                <option value="" selected data-default> Select Car</option>-->
-<!--                --><?php //foreach($vehicle_name as $row):?>
-<!--            <option value="--><?php //echo $row->vehicle_name ?><!--">--><?php //echo $row->vehicle_name; ?><!--</option>-->
-<!--                --><?php //endforeach; ?>
-              <input list="cities" name="city" placeholder="                        Choose Car  " class="form-control" required=""  type="text">
-                <datalist id="cities">
-                    <option value="Lahore">
-                    <option value="Karachi">
-                    <option value="Faisalabad">
-                    <option value="Multan">
-                    <option value="Islamabad">
-                    <option value="Quetta">
-                    <option value="Abottabad">
-                    <option value="Sargodha">
-                    <option value="Bhawalpur">
-                    <option value="Sawat">
+                $('#radio101').click(function() {
+                    $("#abc").toggle(this.checked);
+                });
 
-                </datalist>
+            </script>
 
-<!--            </select>
-<span class="text-danger"> <?php echo form_error('text'); ?></span>
+            <select name="car"  id="abc" class="form-control">
+                    <option value="" selected data-default> Select Car</option>
+                    <?php foreach($driver_name as $row):?>
+                        <option  value="<?php echo $row->driver_name ?>"><?php echo $row->driver_name; ?></option>
+                    <?php endforeach; ?>
+                </select>
 
 
 
-<span class="text-danger"> <?php echo form_error('text'); ?></span>
 
-<!--rate per day-->
+            <!--            </select>
+            <span class="text-danger"> <?php echo form_error('text'); ?></span>
+
+
+
+            <span class="text-danger"> <?php echo form_error('text'); ?></span>
+
+            <!--rate per day-->
 
 
 
