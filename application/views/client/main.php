@@ -49,7 +49,7 @@ ul, li {
         </div>
 
         <div class="col-lg-4">
-            <img style="width: 180px" src="<?php echo base_url('assets/images/van.png');?>">
+            <img style="width: 180px" src="<?php echo base_url('assets/images/pan.png');?>">
             <br><br>
             <a type="button" class="btn btn-default" href="<?php echo site_url('client_logged_in/vanBooking'); ?>" >Book a Van</a>
         </div>
@@ -61,34 +61,9 @@ ul, li {
         </div>
 
     </div>
+
 </div>
 
 </body>
 </html>
 
-         <!-- Sidebar -->
-    
-<!--    <div class="container">-->
-<!--    -->
-<!--    <h2 style="text-align: center;">Choose Whatever you want</h2>-->
-<!--    <hr>-->
-<!--    <div class="row">-->
-<!--    <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> -->
-<!--        <a href="--><?php //echo site_url('client_logged_in/Choice'); ?><!--" type="button" class="btn btn-default btn-lg btn-block" name="plan_a_trip"> Plan a trip</a>-->
-<!--        <a href="#" type="button" class="btn btn-default btn-lg btn-block" name="share_a_ride"> Share a ride</a>-->
-<!--        <a href="#" type="button" class="btn btn-default btn-lg btn-block" name="find_a_ride"> Find a ride</a>-->
-<!--        <a href="--><?php //echo site_url('client_logged_in/trip_option'); ?><!--" type="button" class="btn btn-default btn-lg btn-block" name="my_trips"> My trips</a>-->
-<!--        <a href="--><?php //echo site_url('client_logged_in/companies'); ?><!--" type="button" class="btn btn-default btn-lg btn-block" name="companies"> Companies</a>-->
-<!--    </div>-->
-<!--    <hr>   -->
-<!--</div>-->
-<!--    -->
-<!---->
-<!--  <!--  <div id="profile">-->
-<!--        --><?php
-//        echo "Hello <b id='welcome'><i>" . $session_data['phone'] . "</i> !</b>";
-//        echo "Welcome to Admin Page";
-//        ?>
-<!--    </div>-->
-<!--    <b id="logout"><a href="logout">Logout</a></b>-->
-<!--</div>-->
