@@ -80,10 +80,9 @@ body {
 <div class="wrapper">
     <body>
     <div class="container">
-
         <form class="form-signin" method="POST" action="<?php echo site_url("PlanTrip/carTripType"); ?>" >
-
-            <h2 class="form-signin-heading">Trip Details</h2>
+            <h2 style="text-align: center; color: #000000">CAR BOOKING</h2>
+            <h3 class="form-signin-heading">Trip Details</h3>
 
             <div>
                 <label> Cars</label>
