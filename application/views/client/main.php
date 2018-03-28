@@ -13,20 +13,18 @@ $session_data = $this->session->userdata('user_logged_in');
 
 <style>
     a.btn-default{
-    width:50%;
-    border:1px solid #111111;
-    margin:10px; 
-    border-radius: 5px;
-    color: #bf0f09;
-}
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 4em;
-    color: white;
-    transform: translate(-50%, -50%);
-}
+        width:50%;
+        border:1px solid #ffffff;
+        margin:10px;
+        background-color: #ba0710;
+        border-radius: 5px;
+        color: #ffffff;
+    }
+    a.btn-default:hover{
+        background-color: #ffffff; !important;
+        border: 1px solid #000000;
+        color: #ba0710; !important;
+    }
 ul {
     white-space: nowrap;
 }
@@ -38,45 +36,31 @@ ul, li {
 
 </style>
 
-<body>
+<body class="container">
+<h1 style="text-align: center; color:#000000; font-size: 2em">Travelanche</h1>
+<h2 style="text-align: center; color: #000000;" >Choose your relevant vehicle for your trip</h2> <br> <br>
+<div class="center">
 
-<!--    <img class="img-responsive" style="width:100%; height: 520px;" src="--><?php //echo base_url('assets/images/Road-Trip.jpg'); ?><!--" > </img>-->
-<!--    <div class="centered"  style="">Travelanche</div>-->
-
-<!--                 <a href = "--><?php //echo site_url('client_logged_in/Choice'); ?><!--" class = "btn btn-lg btn-success"> Plan a trip </a>-->
-
-<!--    <ul>-->
-<!--        <li><a href="--><?php //echo site_url('client_logged_in/carBooking'); ?><!--">  <img src="--><?php //echo base_url('assets/images/car.jpg'); ?><!--" class="img-circle" alt="Cinque Terre" width="304" height="236"></a></li>-->
-<!--        <li><a href="#">  <img src="--><?php //echo base_url('assets/images/van.png'); ?><!--" class="img-circle" alt="Cinque Terre" width="304" height="236"> </a></li>-->
-<!--        <li><a href="#">  <img src="--><?php //echo base_url('assets/images/car.jpg'); ?><!--" class="img-circle" alt="Cinque Terre" width="304" height="236"> </a></li>-->
-<!--    </ul>-->
-<br> <br>
-<div class="center" id="main">
     <div class="row">
         <div class="col-lg-4">
-            <img style="width: 200px;" src="<?php echo base_url('assets/images/car.png');?>">
+            <img style="width: 180px;" src="<?php echo base_url('assets/images/char.png');?>">
+            <br><br>
             <a type="button" class="btn btn-default" href="<?php echo site_url('client_logged_in/carBooking'); ?>" >Book a Car</a>
         </div>
 
-<<<<<<< HEAD
         <div class="col-lg-4">
-            <img style="width: 260px" src="<?php echo base_url('assets/images/van1.png');?>">
-            <a type="button" class="btn btn-default" href="<?php echo site_url(''); ?>" >Book a Van</a>
+            <img style="width: 180px" src="<?php echo base_url('assets/images/van.png');?>">
+            <br><br>
+            <a type="button" class="btn btn-default" href="<?php echo site_url('client_logged_in/vanBooking'); ?>" >Book a Van</a>
         </div>
 
         <div class="col-lg-4">
-            <img style="width: 235px" src="<?php echo base_url('assets/images/coaster.png');?>">
-            <a type="button" class="btn btn-default" href="<?php echo site_url(''); ?>" >Book a Coaster</a>
+            <img style="width: 180px" src="<?php echo base_url('assets/images/bus.png');?>">
+            <br><br>
+            <a type="button" class="btn btn-default" href="<?php echo site_url('client_logged_in/coasterBooking'); ?>" >Book a Coaster</a>
         </div>
 
     </div>
-=======
-    <ul>
-        <li><a href="<?php echo site_url('client_logged_in/carBooking'); ?>">  <img src="<?php echo base_url('assets/images/car.jpg'); ?>" class="img-circle" alt="Cinque Terre" width="304" height="236"></a></li>
-        <li><a href="<?php echo site_url('client_logged_in/vanBooking'); ?>">  <img src="<?php echo base_url('assets/images/van.png'); ?>" class="img-circle" alt="Cinque Terre" width="304" height="236"> </a></li>
-        <li><a href="<?php echo site_url('client_logged_in/coasterBooking'); ?>">  <img src="<?php echo base_url('assets/images/car.jpg'); ?>" class="img-circle" alt="Cinque Terre" width="304" height="236"> </a></li>
-    </ul>
->>>>>>> ba3be87bee14e3a5398b5cec521d3b3bf53aca19
 </div>
 
 </body>

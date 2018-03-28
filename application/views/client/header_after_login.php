@@ -26,9 +26,9 @@
 </head><!--/head-->
 
 <style>
-    .navbar-inverse{
-        background-color: #ba0710;
-    }
+    /*.navbar-inverse{*/
+        /*background-color: #ba0710;*/
+    /*}*/
 </style>
 
 <body class="homepage">
