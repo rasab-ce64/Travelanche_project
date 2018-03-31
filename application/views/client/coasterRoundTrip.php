@@ -18,7 +18,7 @@
 
 <body>
 <div class="container" >
-    <form class="well form-horizontal" action="<?php echo site_url('client_logged_in/Trip_info'); ?> " method="post"  id="contact_form">
+    <form class="well form-horizontal" action="<?php echo site_url('PlanTrip/RoundTrip'); ?> " method="post"  id="contact_form">
         <fieldset>
             <!-- Form Name -->
             <legend><center><h2><b>Plan Your Trip</b></h2></center></legend>

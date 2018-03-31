@@ -11,29 +11,35 @@ class Trip extends CI_model
         $this->load->library('session');
     }
 
-    public function Trip_details()
+    public function Trip_details($data)
     {
-        $this->load->database();
-        $user_data = $this->session->userdata('user_logged_in');
-        $phone = $user_data['phone'];
-        if (isset($_POST['Enter']))
-        {
-            $destination = $_POST['destination'];
-            $vehicle = $_POST['vehicle'];
-            $pickup_location = $_POST['pickup_location'];
-            $start_date = $_POST['start_date'];
-            $end_date = $_POST['end_date'];
-            $pickup_time = $_POST['pickup_time'];
-            $drop_time = $_POST['drop_time'];
-            $trip_disc = $_POST['trip_disc'];
-            $user_city = $_POST['city'];
-            $sql = "INSERT INTO trip(destination, vehicle, start_date, end_date, time_pickup, time_drop, trip_description, location_pickup,user_phone,timestamp,user_city,trip_status)
-                      VALUES('$destination','$vehicle','$start_date','$end_date','$pickup_time','$drop_time','$trip_disc','$pickup_location','$phone',CURTIME(),'$user_city','Pending')";
+//        $this->load->database();
+//        $user_data = $this->session->userdata('user_logged_in');
+//        $client_phone = $user_data['phone'];
+//        if (isset($_POST['Enter']))
+//        {
+//            $destination = $_POST['destination'];
+//            $vehicle = $_POST['vehicle'];
+//            $pickup_location = $_POST['pickup_location'];
+//            $start_date = $_POST['start_date'];
+//            $end_date = $_POST['end_date'];
+//            $pickup_time = $_POST['pickup_time'];
+//            $drop_time = $_POST['drop_time'];
+//            $trip_disc = $_POST['trip_disc'];
+//            $user_city = $_POST['city'];
+//            $sql = "INSERT INTO trip(destination, vehicle, start_date, end_date, time_pickup, time_drop, trip_description, location_pickup,user_phone,timestamp,user_city,trip_status)
+//                      VALUES('$destination','$vehicle','$start_date','$end_date','$pickup_time','$drop_time','$trip_disc','$pickup_location','$phone',CURTIME(),'$user_city','Pending')";
+//
+//            $this->db->query($sql);
+//            }
+     //   $sql = "INSERT INTO trip(timestamp)  VALUES( CURTIME() )";
+      //  $this->db->query($sql);
 
-            $this->db->query($sql);
-            }
-            
-            
+
+        $this->db->insert('trip', $data);
+
+
+
     }
     
     public function My_trips()

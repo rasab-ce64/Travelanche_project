@@ -108,7 +108,6 @@
     <h2 style="color: #000000" ><b>Car Booking</b></h2>
     <fieldset>
             <h2 style="text-align: center; color: #000000">CAR BOOKING</h2>
-<<<<<<< HEAD
 <!--            <h3 style="text-align: center; color: #000000;">Trip Details</h3>-->
 
         <div class="form-group">
@@ -116,10 +115,10 @@
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <label class="radio-inline">
-                        <input type="radio" name="">All Cars
+                        <input type="radio" name="car"  value="All Cars" checked>All Cars
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" name="">Specific Cars
+                        <input type="radio" name="car" value="Specific Car">Specific Cars
                     </label>
                 </div>
             </div>
@@ -129,7 +128,7 @@
             <label class="col-md-4 control-label" >Vehicle</label>
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
-                    <input name="vehicle" placeholder="Choose Vehicle" class="form-control" autofocus="" required=""  type="text">
+                    <input name="vehicle_name" placeholder="Choose Vehicle" class="form-control" autofocus="" required=""  type="text">
                 </div>
             </div>
         </div>
@@ -139,10 +138,10 @@
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <label class="radio-inline">
-                        <input type="radio" name="">Yes
+                        <input type="radio" name="driver" value="Yes" checked>Yes
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" name="">No
+                        <input type="radio" name="driver" value="No">No
                     </label>
                 </div>
             </div>
@@ -153,10 +152,10 @@
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <label class="radio-inline">
-                        <input type="radio" name="">Round Trip
+                        <input type="radio" name="trip_type" value="Round Trip" checked>Round Trip
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" name="">Single Trip
+                        <input type="radio" name="trip_type" value="One Side Tri" >Single Trip
                     </label>
                 </div>
             </div>
@@ -166,61 +165,9 @@
         <div class="form-group">
             <label class="col-md-4 control-label"></label>
             <div class="col-md-4"><br>
-                <button name="submit" type="submit" class="btn btn-md" >Next</button>
-=======
-            <h3 class="form-signin-heading">Trip Details</h3>
+                <button name="next" type="submit" class="btn btn-md" >Next</button>
 
-
-                <label> Cars</label>
-                <input class="form-check-input" name="car" value="0" type="checkbox" id="radio101" >
-                <label class="form-check-label" for="radio101">Specific car</label>
-                <input class="form-check-input" name="car" value="1" type="radio" id="radio102">
-                <label class="form-check-label" for="radio102">All cars</label>
-            <script>
-
-                $('#radio101').click(function() {
-                    $("#abc").toggle(this.checked);
-                });
-
-            </script>
-
-            <select name="car"  id="abc" class="form-control">
-                    <option value="" selected data-default> Select Car</option>
-                    <?php foreach($driver_name as $row):?>
-                        <option  value="<?php echo $row->driver_name ?>"><?php echo $row->driver_name; ?></option>
-                    <?php endforeach; ?>
-                </select>
-
-
-
-
-            <!--            </select>
-            <span class="text-danger"> <?php echo form_error('text'); ?></span>
-
-
-
-            <span class="text-danger"> <?php echo form_error('text'); ?></span>
-
-            <!--rate per day-->
-
-
-
-<div>
-            <label> Driver</label>
-            <input class="form-check-input" name="group100" type="radio" id="radio100" checked>
-            <label class="form-check-label" for="radio100">Yes</label>
-            <input class="form-check-input" name="group100" type="radio" id="radio101" >
-            <label class="form-check-label" for="radio101">No</label>
-</div>
-            <div>
-            <label> Trip Type</label>
-            <input class="form-check-input" name="trip_type"  value ="0" type="radio" id="radio100" checked>
-            <label class="form-check-label" for="radio100">Round Trip</label>
-            <input class="form-check-input" name="trip_type" type="radio" value ="1" id="radio101" >
-            <label class="form-check-label" for="radio101">Single Trip</label>
->>>>>>> fbea55a2b8e4a37a8a1b7bbe9a53bea71333d207
-            </div>
-        </div>
+ </div>
 
     </fieldset>
 </form>

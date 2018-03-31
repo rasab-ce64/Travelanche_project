@@ -36,28 +36,28 @@ ul, li {
 
 </style>
 
-<body class="container">
+<body class="container" >
 <h1 style="text-align: center; color:#000000; font-size: 2em">Travelanche</h1>
 <h2 style="text-align: center; color: #000000;" >Choose your relevant vehicle for your trip</h2> <br> <br>
-<div class="center">
+<div class="center" >
 
-    <div class="row">
+    <div class="row" >
         <div class="col-lg-4">
             <img style="width: 180px;" src="<?php echo base_url('assets/images/char.png');?>">
             <br><br>
-            <a type="button" class="btn btn-default" href="<?php echo site_url('client_logged_in/carBooking'); ?>" >Book a Car</a>
+            <a type="button" class="btn btn-default" href="<?php echo site_url('PlanTrip/carBooking'); ?>" >Book a Car</a>
         </div>
 
         <div class="col-lg-4">
             <img style="width: 180px" src="<?php echo base_url('assets/images/pan.png');?>">
             <br><br>
-            <a type="button" class="btn btn-default" href="<?php echo site_url('client_logged_in/vanBooking'); ?>" >Book a Van</a>
+            <a type="button" class="btn btn-default" href="<?php echo site_url('PlanTrip/vanBooking'); ?>" >Book a Van</a>
         </div>
 
         <div class="col-lg-4">
             <img style="width: 180px" src="<?php echo base_url('assets/images/bus.png');?>">
             <br><br>
-            <a type="button" class="btn btn-default" href="<?php echo site_url('client_logged_in/coasterBooking'); ?>" >Book a Coaster</a>
+            <a type="button" class="btn btn-default" href="<?php echo site_url('PlanTrip/coasterBooking'); ?>" >Book a Coaster</a>
         </div>
 
     </div>

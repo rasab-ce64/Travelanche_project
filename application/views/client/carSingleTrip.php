@@ -22,7 +22,7 @@
 
 
 <body>
-    <form class="well form-horizontal" action="<?php echo site_url('client_logged_in/Trip_info'); ?> " method="post"  id="contact_form">
+    <form class="well form-horizontal" action="<?php echo site_url('PlanTrip/SingleTrip'); ?> " method="post"  id="contact_form">
 
         <fieldset>
             <!-- Form Name -->

@@ -10,6 +10,11 @@
 <head>
     <!--  jquery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src='http://maps.google.com/maps/api/js?sensor=false&libraries=places'></script>
+<!--    <script type="text/javascript" src="http://www.google.com/jsapi?key=AIzaSyCFh_83LvhwV33pky1tepUWLzN7wTlKI4M"></script>-->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFh_83LvhwV33pky1tepUWLzN7wTlKI4M&callback=initMap" type="text/javascript"></script>
+    <script src="<?php echo base_url('assets/js/locationpicker.jquery.js'); ?>"></script>
     <!--link jquery ui css-->
 </head>
 <style>
@@ -17,8 +22,9 @@
 </style>
 
 <body>
+
 <div class="container" >
-    <form class="well form-horizontal" action="<?php echo site_url('client_logged_in/Trip_info'); ?> " method="post"  id="contact_form">
+    <form class="well form-horizontal" action="<?php echo site_url('PlanTrip/RoundTrip'); ?> " method="post"  id="contact_form">
         <fieldset>
             <!-- Form Name -->
             <legend><center><h2><b>Plan Your Trip</b></h2></center></legend>
@@ -60,7 +66,6 @@
                 </div>
             </div>
 
-            <!-- Text input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" >Choose Start Date</label>
                 <div class="col-md-4 inputGroupContainer">
@@ -105,6 +110,33 @@
                 </div>
             </div>
             <!-- Success message -->
+
+            Location: <input type="text" id="us2-address" style="width: 200px"/>
+            <div id="us2" style="width: 500px; height: 400px;"></div>
+            Lat.: <input type="text" id="us2-lat"/>
+            Long.: <input type="text" id="us2-lon"/>
+            <script>
+                $('#us2').locationpicker({
+                    enableAutocomplete: true,
+                    enableReverseGeocode: true,
+                    radius: 0,
+                    inputBinding: {
+                        latitudeInput: $('#us2-lat'),
+                        longitudeInput: $('#us2-lon'),
+                        radiusInput: $('#us2-radius'),
+                        locationNameInput: $('#us2-address')
+                    },
+                    onchanged: function (currentLocation, radius, isMarkerDropped) {
+                        var addressComponents = $(this).locationpicker('map').location.addressComponents;
+                        console.log(currentLocation);  //latlon
+                        updateControls(addressComponents); //Data
+                    }
+                });
+
+                function updateControls(addressComponents) {
+                    console.log(addressComponents);
+                }
+            </script><!-- Text input-->
 
             <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>
             <!-- Button -->

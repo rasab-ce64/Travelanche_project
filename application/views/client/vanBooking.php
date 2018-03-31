@@ -103,7 +103,7 @@
 
 <body>
 <img class="img-responsive" style="width:100%; height:600px;" src="<?php echo base_url('assets/images/backgnd.jpg'); ?>" > </img>
-<form class="form-horizontal" id="centered" action="<?php echo site_url("PlanTrip/carTripType"); ?> " method="post"  id="contact_form">
+<form class="form-horizontal" id="centered" action="<?php echo site_url("PlanTrip/vanTripType"); ?> " method="post"  id="contact_form">
 
     <fieldset>
         <h2 style="text-align: center; color: #000000">Van Booking</h2>
@@ -113,17 +113,17 @@
             <label class="col-md-4 control-label">Van Seats</label>
             <div class="col-md-6 inputGroupContainer">
                 <div class="input-group">
-                    <label class="checkbox-inline">
-                        <input type="checkbox" name="">8-Seater
+                    <label class="radio-inline">
+                        <input type="radio" name="vehicle_seats" value="8" checked>8-Seater
                     </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" name="">10-Seater
+                    <label class="radio-inline">
+                        <input type="radio" name="vehicle_seats" value="10">10-Seater
                     </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" name="">12-Seater
+                    <label class="radio-inline">
+                        <input type="radio" name="vehicle_seats" value="12">12-Seater
                     </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" name="">15-Seater
+                    <label class="radio-inline">
+                        <input type="radio" name="vehicle_seats" value="15">15-Seater
                     </label>
                 </div>
             </div>
@@ -133,11 +133,11 @@
             <label class="col-md-4 control-label">Driver</label>
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
-                    <label class="checkbox-inline">
-                        <input type="checkbox" name="">Yes
+                    <label class="radio-inline">
+                        <input type="radio" name="driver" value="Yes" checked>Yes
                     </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" name="">No
+                    <label class="radio-inline">
+                        <input type="radio" name="driver" value="No">No
                     </label>
                 </div>
             </div>
@@ -147,11 +147,11 @@
             <label class="col-md-4 control-label">Trip Type</label>
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
-                    <label class="checkbox-inline">
-                        <input type="checkbox" name="">Round Trip
+                    <label class="radio-inline">
+                        <input type="radio" name="trip_type" value="Round Trip" checked>Round Trip
                     </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" name="">Single Trip
+                    <label class="radio-inline">
+                        <input type="radio" name="trip_type" value="One Side Tri">Single Trip
                     </label>
                 </div>
             </div>
