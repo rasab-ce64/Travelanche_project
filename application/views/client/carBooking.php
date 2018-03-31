@@ -1,63 +1,21 @@
-<html xmlns="http://www.w3.org/1999/html">
+
+<!DOCTYPE html>
+<html lang='en-US'>
 <head>
-    <title>Edit Trip</title>
+    <!--  jquery  -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script language="javascript" type="text/javascript"> </script>
+
 </head>
 
 <style>
-    #success_message{ display: none;}
-
-    .form-group, .input-group, .inputGroupContainer{
-        text-align: center;
-        width: 100%;
-        background-color: transparent;
-    }
-    .input-group:focus{
-        border: 1px #ba0710;
-        border-radius: 30px ;
-    }
-    .well{
-        background-color: #ffffff;
-    }
-    #centered{
-        position: absolute;
-        top: 50%;
-        left: 25%;
-        width: 90%;
-        color: white;
-        transform: translate(-50%, -50%);
-    }
-    .btn-md:hover{
-        color: #ba0710; !important;
-        background-color: #ffffff;
-        border: solid 1px #ba0710;
-    }
-    .btn-md{
-        background-color: #ba0710;
-        color: #ffffff;
-        text-align: center;
-        width: 30%;
-
-    }
-
-    /*fazooll*/
-
-    .wrapper {
-        margin-top: 80px;
-        margin-bottom: 80px;
-    }
 
     .form-signin {
         max-width: 380px;
-        padding: 15px 35px 45px;
+        padding: 10px 20px 30px;
         margin: 0 auto;
-        background-color: #fff;
-        border: 1px solid rgba(0,0,0,0.1);
-    }
-    .checkbox {
-        margin-bottom: 30px;
-        color: black;
-        text-align: left;
     }
     .form-signin-heading{
         margin-bottom: 30px;
@@ -69,26 +27,22 @@
         text-align: center;
         color: black;
     }
-
-    .checkbox {
-        font-weight: normal;
-    }
-
     .form-control {
         position: relative;
         font-size: 16px;
         height: auto;
-        padding: 5px;
+        padding: 8px;
     @include box-sizing(border-box);
     &:focus {
          z-index: 2;
      }
     }
     input[type="text"] {
-        margin-bottom: 0px;
+        margin-bottom: -1px;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }
+<<<<<<< HEAD
     input[type="password"] {
         margin-bottom: 10px;
         border-top-left-radius: 0;
@@ -173,3 +127,58 @@
 </form>
 </body>
 </html>
+=======
+
+</style>
+
+<div class="wrapper">
+    <body>
+    <div class="container">
+        <form class="form-signin" method="POST" action="<?php echo site_url('PlanTrip/carTripType'); ?>" >
+
+            <h1 class="form-signin-heading">Car Booking</h1>
+
+            <span class="fa fa-car"></span> &nbsp; <label>Choose Cars</label>
+            <div class="radio">
+                <label><input type="radio" name="optradio">Specific Cars</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="optradio">All Cars</label>
+            </div>
+
+            <span class="fa fa-car"></span> &nbsp; <label> Choose your Car </label>
+
+            <input type="text" class="form-control" name="car" placeholder="Choose Car"  autofocus="" />
+            <br>
+
+            &nbsp;<span class="fa fa-user"></span> &nbsp; <label>Driver</label>
+            <div class="radio">
+                <label><input type="radio" name="optradio">Yes</label>
+            </div>
+
+            <div class="radio">
+                <label><input type="radio" name="optradio">No</label>
+            </div>
+
+            <span class="fa fa-tripadvisor"></span> &nbsp;<label>Trip Type</label>
+            <div class="radio">
+                <label><input type="radio" name="trip_type">Round Trip</label>
+            </div>
+
+            <div class="radio">
+                <label><input type="radio" name="trip_type">Single Trip</label>
+            </div>
+
+            <span class="text-danger"> <?php echo form_error('Phone'); ?></span>
+
+            <br>
+
+            <button class="btn btn-md" style="width: 35%; background-color: #ba0710; color: #ffffff" name="login" type="submit">Next</button>
+
+            <span><?php echo $this->session->flashdata("error"); ?> </span>
+        </form>
+    </div>
+    </body>
+</div>
+</html>
+>>>>>>> 75571b9135415e91d2ca2d53c008ba7637da0d1d

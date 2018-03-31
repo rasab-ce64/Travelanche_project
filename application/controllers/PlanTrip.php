@@ -83,13 +83,21 @@ class PlanTrip extends CI_Controller
         {
             $this->load->view('client/header_after_login',$user_namee);
             $this->load->view('client/carSingleTrip');
+<<<<<<< HEAD
 
+=======
+            $this->load->view('template/footer');
+>>>>>>> 75571b9135415e91d2ca2d53c008ba7637da0d1d
         }
         if($trip_type =="Round Trip")
         {
             $this->load->view('client/header_after_login',$user_namee);
             $this->load->view('client/carRoundTrip');
+<<<<<<< HEAD
 
+=======
+            $this->load->view('template/footer');
+>>>>>>> 75571b9135415e91d2ca2d53c008ba7637da0d1d
         }
 
     }
@@ -113,11 +121,14 @@ class PlanTrip extends CI_Controller
         {
             $this->load->view('client/header_after_login',$user_namee);
             $this->load->view('client/vanSingleTrip');
+            $this->load->view('template/footer');
         }
         if($trip_type =="Round Trip")
         {
             $this->load->view('client/header_after_login',$user_namee);
             $this->load->view('client/vanRoundTrip');
+            $this->load->view('template/footer');
+
         }
 
     }
@@ -142,11 +153,13 @@ class PlanTrip extends CI_Controller
         {
             $this->load->view('client/header_after_login',$user_namee);
             $this->load->view('client/coasterSingleTrip');
+            $this->load->view('template/footer');
         }
         if($trip_type =="Round Trip")
         {
             $this->load->view('client/header_after_login',$user_namee);
             $this->load->view('client/coasterRoundTrip');
+            $this->load->view('template/footer');
         }
 
     }

@@ -25,18 +25,22 @@ $session_data = $this->session->userdata('user_logged_in');
         border: 1px solid #000000;
         color: #ba0710; !important;
     }
-ul {
-    white-space: nowrap;
-}
+    ul {
+        white-space: nowrap;
+    }
 
-ul, li {
-    list-style: none;
-    display: inline;
-}
+    ul, li {
+        list-style: none;
+        display: inline;
+    }
 
 </style>
 
+<<<<<<< HEAD
 <body class="container" >
+=======
+<body>
+>>>>>>> 75571b9135415e91d2ca2d53c008ba7637da0d1d
 <h1 style="text-align: center; color:#000000; font-size: 2em">Travelanche</h1>
 <h2 style="text-align: center; color: #000000;" >Choose your relevant vehicle for your trip</h2> <br> <br>
 <div class="center" >
