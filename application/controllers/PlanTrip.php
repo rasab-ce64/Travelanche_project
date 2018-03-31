@@ -34,11 +34,13 @@ class PlanTrip extends CI_Controller
         {
             $this->load->view('client/header_after_login',$user_namee);
             $this->load->view('client/carSingleTrip');
+            $this->load->view('template/footer');
         }
         if($trip_type ==0)
         {
             $this->load->view('client/header_after_login',$user_namee);
             $this->load->view('client/carRoundTrip');
+            $this->load->view('template/footer');
         }
 
     }
@@ -51,11 +53,14 @@ class PlanTrip extends CI_Controller
         {
             $this->load->view('client/header_after_login',$user_namee);
             $this->load->view('client/vanSingleTrip');
+            $this->load->view('template/footer');
         }
         if($trip_type ==1)
         {
             $this->load->view('client/header_after_login',$user_namee);
             $this->load->view('client/vanRoundTrip');
+            $this->load->view('template/footer');
+
         }
 
     }
@@ -69,11 +74,13 @@ class PlanTrip extends CI_Controller
         {
             $this->load->view('client/header_after_login',$user_namee);
             $this->load->view('client/coasterSingleTrip');
+            $this->load->view('template/footer');
         }
         if($trip_type ==1)
         {
             $this->load->view('client/header_after_login',$user_namee);
             $this->load->view('client/coasterRoundTrip');
+            $this->load->view('template/footer');
         }
 
     }
